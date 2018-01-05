@@ -1,0 +1,26 @@
+{
+  "name": "material-elements",
+  "version": "0.0.1",
+  "description": "一个基于react native的ui设计",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2534290808/material-elements.git"
+  },
+  "keywords": [
+    "react-native",
+    "material",
+    "ui",
+    "react",
+    "elements"
+  ],
+  "author": "lmy2534290808",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2534290808/material-elements/issues"
+  },
+  "homepage": "https://github.com/2534290808/material-elements#readme"
+}
