@@ -5,6 +5,9 @@ import { View, Image, Text, StyleSheet } from 'react-native';
 import { ViewPropTypes } from '../utils';
 /* eslint-enable import/no-unresolved, import/extensions */
 import Icon from '../Icon';
+import getTheme from '../styles/getTheme';
+import light from '../styles/themes/light';
+import merge from 'lodash/merge'
 
 const propTypes = {
     /**
@@ -48,12 +51,8 @@ const defaultProps = {
     size: 48,
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { avatar } = context.uiTheme;
+function getStyles(props, theme) {
+    const { avatar } = getTheme(theme);
     const { size } = props;
 
     const local = {};
@@ -85,8 +84,8 @@ class Avatar extends PureComponent {
         const { image, icon, iconSize, iconColor, text } = this.props;
 
         let content = null;
-        const { avatar, spacing } = this.context.uiTheme;
-        const styles = getStyles(this.props, this.context);
+        const { avatar, spacing } =merge(light,this.props.theme);
+        const styles = getStyles(this.props, this.props.theme);
 
         if (icon) {
             const color = iconColor || StyleSheet.flatten(avatar.content).color;
@@ -111,6 +110,4 @@ class Avatar extends PureComponent {
 
 Avatar.propTypes = propTypes;
 Avatar.defaultProps = defaultProps;
-Avatar.contextTypes = contextTypes;
-
 export default Avatar;

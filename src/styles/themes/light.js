@@ -34,4 +34,7 @@ export default {
         // shadowColor: fullBlack,
 
     },
+    avatar:{
+        content:{color:blue500}
+    }
 };
