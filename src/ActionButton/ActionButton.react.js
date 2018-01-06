@@ -17,7 +17,7 @@ import RippleFeedback from '../RippleFeedback';
 /* eslint-disable import/no-unresolved, import/extensions */
 import getPlatformElevation from '../styles/getPlatformElevation';
 /* eslint-enable import/no-unresolved, import/extensions */
-
+import getTheme from '../styles/getTheme';
 const propTypes = {
     /**
     * Array of names of icons (or elements) that will be shown after the main button is pressed
@@ -78,12 +78,8 @@ const defaultProps = {
     hidden: false,
     rippleColor: '#AAF',
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context, state) {
-    const { actionButton } = context.uiTheme;
+function getStyles(props, theme, state) {
+    const { actionButton } = getTheme(theme);
     const { size } = props;
 
     const local = {
@@ -418,7 +414,7 @@ class ActionButton extends PureComponent {
     render() {
         const { render } = this.state;
 
-        const styles = getStyles(this.props, this.context, this.state);
+        const styles = getStyles(this.props, this.props.theme, this.state);
 
         if (render === 'toolbar') {
             return this.renderToolbarTransition(styles);
@@ -432,6 +428,4 @@ class ActionButton extends PureComponent {
 
 ActionButton.propTypes = propTypes;
 ActionButton.defaultProps = defaultProps;
-ActionButton.contextTypes = contextTypes;
-
 export default ActionButton;
