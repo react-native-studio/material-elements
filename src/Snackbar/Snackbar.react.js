@@ -2,54 +2,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Text, Animated, Easing, Platform, StyleSheet } from 'react-native';
-import { ViewPropTypes } from '../utils';
-
-import Button from '../Button';
-
-const propTypes = {
-    /**
-    * The text message to display.
-    */
-    message: PropTypes.string.isRequired,
-    /**
-    * Whether or not the snackbar is visible.
-    */
-    visible: PropTypes.bool.isRequired,
-    /**
-    * The amount of time in milliseconds to show the snackbar.
-    */
-    timeout: PropTypes.number.isRequired,
-    /**
-    * Callback for when the timeout finishes.
-    */
-    onRequestClose: PropTypes.func.isRequired,
-    /**
-    * Whether or not there is a bottom navigation on the screen.
-    */
-    bottomNavigation: PropTypes.bool.isRequired,
-    /**
-    * The function to execute when the action is clicked.
-    */
-    onActionPress: PropTypes.func,
-    /**
-    * The function to execute when the action is clicked.
-    */
-    actionText: PropTypes.string,
-    /**
-    * Take a look at the Button component for more details.
-    */
-    button: PropTypes.shape({
-        ...Button.propTypes,
-        text: PropTypes.string,
-    }),
-    /**
-    * Inline style of snackbar
-    */
-    style: PropTypes.shape({
-        container: ViewPropTypes.style,
-        message: ViewPropTypes.style,
-    }),
-};
+import { ViewPropTypes } from '../utils/index';
+import getTheme from '../styles/getTheme'
+import Button from '../Button/index';
 const defaultProps = {
     onActionPress: null,
     actionText: null,
@@ -59,36 +14,58 @@ const defaultProps = {
     style: {},
     button: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { snackbar } = context.uiTheme;
-    const local = {};
-
-    return {
-        container: [
-            snackbar.container,
-            local.container,
-            props.style.container,
-        ],
-        message: [
-            snackbar.message,
-            local.message,
-            props.style.message,
-        ],
-    };
-}
-
 /**
 * Component for snackbars
 * https://material.io/guidelines/components/snackbars-toasts.html
 */
 class Snackbar extends PureComponent {
-    constructor(props, context) {
-        super(props, context);
-        const styles = getStyles(props, context);
+    static propTypes={
+        /**
+         * The text message to display.
+         */
+        message: PropTypes.string.isRequired,
+        /**
+         * Whether or not the snackbar is visible.
+         */
+        visible: PropTypes.bool.isRequired,
+        /**
+         * The amount of time in milliseconds to show the snackbar.
+         */
+        timeout: PropTypes.number.isRequired,
+        /**
+         * Callback for when the timeout finishes.
+         */
+        onRequestClose: PropTypes.func.isRequired,
+        /**
+         * Whether or not there is a bottom navigation on the screen.
+         */
+        bottomNavigation: PropTypes.bool.isRequired,
+        /**
+         * The function to execute when the action is clicked.
+         */
+        onActionPress: PropTypes.func,
+        /**
+         * The function to execute when the action is clicked.
+         */
+        actionText: PropTypes.string,
+        /**
+         * Take a look at the Button component for more details.
+         */
+        button: PropTypes.shape({
+            ...Button.propTypes,
+            text: PropTypes.string,
+        }),
+        /**
+         * Inline style of snackbar
+         */
+        style: PropTypes.shape({
+            container: ViewPropTypes.style,
+            message: ViewPropTypes.style,
+        }),
+    }
+    constructor(props) {
+        super(props);
+        const styles = this._getStyles();
         this.state = {
             styles,
             moveAnimated: new Animated.Value(StyleSheet.flatten(styles.container).height),
@@ -99,7 +76,7 @@ class Snackbar extends PureComponent {
         const { style, visible, bottomNavigation } = this.props;
 
         if (nextProps.style !== style) {
-            this.setState({ styles: getStyles(this.props, this.context) });
+            this.setState({ styles: this._getStyles() });
         }
 
         if (nextProps.visible !== visible) {
@@ -118,10 +95,25 @@ class Snackbar extends PureComponent {
     componentWillUnmount() {
         clearTimeout(this.hideTimer);
     }
-
+    //得到styles
+    _getStyles=()=>{
+            const { snackbar } = getTheme(this.props.theme);
+            const local = {};
+            return {
+                container: [
+                    snackbar.container,
+                    local.container,
+                    this.props.style.container,
+                ],
+                message: [
+                    snackbar.message,
+                    local.message,
+                    this.props.style.message,
+                ],
+            };
+        }
     setHideTimer() {
         const { timeout, onRequestClose } = this.props;
-
         if (timeout > 0) {
             clearTimeout(this.hideTimer);
             this.hideTimer = setTimeout(() => {
@@ -129,14 +121,12 @@ class Snackbar extends PureComponent {
             }, timeout);
         }
     }
-
     show = (bottomNavigation) => {
         let toValue = 0;
         if (bottomNavigation) {
             // TODO: Get bottom navigation height from context.
             toValue = -56;
         }
-
         Animated.timing(this.state.moveAnimated, {
             toValue,
             duration: 225,
@@ -171,7 +161,7 @@ class Snackbar extends PureComponent {
     }
 
     renderAction = () => {
-        const { snackbar } = this.context.uiTheme;
+        const { snackbar } = getTheme(this.props.theme);
         const { button, actionText, onActionPress } = this.props;
         const styles = {};
 
@@ -225,8 +215,6 @@ class Snackbar extends PureComponent {
     }
 }
 
-Snackbar.propTypes = propTypes;
 Snackbar.defaultProps = defaultProps;
-Snackbar.contextTypes = contextTypes;
 
 export default Snackbar;
