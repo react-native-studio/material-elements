@@ -1,3 +1,6 @@
+/**
+ * 可产生水波纹
+ */
 /* eslint-disable import/no-unresolved, import/extensions */
 import { View, Animated, StyleSheet, Platform, Easing, TouchableWithoutFeedback } from 'react-native';
 import React, { PureComponent } from 'react';
@@ -56,7 +59,7 @@ const defaultProps = {
     style: {},
 };
 function getStyles(props, state) {
-    const { iconToggle, palette } =getTheme({});
+    const { iconToggle, palette } =getTheme(props.theme);
 
     const local = {};
 
@@ -93,7 +96,7 @@ function getStyles(props, state) {
 * Returns size of icon. Priority order: style prop, size prop, spacing.iconSize.
 */
 function getIconSize(props) {
-    const { spacing } =getTheme({});
+    const { spacing } =getTheme(props.theme);
     const { icon } = props.style;
 
     if (icon && icon.width) {

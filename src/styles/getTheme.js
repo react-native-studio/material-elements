@@ -485,7 +485,8 @@ export default function getTheme(theme, ...more) {
             },
             centerElementContainer: {
                 flex: 1,
-                marginLeft: 20,
+               marginLeft: 20,
+
             },
             titleText: {
                 fontFamily,
@@ -519,6 +520,39 @@ export default function getTheme(theme, ...more) {
                 color: palette.secondaryTextColor,
             },
         }, theme.toolbarSearchActive)),
+        simpleToolbar: StyleSheet.create(merge({
+            container: {
+                backgroundColor: palette.primaryColor,
+                height: 56,
+                flexDirection: 'row',
+                alignItems: 'center',
+                paddingHorizontal: 4,
+                overflow: 'hidden',
+                ...getPlatformElevation(4),
+                justifyContent:'space-between'
+            },
+            leftElement: {
+                color: palette.alternateTextColor,
+            },
+            centerElementContainer: {
+                flex: 1,
+                position:'absolute',
+                top:0,
+                left:0,
+                right:0,
+                bottom:0,
+                justifyContent:'center',
+                alignItems:'center'
+            },
+            titleText: {
+                fontFamily,
+                color: palette.alternateTextColor,
+                ...typography.appBar,
+            },
+            rightElement: {
+                color: palette.alternateTextColor,
+            },
+        }, theme.simpleToolbar)),
     }, baseTheme);
 
     return theme;
