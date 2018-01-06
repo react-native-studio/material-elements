@@ -2,6 +2,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Animated, Easing, Platform, StyleSheet } from 'react-native';
+import getTheme from '../styles/getTheme'
 /* eslint-enable import/no-unresolved, import/extensions */
 
 import IconToggle from '../IconToggle';
@@ -23,10 +24,6 @@ const defaultProps = {
     style: {},
     size: 24,
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
 const SEARCH_BACK_ICON = 'arrow-back';
 const SEARCH_FORWARD_ICON = 'arrow-forward';
 
@@ -40,9 +37,9 @@ function shouldUpdateStyles(props, nextProps) {
 
     return false;
 }
-function getStyles(props, context) {
+function getStyles(props) {
     const { isSearchActive } = props;
-    const { toolbar, toolbarSearchActive } = context.uiTheme;
+    const { toolbar, toolbarSearchActive } =getTheme({});
 
     return {
         leftElementContainer: [
@@ -59,11 +56,11 @@ function getStyles(props, context) {
 }
 
 class LeftElement extends PureComponent {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
 
         this.state = {
-            styles: getStyles(this.props, this.context),
+            styles: getStyles(this.props),
             leftElement: props.isSearchActive ? SEARCH_FORWARD_ICON : props.leftElement,
             spinValue: new Animated.Value(props.isSearchActive ? 1 : 0),
         };
@@ -78,7 +75,7 @@ class LeftElement extends PureComponent {
         }
 
         if (shouldUpdateStyles(this.props, nextProps)) {
-            this.setState({ styles: getStyles(nextProps, this.context) });
+            this.setState({ styles: getStyles(nextProps) });
         }
     }
     animateIcon = (activate) => {
@@ -163,6 +160,4 @@ class LeftElement extends PureComponent {
 
 LeftElement.propTypes = propTypes;
 LeftElement.defaultProps = defaultProps;
-LeftElement.contextTypes = contextTypes;
-
 export default LeftElement;

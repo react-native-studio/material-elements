@@ -9,6 +9,8 @@ import { ViewPropTypes } from '../utils';
 import Icon from '../Icon';
 import RippleFeedback from '../RippleFeedback';
 import getPlatformElevation from '../styles/getPlatformElevation';
+import getTheme from '../styles/getTheme';
+import {blue500,red500} from '../styles/colors'
 const propTypes = {
     /**
     * button组件是否可用
@@ -60,9 +62,6 @@ const defaultProps = {
     upperCase: true,
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
 
 function getStyles(props, context, state) {
     const {
@@ -71,11 +70,13 @@ function getStyles(props, context, state) {
         buttonRaised,
         buttonDisabled,
         buttonRaisedDisabled,
-    } = context.uiTheme;
+    } = getTheme({});
 
     const { primary, accent, disabled, raised } = props;
-    const { palette } = context.uiTheme;
-
+    const { palette } = {palette: {  // can be used to change the color of components.
+        primaryColor: blue500,
+        accentColor: red500,
+    }}
     const local = {
         container: {},
     };
@@ -216,6 +217,5 @@ class Button extends PureComponent {
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
-Button.contextTypes = contextTypes;
 
 export default Button;

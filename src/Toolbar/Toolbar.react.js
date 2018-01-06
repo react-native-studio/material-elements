@@ -16,6 +16,7 @@ import CenterElement from './CenterElement.react';
 import RightElement from './RightElement.react';
 import IconToggle from '../IconToggle';
 import isFunction from '../utils/isFunction';
+import getTheme from '../styles/getTheme'
 
 const propTypes = {
     /**
@@ -153,18 +154,14 @@ const defaultProps = {
     onLeftElementPress: null,
     size: 24,
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
 const getBackButtonListener = callback =>
     BackAndroid.addEventListener('hardwareBackPress', callback);
 
 // const isSearchable = props => (props.searchable && props.isSearchActive) || false;
 // const getIsSearchActive = (props, state) => (props.searchable && state.isSearchActive) || false;
 
-function getStyles(props, context) {
-    const { toolbar } = context.uiTheme;
+function getStyles(props) {
+    const { toolbar } =getTheme({});
 
     return {
         container: [
@@ -346,7 +343,7 @@ class Toolbar extends PureComponent {
     }
     hide = () => {
         const { moveAnimated } = this.state;
-        const styles = getStyles(this.props, this.context, this.state);
+        const styles = getStyles(this.props);
         Animated.timing(moveAnimated, {
             toValue: (-1 * StyleSheet.flatten(styles.container).height),
             duration: 195,
@@ -372,7 +369,7 @@ class Toolbar extends PureComponent {
             borderRadius: radius,
         };
 
-        const { toolbarSearchActive } = this.context.uiTheme;
+        const { toolbarSearchActive } = getTheme({});
         const container = StyleSheet.flatten(styles.container);
         const searchActive = StyleSheet.flatten(toolbarSearchActive.container);
 
@@ -421,7 +418,7 @@ class Toolbar extends PureComponent {
 
         const { isSearchActive, searchValue } = this.state;
         // TODO: move out from render method
-        const styles = getStyles(this.props, this.context, this.state);
+        const styles = getStyles(this.props);
 
         return (
             <Animated.View
@@ -460,6 +457,4 @@ class Toolbar extends PureComponent {
 
 Toolbar.propTypes = propTypes;
 Toolbar.defaultProps = defaultProps;
-Toolbar.contextTypes = contextTypes;
-
 export default Toolbar;

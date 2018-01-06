@@ -2,6 +2,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Animated, TouchableWithoutFeedback, Text, TextInput, Easing, Platform } from 'react-native';
+import getTheme from '../styles/getTheme'
+
 /* eslint-enable import/no-unresolved, import/extensions */
 
 const propTypes = {
@@ -19,13 +21,9 @@ const defaultProps = {
     searchable: null,
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context, state = {}) {
+function getStyles(props, state = {}) {
     const { leftElement } = props;
-    const { toolbar, toolbarSearchActive } = context.uiTheme;
+    const { toolbar, toolbarSearchActive } = getTheme({});
     const { isSearchActive } = state;
 
     const local = {};
@@ -58,8 +56,8 @@ function getStyles(props, context, state = {}) {
 }
 
 class CenterElement extends PureComponent {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
 
         this.state = {
             isSearchActive: props.isSearchActive,
@@ -93,7 +91,7 @@ class CenterElement extends PureComponent {
     render() {
         const { searchable, centerElement, onPress, onSearchTextChange, searchValue } = this.props;
         const { opacityValue, isSearchActive } = this.state;
-        const styles = getStyles(this.props, this.context, this.state);
+        const styles = getStyles(this.props, this.state);
 
         // there can be situastion like this:
         // 1. Given toolbar with title and searchable feature
@@ -148,6 +146,4 @@ class CenterElement extends PureComponent {
 
 CenterElement.propTypes = propTypes;
 CenterElement.defaultProps = defaultProps;
-CenterElement.contextTypes = contextTypes;
-
 export default CenterElement;

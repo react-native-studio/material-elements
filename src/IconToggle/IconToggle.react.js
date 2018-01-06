@@ -2,6 +2,7 @@
 import { View, Animated, StyleSheet, Platform, Easing, TouchableWithoutFeedback } from 'react-native';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import getTheme from '../styles/getTheme'
 /* eslint-enable import/no-unresolved, import/extensions */
 
 import Color from 'color';
@@ -54,12 +55,8 @@ const defaultProps = {
     maxOpacity: 0.16,
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context, state) {
-    const { iconToggle, palette } = context.uiTheme;
+function getStyles(props, state) {
+    const { iconToggle, palette } =getTheme({});
 
     const local = {};
 
@@ -95,8 +92,8 @@ function getStyles(props, context, state) {
 /**
 * Returns size of icon. Priority order: style prop, size prop, spacing.iconSize.
 */
-function getIconSize(props, context) {
-    const { spacing } = context.uiTheme;
+function getIconSize(props) {
+    const { spacing } =getTheme({});
     const { icon } = props.style;
 
     if (icon && icon.width) {
@@ -116,10 +113,10 @@ function getRippleSize(containerSize, percent) {
 }
 
 class IconToggle extends PureComponent {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
 
-        const iconSize = getIconSize(props, context);
+        const iconSize = getIconSize(props);
         const containerSize = getContainerSize(iconSize);
 
         this.state = {
@@ -134,7 +131,7 @@ class IconToggle extends PureComponent {
         this.onPressOut = this.onPressOut.bind(this);
     }
     componentWillReceiveProps(nextProps) {
-        const iconSize = getIconSize(nextProps, this.context);
+        const iconSize = getIconSize(nextProps);
         if (this.state.iconSize !== iconSize || nextProps.percent !== this.props.percent) {
             const containerSize = getContainerSize(iconSize);
 
@@ -216,7 +213,7 @@ class IconToggle extends PureComponent {
         return <Icon name={name} color={color} size={iconSize} />;
     }
     render() {
-        const styles = getStyles(this.props, this.context, this.state);
+        const styles = getStyles(this.props, this.state);
 
         return (
             <TouchableWithoutFeedback onPressIn={this.onPressIn} onPressOut={this.onPressOut}>
@@ -233,7 +230,4 @@ class IconToggle extends PureComponent {
 
 IconToggle.propTypes = propTypes;
 IconToggle.defaultProps = defaultProps;
-IconToggle.contextTypes = contextTypes;
-
-
 export default IconToggle;

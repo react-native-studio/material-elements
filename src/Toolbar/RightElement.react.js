@@ -6,6 +6,7 @@ import { View, StyleSheet, NativeModules, findNodeHandle } from 'react-native';
 
 import IconToggle from '../IconToggle';
 import isFunction from '../utils/isFunction';
+import getTheme from '../styles/getTheme';
 
 const UIManager = NativeModules.UIManager;
 
@@ -27,13 +28,10 @@ const defaultProps = {
     style: {},
     searchable: null,
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
 
-function getStyles(props, context) {
+function getStyles(props) {
     const { isSearchActive } = props;
-    const { toolbar, toolbarSearchActive } = context.uiTheme;
+    const { toolbar, toolbarSearchActive } =getTheme({});
 
     return {
         rightElementContainer: [
@@ -83,7 +81,7 @@ class RightElement extends PureComponent {
             onSearchClearRequest,
         } = this.props;
 
-        const styles = getStyles(this.props, this.context, this.state);
+        const styles = getStyles(this.props);
 
         // if there is no rightElement and searchable feature is off then we are sure on the right
         // is nothing
@@ -200,6 +198,4 @@ class RightElement extends PureComponent {
 
 RightElement.propTypes = propTypes;
 RightElement.defaultProps = defaultProps;
-RightElement.contextTypes = contextTypes;
-
 export default RightElement;

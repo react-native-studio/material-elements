@@ -2,6 +2,7 @@
 import VectorIcon from 'react-native-vector-icons/MaterialIcons';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import getTheme from '../styles/getTheme'
 /* eslint-enable import/no-unresolved, import/extensions */
 
 const propTypes = {
@@ -15,14 +16,10 @@ const defaultProps = {
     color: null,
     style: null,
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
 class Icon extends PureComponent {
     render() {
         const { name, style, size, color } = this.props;
-        const { palette, spacing } = this.context.uiTheme;
+        const { palette, spacing } = getTheme({});
 
         const iconColor = color || palette.secondaryTextColor;
         const iconSize = size || spacing.iconSize;
@@ -40,6 +37,4 @@ class Icon extends PureComponent {
 
 Icon.propTypes = propTypes;
 Icon.defaultProps = defaultProps;
-Icon.contextTypes = contextTypes;
-
 export default Icon;
