@@ -5,37 +5,9 @@ import PropTypes from 'prop-types';
 /* eslint-enable import/no-unresolved, import/extensions */
 import IconToggle from '../IconToggle';
 import RippleFeedback from '../RippleFeedback';
-
-const propTypes = {
-    /**
-    * Text will be shown after Icon
-    */
-    label: PropTypes.string.isRequired,
-    /**
-    * Value will be returned when onCheck is fired
-    */
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    /**
-    * True if it's check
-    */
-    checked: PropTypes.bool,
-    /**
-    * Is checkbox active
-    */
-    disabled: PropTypes.bool,
-    /**
-    * Will be shown when checked is false
-    */
-    uncheckedIcon: PropTypes.string,
-    /**
-    * Will be shown when checked is true
-    */
-    checkedIcon: PropTypes.string,
-    /**
-    * Event that is called when state is changed
-    */
-    onCheck: PropTypes.func.isRequired,
-};
+import getTheme from '../styles/getTheme';
+import merge from 'lodash/merge';
+import light from '../styles/themes/light'
 const defaultProps = {
     checked: false,
     checkedIcon: 'check-box',
@@ -43,37 +15,64 @@ const defaultProps = {
     disabled: false,
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { checkbox, palette } = context.uiTheme;
-    const { disabled } = props;
-
-    const local = {};
-
-    return {
-        container: [
-            checkbox.container,
-            local.container,
-            props.style.container,
-        ],
-        icon: [
-            checkbox.icon,
-            props.style.icon,
-        ],
-        label: [
-            checkbox.label,
-            local.label,
-            props.style.label,
-            // disabled has the highest priority
-            disabled && { color: palette.disabledTextColor },
-        ],
-    };
-}
-
 class Checkbox extends PureComponent {
+    static propTypes= {
+        /**
+         * Text will be shown after Icon
+         */
+        label: PropTypes.string.isRequired,
+        /**
+         * Value will be returned when onCheck is fired
+         */
+        value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        /**
+         * True if it's check
+         */
+        checked: PropTypes.bool,
+        /**
+         * Is checkbox active
+         */
+        disabled: PropTypes.bool,
+        /**
+         * Will be shown when checked is false
+         */
+        uncheckedIcon: PropTypes.string,
+        /**
+         * Will be shown when checked is true
+         */
+        checkedIcon: PropTypes.string,
+        /**
+         * Event that is called when state is changed
+         */
+        onCheck: PropTypes.func.isRequired,
+    }
+    _getStyles(){
+            const { checkbox} =getTheme(this.props.theme);
+
+            const {palette}=merge(light,this.props.theme);
+            const { disabled } = this.props;
+
+            const local = {};
+
+            return {
+                container: [
+                    checkbox.container,
+                    local.container,
+                    this.props.style.container,
+                ],
+                icon: [
+                    checkbox.icon,
+                    this.props.style.icon,
+                ],
+                label: [
+                    checkbox.label,
+                    local.label,
+                    this.props.style.label,
+                    // disabled has the highest priority
+                    disabled && { color: palette.disabledTextColor },
+                ],
+            };
+    }
     onPress = () => {
         const { checked, disabled, onCheck, value } = this.props;
 
@@ -84,7 +83,7 @@ class Checkbox extends PureComponent {
     render() {
         const { checked, checkedIcon, uncheckedIcon, disabled, value } = this.props;
 
-        const styles = getStyles(this.props, this.context);
+        const styles =this._getStyles();
 
         const labelColor = StyleSheet.flatten(styles.label).color;
         const iconColor = StyleSheet.flatten(styles.icon).color;
@@ -116,8 +115,6 @@ class Checkbox extends PureComponent {
     }
 }
 
-Checkbox.propTypes = propTypes;
 Checkbox.defaultProps = defaultProps;
-Checkbox.contextTypes = contextTypes;
 
 export default Checkbox;

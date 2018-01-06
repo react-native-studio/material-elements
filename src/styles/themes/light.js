@@ -36,5 +36,5 @@ export default {
     },
     avatar:{
         content:{color:blue500}
-    }
+    },
 };

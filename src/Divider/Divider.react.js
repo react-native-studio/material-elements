@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 /* eslint-enable import/no-unresolved, import/extensions */
-
+import getTheme from '../styles/getTheme'
 
 const propTypes = {
     inset: PropTypes.bool,
@@ -13,29 +13,27 @@ const defaultProps = {
     inset: false,
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { divider } = context.uiTheme;
-
-    const local = {
-        container: props.inset ? { marginLeft: 72 } : null,
-    };
-
-    return {
-        container: [
-            divider.container,
-            local.container,
-            props.style.container,
-        ],
-    };
-}
-
 class Divider extends PureComponent {
+
+    _getStyles=()=>{
+            let props=this.props;
+            const { divider } = getTheme(props.theme);
+
+            const local = {
+                container: props.inset ? { marginLeft: 72 } : null,
+            };
+
+            return {
+                container: [
+                    divider.container,
+                    local.container,
+                    props.style.container,
+                ],
+            };
+
+    }
     render() {
-        const styles = getStyles(this.props, this.context);
+        const styles = this._getStyles();
 
         return (
             <View style={styles.container} />
@@ -45,6 +43,4 @@ class Divider extends PureComponent {
 
 Divider.propTypes = propTypes;
 Divider.defaultProps = defaultProps;
-Divider.contextTypes = contextTypes;
-
 export default Divider;

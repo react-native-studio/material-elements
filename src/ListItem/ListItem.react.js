@@ -15,6 +15,7 @@ import Divider from '../Divider';
 import Icon from '../Icon';
 import IconToggle from '../IconToggle';
 import RippleFeedback from '../RippleFeedback';
+import getTheme from '../styles/getTheme'
 
 const UIManager = NativeModules.UIManager;
 
@@ -76,10 +77,6 @@ const defaultProps = {
     children: null,
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
 function getNumberOfSecondaryTextLines(numberOfLines) {
     if (numberOfLines === 'dynamic') {
         return null;
@@ -125,90 +122,6 @@ function getListItemHeight(props, state) {
 
     return null;
 }
-function getStyles(props, context, state) {
-    const { rightElement } = props;
-    const { listItem } = context.uiTheme;
-    const { numberOfLines } = state;
-
-
-    const container = {
-        height: getListItemHeight(props, state),
-    };
-    const contentViewContainer = {};
-    const leftElementContainer = {};
-
-    if (numberOfLines === 'dynamic') {
-        contentViewContainer.paddingVertical = 16;
-        leftElementContainer.alignSelf = 'flex-start';
-    }
-
-    if (!rightElement) {
-        contentViewContainer.paddingRight = 16;
-    }
-
-    return {
-        container: [
-            listItem.container,
-            container,
-            props.style.container,
-        ],
-        content: [
-            listItem.content,
-            props.style.content,
-        ],
-        contentViewContainer: [
-            listItem.contentViewContainer,
-            contentViewContainer,
-            props.style.contentViewContainer,
-        ],
-        leftElementContainer: [
-            listItem.leftElementContainer,
-            leftElementContainer,
-            props.style.leftElementContainer,
-        ],
-        centerElementContainer: [
-            listItem.centerElementContainer,
-            props.style.centerElementContainer,
-        ],
-        textViewContainer: [
-            listItem.textViewContainer,
-            props.style.textViewContainer,
-        ],
-        primaryText: [
-            listItem.primaryText,
-            props.style.primaryText,
-        ],
-        firstLine: [
-            listItem.firstLine,
-            props.style.firstLine,
-        ],
-        primaryTextContainer: [
-            listItem.primaryTextContainer,
-            props.style.primaryTextContainer,
-        ],
-        secondaryText: [
-            listItem.secondaryText,
-            props.style.secondaryText,
-        ],
-        tertiaryText: [
-            listItem.tertiaryText,
-            props.style.tertiaryText,
-        ],
-        rightElementContainer: [
-            listItem.rightElementContainer,
-            props.style.rightElementContainer,
-        ],
-        leftElement: [
-            listItem.leftElement,
-            props.style.leftElement,
-        ],
-        rightElement: [
-            listItem.rightElement,
-            props.style.rightElement,
-        ],
-    };
-}
-
 class ListItem extends PureComponent {
     constructor(props) {
         super(props);
@@ -219,6 +132,91 @@ class ListItem extends PureComponent {
     }
     componentWillReceiveProps(nextPros) {
         this.setState({ numberOfLines: getNumberOfLines(nextPros) });
+    }
+    _getStyles=()=>{
+            let props=this.props,state=this.state;
+            const { rightElement } = props;
+            const { listItem } = getTheme(props.theme);
+            const { numberOfLines } = state;
+
+
+            const container = {
+                height: getListItemHeight(props, state),
+            };
+            const contentViewContainer = {};
+            const leftElementContainer = {};
+
+            if (numberOfLines === 'dynamic') {
+                contentViewContainer.paddingVertical = 16;
+                leftElementContainer.alignSelf = 'flex-start';
+            }
+
+            if (!rightElement) {
+                contentViewContainer.paddingRight = 16;
+            }
+
+            return {
+                container: [
+                    listItem.container,
+                    container,
+                    props.style.container,
+                ],
+                content: [
+                    listItem.content,
+                    props.style.content,
+                ],
+                contentViewContainer: [
+                    listItem.contentViewContainer,
+                    contentViewContainer,
+                    props.style.contentViewContainer,
+                ],
+                leftElementContainer: [
+                    listItem.leftElementContainer,
+                    leftElementContainer,
+                    props.style.leftElementContainer,
+                ],
+                centerElementContainer: [
+                    listItem.centerElementContainer,
+                    props.style.centerElementContainer,
+                ],
+                textViewContainer: [
+                    listItem.textViewContainer,
+                    props.style.textViewContainer,
+                ],
+                primaryText: [
+                    listItem.primaryText,
+                    props.style.primaryText,
+                ],
+                firstLine: [
+                    listItem.firstLine,
+                    props.style.firstLine,
+                ],
+                primaryTextContainer: [
+                    listItem.primaryTextContainer,
+                    props.style.primaryTextContainer,
+                ],
+                secondaryText: [
+                    listItem.secondaryText,
+                    props.style.secondaryText,
+                ],
+                tertiaryText: [
+                    listItem.tertiaryText,
+                    props.style.tertiaryText,
+                ],
+                rightElementContainer: [
+                    listItem.rightElementContainer,
+                    props.style.rightElementContainer,
+                ],
+                leftElement: [
+                    listItem.leftElement,
+                    props.style.leftElement,
+                ],
+                rightElement: [
+                    listItem.rightElement,
+                    props.style.rightElement,
+                ],
+            };
+
     }
     onMenuPressed = (labels) => {
         const { onRightElementPress, onPressValue } = this.props;
@@ -436,7 +434,7 @@ class ListItem extends PureComponent {
     render() {
         const { onPress, onLongPress } = this.props;
 
-        const styles = getStyles(this.props, this.context, this.state);
+        const styles =this._getStyles();
 
         // renders left element, center element and right element
         let content = this.renderContent(styles);
@@ -463,6 +461,4 @@ class ListItem extends PureComponent {
 
 ListItem.propTypes = propTypes;
 ListItem.defaultProps = defaultProps;
-ListItem.contextTypes = contextTypes;
-
 export default ListItem;

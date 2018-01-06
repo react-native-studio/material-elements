@@ -2,9 +2,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Text, Animated, Easing, Platform, StyleSheet } from 'react-native';
-import { ViewPropTypes } from '../utils/index';
+import { ViewPropTypes } from '../utils';
 import getTheme from '../styles/getTheme'
-import Button from '../Button/index';
+import Button from '../Button';
 const defaultProps = {
     onActionPress: null,
     actionText: null,

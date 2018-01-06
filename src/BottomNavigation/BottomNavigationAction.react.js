@@ -7,6 +7,7 @@ import { ViewPropTypes } from '../utils';
 
 import RippleFeedback from '../RippleFeedback';
 import Icon from '../Icon';
+import getTheme from '../styles/getTheme'
 
 const propTypes = {
     /**

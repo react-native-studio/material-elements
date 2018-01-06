@@ -10,7 +10,8 @@ import Icon from '../Icon';
 import RippleFeedback from '../RippleFeedback';
 import getPlatformElevation from '../styles/getPlatformElevation';
 import getTheme from '../styles/getTheme';
-import {blue500,red500} from '../styles/colors'
+import light from '../styles/themes/light';
+import merge from 'lodash/merge'
 const propTypes = {
     /**
     * button组件是否可用
@@ -63,20 +64,18 @@ const defaultProps = {
     style: {},
 };
 
-function getStyles(props, context, state) {
+function getStyles(props, theme, state) {
+    let uiTheme=getTheme(theme)
     const {
         button,
         buttonFlat,
         buttonRaised,
         buttonDisabled,
         buttonRaisedDisabled,
-    } = getTheme({});
+    } = uiTheme;
 
     const { primary, accent, disabled, raised } = props;
-    const { palette } = {palette: {  // can be used to change the color of components.
-        primaryColor: blue500,
-        accentColor: red500,
-    }}
+    const { palette } =merge(light,theme)
     const local = {
         container: {},
     };
@@ -140,6 +139,7 @@ class Button extends PureComponent {
         this.state = {
             elevation: 2,//高程为2
         };
+
     }
     onPress = () => {
         const { text, onPress } = this.props;
@@ -186,7 +186,7 @@ class Button extends PureComponent {
     render() {
         const { text, disabled, raised, upperCase, onLongPress } = this.props;
 
-        const styles = getStyles(this.props, this.context, this.state);
+        const styles = getStyles(this.props, this.props.theme, this.state);
 
         const content = (
             <View style={styles.container} pointerEvents="box-only">
