@@ -7,33 +7,32 @@ import Container from '../Container';
 
 import Header from './Header.react';
 import Section from './Section.react';
-
+import getTheme from '../styles/getTheme'
 const propTypes = {
     children: PropTypes.node.isRequired,
 };
 const defaultProps = {
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { drawer } = context.uiTheme;
-
-    return {
-        container: [
-            drawer.container,
-            props.style.container,
-        ],
-    };
-}
 
 class Drawer extends PureComponent {
+
+    _getStyles=()=>{
+            let props=this.props;
+            const { drawer } = getTheme(props.theme);
+
+            return {
+                container: [
+                    drawer.container,
+                    props.style.container,
+                ],
+            };
+
+    }
     render() {
         const { children } = this.props;
 
-        const styles = getStyles(this.props, this.context);
+        const styles = this._getStyles();
 
         return (
             <Container>
@@ -47,7 +46,6 @@ class Drawer extends PureComponent {
 
 Drawer.propTypes = propTypes;
 Drawer.defaultProps = defaultProps;
-Drawer.contextTypes = contextTypes;
 
 Drawer.Header = Header;
 Drawer.Section = Section;

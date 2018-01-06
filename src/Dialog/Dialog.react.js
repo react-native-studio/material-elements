@@ -8,6 +8,7 @@ import RippleFeedback from '../RippleFeedback';
 import Title from './Title.react';
 import Content from './Content.react';
 import Actions from './Actions.react';
+import getTheme from '../styles/getTheme'
 
 const propTypes = {
     onPress: PropTypes.func,
@@ -18,26 +19,24 @@ const defaultProps = {
     onPress: null,
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { dialog } = context.uiTheme;
-
-    return {
-        container: [
-            dialog.container,
-            props.style.container,
-        ],
-    };
-}
 
 class Dialog extends PureComponent {
+
+    _getStyles=()=>{
+            let props=this.props;
+            const { dialog } = getTheme(props.theme);
+
+            return {
+                container: [
+                    dialog.container,
+                    props.style.container,
+                ],
+            };
+    }
     render() {
         const { onPress, children } = this.props;
 
-        const styles = getStyles(this.props, this.context);
+        const styles =this._getStyles();
 
         return (
             <RippleFeedback onPress={onPress} >
@@ -51,7 +50,6 @@ class Dialog extends PureComponent {
 
 Dialog.propTypes = propTypes;
 Dialog.defaultProps = defaultProps;
-Dialog.contextTypes = contextTypes;
 
 Dialog.Title = Title;
 Dialog.Content = Content;

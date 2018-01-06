@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { View, TouchableWithoutFeedback } from 'react-native';
 /* eslint-enable import/no-unresolved, import/extensions */
 import ListItem from '../ListItem';
+import getTheme from '../styles/getTheme'
 
 const propTypes = {
     avatar: PropTypes.element,
@@ -19,42 +20,41 @@ const defaultProps = {
     footer: null,
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { drawerHeaderAccount } = context.uiTheme;
-
-    return {
-        container: [
-            drawerHeaderAccount.container,
-            props.style.container,
-        ],
-        accountContainer: [
-            drawerHeaderAccount.accountContainer,
-            props.style.accountContainer,
-        ],
-        topContainer: [
-            drawerHeaderAccount.topContainer,
-            props.style.topContainer,
-        ],
-        avatarsContainer: [
-            drawerHeaderAccount.avatarsContainer,
-            props.style.avatarsContainer,
-        ],
-        activeAvatarContainer: [
-            drawerHeaderAccount.activeAvatarContainer,
-            props.style.activeAvatarContainer,
-        ],
-        inactiveAvatarContainer: [
-            drawerHeaderAccount.inactiveAvatarContainer,
-            props.style.inactiveAvatarContainer,
-        ],
-    };
-}
 
 class HeaderAcount extends PureComponent {
+
+    _getStyles=()=>{
+        let props=this.props;
+        const { drawerHeaderAccount } = getTheme(props.theme);
+
+        return {
+            container: [
+                drawerHeaderAccount.container,
+                props.style.container,
+            ],
+            accountContainer: [
+                drawerHeaderAccount.accountContainer,
+                props.style.accountContainer,
+            ],
+            topContainer: [
+                drawerHeaderAccount.topContainer,
+                props.style.topContainer,
+            ],
+            avatarsContainer: [
+                drawerHeaderAccount.avatarsContainer,
+                props.style.avatarsContainer,
+            ],
+            activeAvatarContainer: [
+                drawerHeaderAccount.activeAvatarContainer,
+                props.style.activeAvatarContainer,
+            ],
+            inactiveAvatarContainer: [
+                drawerHeaderAccount.inactiveAvatarContainer,
+                props.style.inactiveAvatarContainer,
+            ],
+        };
+
+    }
     renderFooter = () => {
         const { footer } = this.props;
 
@@ -64,7 +64,7 @@ class HeaderAcount extends PureComponent {
 
         const props = {
             ...footer,
-            style: this.context.uiTheme.drawerHeaderListItem,
+            style: getTheme(this.props.theme).drawerHeaderListItem,
         };
 
         return <ListItem {...props} />;
@@ -75,7 +75,7 @@ class HeaderAcount extends PureComponent {
             avatar,
         } = this.props;
 
-        const styles = getStyles(this.props, this.context);
+        const styles = this._getStyles();
 
         return (
             <View style={styles.container}>
@@ -109,6 +109,5 @@ class HeaderAcount extends PureComponent {
 
 HeaderAcount.propTypes = propTypes;
 HeaderAcount.defaultProps = defaultProps;
-HeaderAcount.contextTypes = contextTypes;
 
 export default HeaderAcount;

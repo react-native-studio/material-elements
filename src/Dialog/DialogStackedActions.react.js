@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 /* eslint-enable import/no-unresolved, import/extensions */
 import Button from '../Button';
+import getTheme from '../styles/getTheme'
 
 const propTypes = {
     actions: PropTypes.array.isRequired,
@@ -12,26 +13,25 @@ const propTypes = {
 const defaultProps = {
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { dialog } = context.uiTheme;
-
-    return {
-        stackedActionsContainer: [
-            dialog.stackedActionsContainer,
-            props.style.stackedActionsContainer,
-        ],
-    };
-}
 
 class DialogStackedActions extends PureComponent {
+
+    _getStyles=()=>{
+            let props=this.props;
+            const { dialog } = getTheme(props.theme);
+
+            return {
+                stackedActionsContainer: [
+                    dialog.stackedActionsContainer,
+                    props.style.stackedActionsContainer,
+                ],
+            };
+
+    }
     render() {
         const { actions, onActionPress } = this.props;
 
-        const styles = getStyles(this.props, this.context);
+        const styles =this._getStyles();
 
         return (
             <View style={styles.stackedActionsContainer}>
@@ -55,6 +55,5 @@ class DialogStackedActions extends PureComponent {
 
 DialogStackedActions.propTypes = propTypes;
 DialogStackedActions.defaultProps = defaultProps;
-DialogStackedActions.contextTypes = contextTypes;
 
 export default DialogStackedActions;

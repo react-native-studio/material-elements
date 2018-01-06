@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 /* eslint-enable import/no-unresolved, import/extensions */
-
+import getTheme from '../styles/getTheme'
 
 const propTypes = {
     children: PropTypes.node.isRequired,
@@ -11,30 +11,28 @@ const propTypes = {
 const defaultProps = {
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { dialog } = context.uiTheme;
-
-    return {
-        titleContainer: [
-            dialog.titleContainer,
-            props.style.titleContainer,
-        ],
-        titleText: [
-            dialog.titleText,
-            props.style.titleText,
-        ],
-    };
-}
-
 class DialogHeader extends PureComponent {
+
+    _getStyles=()=>{
+            let props=this.props;
+
+            const { dialog } =getTheme(props.theme);
+
+            return {
+                titleContainer: [
+                    dialog.titleContainer,
+                    props.style.titleContainer,
+                ],
+                titleText: [
+                    dialog.titleText,
+                    props.style.titleText,
+                ],
+            };
+    }
     render() {
         const { children } = this.props;
 
-        const styles = getStyles(this.props, this.context);
+        const styles = this._getStyles();
 
         return (
             <View style={styles.titleContainer}>
@@ -48,6 +46,5 @@ class DialogHeader extends PureComponent {
 
 DialogHeader.propTypes = propTypes;
 DialogHeader.defaultProps = defaultProps;
-DialogHeader.contextTypes = contextTypes;
 
 export default DialogHeader;

@@ -6,6 +6,9 @@ import { View } from 'react-native';
 import Subheader from '../Subheader';
 import Divider from '../Divider';
 import ListItem from '../ListItem';
+import getTheme from '../styles/getTheme';
+import light from '../styles/themes/light';
+import merge from 'lodash/merge'
 
 const propTypes = {
     title: PropTypes.string,
@@ -26,42 +29,41 @@ const defaultProps = {
     divider: false,
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { drawerSection } = context.uiTheme;
-
-    return {
-        container: [
-            drawerSection.container,
-            props.style.container,
-        ],
-        item: [
-            drawerSection.item,
-            props.style.item,
-        ],
-        subheader: [
-            drawerSection.subheader,
-            props.style.subheader,
-        ],
-        icon: [
-            drawerSection.icon,
-            props.style.icon,
-        ],
-        value: [
-            drawerSection.value,
-            props.style.value,
-        ],
-        label: [
-            drawerSection.label,
-            props.style.label,
-        ],
-    };
-}
 
 class Section extends PureComponent {
+
+    _getStyles=()=>{
+        let props=this.props;
+        const { drawerSection } = getTheme(props.theme);
+
+        return {
+            container: [
+                drawerSection.container,
+                props.style.container,
+            ],
+            item: [
+                drawerSection.item,
+                props.style.item,
+            ],
+            subheader: [
+                drawerSection.subheader,
+                props.style.subheader,
+            ],
+            icon: [
+                drawerSection.icon,
+                props.style.icon,
+            ],
+            value: [
+                drawerSection.value,
+                props.style.value,
+            ],
+            label: [
+                drawerSection.label,
+                props.style.label,
+            ],
+        };
+
+    }
     renderTitle = () => {
         const { title } = this.props;
 
@@ -73,9 +75,9 @@ class Section extends PureComponent {
     }
     render() {
         const { items, divider } = this.props;
-        const { typography } = this.context.uiTheme;
+        const { typography } = merge(light,this.props.theme);
 
-        const styles = getStyles(this.props, this.context);
+        const styles = this._getStyles();
 
         return (
             <View>
@@ -85,7 +87,7 @@ class Section extends PureComponent {
                         let style = { primaryText: typography.buttons };
 
                         if (item.active) {
-                            style = this.context.uiTheme.drawerSectionActiveItem;
+                            style = getTheme(this.props.theme).drawerSectionActiveItem;
                         }
 
                         return (
@@ -108,6 +110,5 @@ class Section extends PureComponent {
 
 Section.propTypes = propTypes;
 Section.defaultProps = defaultProps;
-Section.contextTypes = contextTypes;
 
 export default Section;

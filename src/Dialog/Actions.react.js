@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 /* eslint-enable import/no-unresolved, import/extensions */
+import getTheme from '../styles/getTheme'
 
 const propTypes = {
     children: PropTypes.node.isRequired,
@@ -10,26 +11,23 @@ const propTypes = {
 const defaultProps = {
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { dialog } = context.uiTheme;
-
-    return {
-        actionsContainer: [
-            dialog.actionsContainer,
-            props.style.actionsContainer,
-        ],
-    };
-}
-
 class DialogFooter extends PureComponent {
+
+    _getStyles=()=>{
+            let props=this.props;
+            const { dialog } = getTheme(props.theme);
+
+            return {
+                actionsContainer: [
+                    dialog.actionsContainer,
+                    props.style.actionsContainer,
+                ],
+            };
+    }
     render() {
         const { children } = this.props;
 
-        const styles = getStyles(this.props, this.context);
+        const styles = this._getStyles();
 
         return (
             <View style={styles.actionsContainer}>
@@ -41,6 +39,5 @@ class DialogFooter extends PureComponent {
 
 DialogFooter.propTypes = propTypes;
 DialogFooter.defaultProps = defaultProps;
-DialogFooter.contextTypes = contextTypes;
 
 export default DialogFooter;

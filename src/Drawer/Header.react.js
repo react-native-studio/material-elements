@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { View, Image, StyleSheet } from 'react-native';
 /* eslint-enable import/no-unresolved, import/extensions */
 import HeaderAccount from './HeaderAccount.react';
+import getTheme from '../styles/getTheme'
 
 const propTypes = {
     image: PropTypes.shape({ type: PropTypes.oneOf([Image]) }),
@@ -15,9 +16,6 @@ const defaultProps = {
     backgroundColor: null,
     children: null,
     style: {},
-};
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
 };
 
 function getStyles(props, context) {
@@ -46,10 +44,38 @@ function getStyles(props, context) {
 }
 
 class Header extends PureComponent {
+
+    _getStyles=()=>{
+        let props=this.props;
+        const { drawerHeader } = getTheme(props.theme);
+
+        const { image } = props;
+
+        const local = {};
+
+        if (image) {
+            local.contentContainer = {
+                backgroundColor: null,
+            };
+        }
+
+        return {
+            container: [
+                drawerHeader.container,
+                props.style.container,
+            ],
+            contentContainer: [
+                drawerHeader.contentContainer,
+                props.style.contentContainer,
+                local.contentContainer,
+            ],
+        };
+
+    }
     render() {
         const { image, children } = this.props;
 
-        const styles = getStyles(this.props, this.context);
+        const styles = this._getStyles();
         const flatten = StyleSheet.flatten(styles.contentContainer);
 
         const content = (
@@ -75,7 +101,6 @@ class Header extends PureComponent {
 
 Header.propTypes = propTypes;
 Header.defaultProps = defaultProps;
-Header.contextTypes = contextTypes;
 
 Header.Account = HeaderAccount;
 

@@ -47,45 +47,43 @@ const defaultProps = {
     disabled: false,
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { bottomNavigationAction } = context.uiTheme;
-
-    const local = {};
-
-    if (props.active) {
-        local.container = bottomNavigationAction.containerActive;
-        local.icon = bottomNavigationAction.iconActive;
-        local.label = bottomNavigationAction.labelActive;
-    }
-
-    if (!props.label) {
-        local.container = { paddingTop: 16, paddingBottom: 16 };
-    }
-
-    return {
-        container: [
-            bottomNavigationAction.container,
-            local.container,
-            props.style.container,
-        ],
-        icon: [
-            bottomNavigationAction.icon,
-            local.icon,
-            props.style.icon,
-        ],
-        label: [
-            bottomNavigationAction.label,
-            local.label,
-            props.style.label,
-        ],
-    };
-}
-
 class BottomNavigationAction extends PureComponent {
+
+    _getStyles=()=>{
+            let props=this.props;
+            const { bottomNavigationAction } =getTheme(props.theme);
+
+            const local = {};
+
+            if (props.active) {
+                local.container = bottomNavigationAction.containerActive;
+                local.icon = bottomNavigationAction.iconActive;
+                local.label = bottomNavigationAction.labelActive;
+            }
+
+            if (!props.label) {
+                local.container = { paddingTop: 16, paddingBottom: 16 };
+            }
+
+            return {
+                container: [
+                    bottomNavigationAction.container,
+                    local.container,
+                    props.style.container,
+                ],
+                icon: [
+                    bottomNavigationAction.icon,
+                    local.icon,
+                    props.style.icon,
+                ],
+                label: [
+                    bottomNavigationAction.label,
+                    local.label,
+                    props.style.label,
+                ],
+            };
+
+    }
     renderIcon(icon, styles, color) {
         let element;
         if (React.isValidElement(icon)) {
@@ -101,7 +99,7 @@ class BottomNavigationAction extends PureComponent {
     render() {
         const { icon, label, onPress } = this.props;
 
-        const styles = getStyles(this.props, this.context);
+        const styles =this._getStyles();
         const color = StyleSheet.flatten(styles.icon).color;
 
         const iconElement = this.renderIcon(icon, styles, color);
@@ -119,6 +117,5 @@ class BottomNavigationAction extends PureComponent {
 
 BottomNavigationAction.propTypes = propTypes;
 BottomNavigationAction.defaultProps = defaultProps;
-BottomNavigationAction.contextTypes = contextTypes;
 
 export default BottomNavigationAction;

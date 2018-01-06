@@ -1,9 +1,10 @@
 /* eslint-disable import/no-unresolved, import/extensions */
-import React, { PureComponent } from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import {View} from 'react-native';
 /* eslint-enable import/no-unresolved, import/extensions */
 import Button from '../Button';
+import getTheme from '../styles/getTheme'
 
 const propTypes = {
     actions: PropTypes.array.isRequired,
@@ -12,20 +13,6 @@ const propTypes = {
 const defaultProps = {
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { dialog } = context.uiTheme;
-
-    return {
-        defaultActionsContainer: [
-            dialog.defaultActionsContainer,
-            props.style.defaultActionsContainer,
-        ],
-    };
-}
 
 class DialogDefaultActions extends PureComponent {
     constructor(props) {
@@ -33,17 +20,31 @@ class DialogDefaultActions extends PureComponent {
 
         this.onActionPressed = this.onActionPressed.bind(this);
     }
+
+    _getStyles = () => {
+        let props = this.props;
+        const {dialog} = getTheme(props.theme);
+
+        return {
+            defaultActionsContainer: [
+                dialog.defaultActionsContainer,
+                props.style.defaultActionsContainer,
+            ],
+        };
+    }
+
     onActionPressed(action) {
-        const { onActionPress } = this.props;
+        const {onActionPress} = this.props;
 
         if (onActionPress) {
             onActionPress(action);
         }
     }
-    render() {
-        const { actions } = this.props;
 
-        const styles = getStyles(this.props, this.context);
+    render() {
+        const {actions} = this.props;
+
+        const styles = this._getStyles();
 
         return (
             <View style={styles.defaultActionsContainer}>
@@ -68,6 +69,5 @@ class DialogDefaultActions extends PureComponent {
 
 DialogDefaultActions.propTypes = propTypes;
 DialogDefaultActions.defaultProps = defaultProps;
-DialogDefaultActions.contextTypes = contextTypes;
 
 export default DialogDefaultActions;
