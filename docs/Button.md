@@ -1,7 +1,6 @@
 # [Button](https://material.google.com/components/buttons.html)
-<img src="https://raw.githubusercontent.com/xotahal/react-native-material-ui-demo-app/master/resources/buttons-1.jpg" height="560">
 
-### Usage
+### 使用
 
 ```js
 ...
@@ -20,48 +19,42 @@ render() {
 ```js
 const propTypes = {
     /**
-    * If true button will be disabled
-    */
-    disabled: PropTypes.bool,
-    /**
-    * If true button will be raised
-    */
-    raised: PropTypes.bool,
-    /**
-    * Called when button is pressed. Text is passed as param
-    */
-    onPress: PropTypes.func,
-    /**
-    * Called when button is long pressed. Text is passed as param
-    */
-    onLongPress: PropTypes.func,
-    /**
-    * Text will be shown on button
-    */
-    text: PropTypes.string.isRequired,
-    /**
-    * Button text will be in uppercase letters
-    */
-    upperCase: PropTypes.bool,
-    /**
-    * If specified it'll be shown before text
-    */
-    icon: PropTypes.string,
-    /**
-    * You can overide any style for this button
-    */
-    style: PropTypes.shape({
-        container: View.propTypes.style,
-        text: Text.propTypes.style,
-    }),
-};
-
-const defaultProps = {
-    primary: false,
-    accent: false,
-    disabled: false,
-    raised: false,
-    upperCase: true,
-    style: {},
+        * button组件是否可用
+        */
+        disabled: PropTypes.bool,
+        /**
+        * button组件是否凸起
+        */
+        raised: PropTypes.bool,
+        /**
+        * 按下时触发，传递text参数
+        */
+        onPress: PropTypes.func,
+        /**
+        * 长按触发，传递text参数
+        */
+        onLongPress: PropTypes.func,
+        /**
+        * text将被显示
+        */
+        text: PropTypes.string.isRequired,
+        /**
+        * 是否转换大写
+        */
+        upperCase: PropTypes.bool,
+        /**
+        * 展示图标，展示在text之前
+        */
+        icon: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.element,
+        ]),
+        /**
+        * 重写button样式和text样式
+        */
+        style: PropTypes.shape({
+            container: ViewPropTypes.style,
+            text: Text.propTypes.style,
+        }),
 };
 ```
