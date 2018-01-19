@@ -1,4 +1,6 @@
-/* eslint-disable import/no-unresolved, import/extensions */
+/**
+ * ActionButton
+ */
 import React, { PureComponent } from 'react';
 import {
     View,
@@ -12,13 +14,10 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { ViewPropTypes } from '../utils';
-/* eslint-enable import/no-unresolved, import/extensions */
 import Icon from '../Icon';
 import IconToggle from '../IconToggle';
 import RippleFeedback from '../RippleFeedback';
-/* eslint-disable import/no-unresolved, import/extensions */
 import getPlatformElevation from '../styles/getPlatformElevation';
-/* eslint-enable import/no-unresolved, import/extensions */
 import getTheme from '../styles/getTheme';
 const propTypes = {
     /**
@@ -38,32 +37,35 @@ const propTypes = {
         })),
     ]),
     /**
-    * Called when button is pressed. Text is passed as param
+    * 按钮onPress时触发,text作为参数传递
     */
     onPress: PropTypes.func,
     /**
-    * Called when button is long pressed. Text is passed as param
+    * 按钮onLongPress时触发,text作为参数传递
     */
     onLongPress: PropTypes.func,
     /**
-    * Set true if you want to hide action button
+    * 是否隐藏button
     */
     hidden: PropTypes.bool,
     /**
-    * If specified it'll be shown before text
+    * 可为字符串或者Component
     */
-    icon: PropTypes.string,
+    icon: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element,
+    ]),
     /**
-    * Leave it empty if you don't want any transition after press. Otherwise, it will be trnasform
-    * to another view - depends on transition value.
+    *
+    * 当transition为null时，不会产生动画
     */
     transition: PropTypes.oneOf(['toolbar', 'speedDial']),
     /**
-    * Set ripple color
+    * 设置水波纹颜色
     */
     rippleColor: PropTypes.string,
     /**
-    * You can overide any style for this button
+    * 设置button的style
     */
     style: PropTypes.shape({
         container: ViewPropTypes.style,
