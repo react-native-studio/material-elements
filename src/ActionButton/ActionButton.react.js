@@ -7,6 +7,8 @@ import {
     StyleSheet,
     TouchableWithoutFeedback,
     Animated,
+    Easing,
+    Platform,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { ViewPropTypes } from '../utils';
@@ -224,22 +226,22 @@ class ActionButton extends PureComponent {
         }
     }
     show = () => {
-        // Animated.timing(this.state.scaleValue, {
-        //     toValue: 1,
-        //     duration: 225,
-        //     easing: Easing.bezier(0.0, 0.0, 0.2, 1),
-        //     useNativeDriver: Platform.OS === 'android',
-        // }).start();
+        Animated.timing(this.state.scaleValue, {
+             toValue: 1,
+            duration: 225,
+             easing: Easing.bezier(0.0, 0.0, 0.2, 1),
+             useNativeDriver: Platform.OS === 'android',
+         }).start();
     }
     hide = () => {
-        // Animated.timing(this.state.scaleValue, {
-        //     // TODO: why is not 0 here?
-        //     // see: https://github.com/facebook/react-native/issues/10510
-        //     toValue: 0.01,
-        //     duration: 195,
-        //     easing: Easing.bezier(0.4, 0.0, 0.6, 1),
-        //     useNativeDriver: Platform.OS === 'android',
-        // }).start();
+         Animated.timing(this.state.scaleValue, {
+             // TODO: why is not 0 here?
+             // see: https://github.com/facebook/react-native/issues/10510
+             toValue: 0.01,
+            duration: 195,
+            easing: Easing.bezier(0.4, 0.0, 0.6, 1),
+            useNativeDriver: Platform.OS === 'android',
+         }).start();
     }
     renderToolbarTransition = (styles) => {
         const { actions } = this.props;
