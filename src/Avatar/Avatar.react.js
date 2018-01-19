@@ -104,12 +104,10 @@ class Avatar extends PureComponent {
 
 
         return (
-            <View style={{ flexGrow: 1 }}>
                 <View style={[styles.container,{overflow: 'hidden',
                 }]} >
                     {content}
                 </View>
-            </View>
         );
     }
 }
