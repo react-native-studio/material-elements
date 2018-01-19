@@ -1,12 +1,13 @@
-/* eslint-disable import/no-unresolved, import/extensions */
+/**
+ * icon
+ */
 import VectorIcon from 'react-native-vector-icons/MaterialIcons';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import IoniconIcon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIconsIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import getTheme from '../styles/getTheme'
-/* eslint-enable import/no-unresolved, import/extensions */
+import getTheme from '../styles/getTheme';
 const iconType={
     MaterialIcons:'MaterialIcons',
     FontAwesome:'FontAwesome',
@@ -14,10 +15,25 @@ const iconType={
     MaterialCommunityIcons:'MaterialCommunityIcons'
 }
 const propTypes = {
+    /**
+     * icon的name
+     */
     name: PropTypes.string.isRequired,
+    /**
+     * icon的style
+     */
     style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    /**
+     * icon的尺寸
+     */
     size: PropTypes.number,
+    /**
+     * icon的颜色
+     */
     color: PropTypes.string,
+    /**
+     * icon的类型
+     */
     type:PropTypes.string,
 };
 const defaultProps = {
