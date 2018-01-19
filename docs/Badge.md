@@ -5,47 +5,50 @@
 
 ```js
 ...
-import { Badge, Icon, Avatar } from '../react-native-material-ui';
+import { Badge, Icon, Avatar } from 'material-elements';
 ...
 render() {
-  <Badge text="3" >
-    <Icon name="star" />
-  </Badge>
-  ...
   <Badge
-    size={24}
-    icon="star"
-    style={{ container: { bottom: -8, right: -12 } }}
-  >
-    <Avatar text="BR" />
-  </Badge>
+            accent
+            icon={{name:'star'}}
+            text="120"
+          >
+            <Avatar text="BR" />
+          </Badge>
 }
 ```
 ### API
 ```js
 const propTypes = {
     /**
-    * The badge will be added relativelty to this node
-    */
+     * badge
+     */
     children: PropTypes.node,
     /**
-    * This is the content rendered within the badge
-    */
+     * badge内容
+     */
     text: PropTypes.string,
     /**
-    * When the icon is set, the content will be <Icon name={icon} /> element
-    */
-    icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.shape({
-            name: PropTypes.string,
-            color: PropTypes.string,
-            size: PropTypes.number,
-        }),
-    ]),
+     * badge里的icon内容
+     */
+    icon:PropTypes.shape({
+      name:PropTypes.string,
+      color:PropTypes.string,
+      type:PropTypes.string,
+      size:PropTypes.number,
+    }),
     /**
-    * Just sugar for style={{ container: { width: size, height: size, borderRadius: size / 2 }}}
-    */
+     * badge container style={{ container: { width: size, height: size, borderRadius: size / 2 }}}
+     */
     size: PropTypes.number,
+
+    style: PropTypes.shape({
+        container: ViewPropTypes.style,
+    }),
+     /**
+     * 整个node的尺寸
+     */
+    nodeSize:PropTypes.number,
+};
 };
 ```
