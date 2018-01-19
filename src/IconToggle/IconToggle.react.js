@@ -1,41 +1,42 @@
 /**
  * 可产生水波纹
  */
-/* eslint-disable import/no-unresolved, import/extensions */
 import { View, Animated, StyleSheet, Platform, Easing, TouchableWithoutFeedback } from 'react-native';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import getTheme from '../styles/getTheme'
-/* eslint-enable import/no-unresolved, import/extensions */
 
 import Color from 'color';
 import { ELEVATION_ZINDEX } from '../styles/constants';
 import Icon from '../Icon';
 
 const propTypes = {
-    color: PropTypes.string,
+  /**
+   * icon颜色
+   */
+  color: PropTypes.string,
     /**
-    * The color of the underlay that will show when the touch is active.
+    * icon按下的颜色
     */
     underlayColor: PropTypes.string,
     /**
-    * Max opacity of ripple effect
+    * 水波纹最大透明度
     */
     maxOpacity: PropTypes.number,
     /**
-    * Size of underlayColor
+    * underlayColor的size
     */
     percent: PropTypes.number,
     /**
-    * If true, the interaction will be forbidden
+    * 是否可用
     */
     disabled: PropTypes.bool,
     /**
-    * Size of icon (default is 24 - see spacing in palette)
+    * icon尺寸，默认24
     */
     size: PropTypes.number,
     /**
-    * Name of icon to show
+    * icon的name
     */
     name: PropTypes.string.isRequired,
     /**
@@ -43,9 +44,18 @@ const propTypes = {
     */
     children: PropTypes.element,
     /**
-    * Call when icon was pressed
+    * 按下触发
     */
     onPress: PropTypes.func,
+   /**
+   * icon的类型
+   */
+   type:PropTypes.oneOf([
+      Icon.iconType.Ionicons,
+      Icon.iconType.MaterialCommunityIcons,
+      Icon.iconType.MaterialIcons,
+      Icon.FontAwesome,
+    ])
 };
 const defaultProps = {
     children: null,
@@ -204,7 +214,7 @@ class IconToggle extends PureComponent {
         );
     }
     renderIcon = (styles) => {
-        const { name, children } = this.props;
+        const { name, children,type } = this.props;
         const { iconSize } = this.state;
 
         if (children) {
@@ -213,7 +223,7 @@ class IconToggle extends PureComponent {
 
         const color = StyleSheet.flatten(styles.icon).color;
 
-        return <Icon name={name} color={color} size={iconSize} />;
+        return <Icon name={name} color={color} type={type} size={iconSize} />;
     }
     render() {
         const styles = getStyles(this.props, this.state);
