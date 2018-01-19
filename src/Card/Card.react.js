@@ -1,26 +1,30 @@
-/* eslint-disable import/no-unresolved, import/extensions */
 import { View } from 'react-native';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-/* eslint-enable import/no-unresolved, import/extensions */
 import RippleFeedback from '../RippleFeedback';
+import getTheme from '../styles/getTheme'
+import { ViewPropTypes } from '../utils/index'
 
 const propTypes = {
     children: PropTypes.node,
+
     onPress: PropTypes.func,
-    style: PropTypes.object,
+
+    style: PropTypes.shape({
+      container:ViewPropTypes.style,
+    }),
+  /**
+   * 是否水平铺满
+   */
+  fullWidth:PropTypes.bool,
 };
 const defaultProps = {
     children: null,
     onPress: null,
     style: {},
 };
-const contextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
-
-function getStyles(props, context) {
-    const { card } = context.uiTheme;
+function getStyles(props) {
+    const { card } =getTheme(props.theme);
 
     const local = {};
 
@@ -43,7 +47,7 @@ class Card extends PureComponent {
     render() {
         const { onPress, children } = this.props;
 
-        const styles = getStyles(this.props, this.context);
+        const styles = getStyles(this.props);
 
         const content = (
             <View style={styles.container}>
@@ -65,6 +69,5 @@ class Card extends PureComponent {
 
 Card.propTypes = propTypes;
 Card.defaultProps = defaultProps;
-Card.contextTypes = contextTypes;
 
 export default Card;
