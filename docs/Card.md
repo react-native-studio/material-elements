@@ -4,7 +4,7 @@
 
 ```js
 ...
-import { Card } from '../react-native-material-ui';
+import { Card } from 'material-elements';
 ...
 render() {
     <View>
@@ -17,13 +17,16 @@ render() {
 ### API
 ```js
 const propTypes = {
-    /**
-    * Called when card is pressed
-    */
+    children: PropTypes.node,
+
     onPress: PropTypes.func,
-    /**
-    * You can override any style for this card
-    */
-    style: PropTypes.object,
+
+    style: PropTypes.shape({
+      container:ViewPropTypes.style,
+    }),
+  /**
+   * 是否水平铺满
+   */
+  fullWidth:PropTypes.bool,
 };
 ```
