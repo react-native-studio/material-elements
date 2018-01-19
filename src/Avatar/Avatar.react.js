@@ -1,9 +1,10 @@
-/* eslint-disable import/no-unresolved, import/extensions */
+/**
+ * Avatar
+ */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { View, Image, Text, StyleSheet } from 'react-native';
 import { ViewPropTypes } from '../utils';
-/* eslint-enable import/no-unresolved, import/extensions */
 import Icon from '../Icon';
 import getTheme from '../styles/getTheme';
 import light from '../styles/themes/light';
@@ -11,31 +12,30 @@ import merge from 'lodash/merge'
 
 const propTypes = {
     /**
-    * If passed in, this component will render image.
+    * 传入Image组件属性，avatar渲染Image
     */
-    image: PropTypes.shape({ type: PropTypes.oneOf([Image]) }),
+    image: PropTypes.shape({
+      ...Image.propTypes,
+    }),
     /**
-    * If passed in, this component will render icon element inside avatar.
+    * 传入Icon属性，avatar渲染icon
     */
-    icon: PropTypes.string,
+    icon:PropTypes.shape({
+      name:PropTypes.string,
+      color:PropTypes.string,
+      size:PropTypes.number,
+      type:PropTypes.string,
+    }),
     /**
-    * If passed in, this component will render an icon with this color.
-    */
-    iconColor: PropTypes.string,
-    /**
-    * If passed in, this component will render an icon with this size.
-    */
-    iconSize: PropTypes.number,
-    /**
-    * If passed in, this component will render text element inside avatar.
+    * 传入text，avatar渲染text组件
     */
     text: PropTypes.string,
     /**
-    * It's just sugar for: style: { width: size, height: size, borderRadius: size / 2 }
+    * 仅仅用于container尺寸: style: { width: size, height: size, borderRadius: size / 2 }
     */
     size: PropTypes.number,
     /**
-    * Inline style of avatar
+    * avatar样式
     */
     style: PropTypes.shape({
         container: ViewPropTypes.style,
@@ -45,8 +45,6 @@ const propTypes = {
 const defaultProps = {
     image: null,
     icon: null,
-    iconColor: null,
-    iconSize: null,
     text: null,
     size: 48,
     style: {},
@@ -76,31 +74,39 @@ function getStyles(props, theme) {
             local.content,
             props.style.content,
         ],
+        image:[
+          avatar.container,
+          local.container,
+          props.style.container,
+        ]
     };
 }
 
 class Avatar extends PureComponent {
     render() {
-        const { image, icon, iconSize, iconColor, text } = this.props;
+        const { image, icon, text } = this.props;
 
         let content = null;
-        const { avatar, spacing } =merge(light,this.props.theme);
+        const { avatar, spacing } =getTheme(this.props.theme);
         const styles = getStyles(this.props, this.props.theme);
 
         if (icon) {
-            const color = iconColor || StyleSheet.flatten(avatar.content).color;
-            const size = iconSize || spacing.iconSize;
-            content = <Icon name={icon} color={color} size={size} />;
+            const color = icon.color || StyleSheet.flatten(avatar.content).color;
+            const size = icon.size || spacing.iconSize;
+            const name=icon.name;
+            const type=icon.type;
+            content = <Icon name={name} type={type} color={color} size={size} />;
         } else if (text) {
             content = <Text style={styles.content}>{text}</Text>;
         } else if (image) {
-            content = image;
+            content = <Image style={styles.image} {...image}/>;
         }
 
 
         return (
             <View style={{ flexGrow: 1 }}>
-                <View style={styles.container} >
+                <View style={[styles.container,{overflow: 'hidden',
+                }]} >
                     {content}
                 </View>
             </View>
