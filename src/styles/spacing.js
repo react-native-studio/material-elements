@@ -4,4 +4,5 @@ export default {
     iconSize: 24,
     avatarSize: 40,
     snackbarHeight: 48,
+    badgeSize:24,
 };

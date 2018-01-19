@@ -112,25 +112,24 @@ export default function getTheme(theme, ...more) {
             content: {
                 color: palette.canvasColor,
             },
+            image:{
+              width: spacing.avatarSize,
+              height: spacing.avatarSize,
+              borderRadius: spacing.avatarSize / 2,
+              //backgroundColor: darkenOrLighten(palette.canvasColor, 0.26).toString(),
+              alignItems: 'center',
+              justifyContent: 'center',
+            },
         }, theme.avatar)),
         badge: StyleSheet.create(merge({
             container: {
                 position: 'absolute',
-                width: 16,
-                height: 16,
-                borderRadius: 8,
+                width: spacing.badgeSize,
+                height: spacing.badgeSize,
+                borderRadius: spacing.badgeSize/2,
                 alignItems: 'center',
                 justifyContent: 'center',
                 backgroundColor: palette.primaryColor,
-            },
-            strokeContainer: {
-                position: 'absolute',
-                width: 16,
-                height: 16,
-                borderRadius: 8,
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: palette.canvasColor,
             },
             content: {
                 color: palette.canvasColor,
@@ -526,10 +525,10 @@ export default function getTheme(theme, ...more) {
                 height: 56,
                 flexDirection: 'row',
                 alignItems: 'center',
+                justifyContent:'space-between',
                 paddingHorizontal: 4,
                 overflow: 'hidden',
                 ...getPlatformElevation(4),
-                justifyContent:'space-between'
             },
             leftElement: {
                 color: palette.alternateTextColor,
@@ -542,7 +541,7 @@ export default function getTheme(theme, ...more) {
                 right:0,
                 bottom:0,
                 justifyContent:'center',
-                alignItems:'center'
+                alignItems:'center',
             },
             titleText: {
                 fontFamily,
