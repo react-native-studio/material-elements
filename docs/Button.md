@@ -4,7 +4,7 @@
 
 ```js
 ...
-import { Button } from 'react-native-material-ui';
+import { Button } from 'material-elements';
 ...
 render() {
     <View>
