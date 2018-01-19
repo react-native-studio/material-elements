@@ -4,16 +4,15 @@
 
 ```js
 ...
-import { Avatar } from '../react-native-material-ui';
+import { Avatar } from 'material-elements';
 ...
 render() {
     <View>
         <Avatar text="A" />
-
-        <Avatar icon="grade" />
-        <Avatar icon="person" iconColor="blue" />
-        <Avatar icon="history" iconSize={20} />
-        <Avatar icon="mic" size={75} />
+                <Avatar icon={{name:'person',color:'blue'}}/>
+                <Avatar icon={{name:'history',size:20}}/>
+                <Avatar icon={{name:'mic'}} size={75} />
+                <Avatar image={{source:require('../Images/launch-icon.png')}}/>
     </View>
 }
 ```
@@ -21,34 +20,33 @@ render() {
 ```js
 const propTypes = {
     /**
-    * If passed in, this component will render image.
+    * 传入Image组件属性，avatar渲染Image
     */
-    image: PropTypes.shape({ type: PropTypes.oneOf([Image]) }),
+    image: PropTypes.shape({
+      ...Image.propTypes,
+    }),
     /**
-    * If passed in, this component will render icon element inside avatar.
+    * 传入Icon属性，avatar渲染icon
     */
-    icon: PropTypes.string,
+    icon:PropTypes.shape({
+      name:PropTypes.string,
+      color:PropTypes.string,
+      size:PropTypes.number,
+      type:PropTypes.string,
+    }),
     /**
-    * If passed in, this component will render an icon with this color.
-    */
-    iconColor: PropTypes.string,
-    /**
-    * If passed in, this component will render an icon with this size.
-    */
-    iconSize: PropTypes.number,
-    /**
-    * If passed in, this component will render text element inside avatar.
+    * 传入text，avatar渲染text组件
     */
     text: PropTypes.string,
     /**
-    * It's just sugar for: style: { width: size, height: size, borderRadius: size / 2 }
+    * 仅仅用于container尺寸: style: { width: size, height: size, borderRadius: size / 2 }
     */
     size: PropTypes.number,
     /**
-    * Inline style of avatar
+    * avatar样式
     */
     style: PropTypes.shape({
-        container: View.propTypes.style,
+        container: ViewPropTypes.style,
         content: Text.propTypes.style,
     }),
 };
