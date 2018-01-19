@@ -1,10 +1,6 @@
-
-/* eslint-disable import/no-unresolved, import/extensions */
-
 import { Text, View } from 'react-native';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-/* eslint-enable import/no-unresolved, import/extensions */
 import Icon from '../Icon';
 import { ViewPropTypes } from '../utils';
 import getTheme from '../styles/getTheme';
@@ -12,45 +8,40 @@ import merge from 'lodash/merge';
 import light from '../styles/themes/light'
 const propTypes = {
     /**
-     * The badge will be added relativelty to this node
+     * badge
      */
     children: PropTypes.node,
     /**
-     * This is the content rendered within the badge
+     * badge内容
      */
     text: PropTypes.string,
     /**
-     * When the icon is set, the content will be <Icon name={icon} /> element
+     * badge里的icon内容
      */
-    icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.shape({
-            name: PropTypes.string,
-            color: PropTypes.string,
-            size: PropTypes.number,
-        }),
-    ]),
+    icon:PropTypes.shape({
+      name:PropTypes.string,
+      color:PropTypes.string,
+      type:PropTypes.string,
+      size:PropTypes.number,
+    }),
     /**
-     * Just sugar for style={{ container: { width: size, height: size, borderRadius: size / 2 }}}
+     * badge container style={{ container: { width: size, height: size, borderRadius: size / 2 }}}
      */
     size: PropTypes.number,
-    /**
-     * You can specify stroke for badge. Note that if you use stroke it swaps container and
-     * strokeContainer. So if you override styles of container you probably need to override
-     * strokeContainer instead the container. Because if you use stroke then the strokeContainer
-     * will be wrapper of whole badge component.
-     */
-    stroke: PropTypes.number,
+
     style: PropTypes.shape({
         container: ViewPropTypes.style,
     }),
+     /**
+     * 整个node的尺寸
+     */
+    nodeSize:PropTypes.number,
 };
 const defaultProps = {
     children: null,
     text: null,
     icon: null,
-    size: 16,
-    stroke: null,
+    nodeSize:48,
     style: {
         container: {
             top: -8,
@@ -61,27 +52,16 @@ const defaultProps = {
 
 };
 function getStyles(props, theme) {
-    const { badge} = getTheme(theme);
+    let { badge} = getTheme(theme);
     const {palette}=merge(light,merge);
-    const { accent, size, stroke } = props;
+    const { accent, size,} = props;
     const local = {
         container: {},
-        strokeContainer: {},
     };
-    if (size && stroke) {
-        const strokeSize = size;
-        const contentSize = size - stroke;
-        local.strokeContainer.width = strokeSize;
-        local.strokeContainer.height = strokeSize;
-        local.strokeContainer.borderRadius = strokeSize / 2;
-        local.container.position = null;
-        local.container.width = contentSize;
-        local.container.height = contentSize;
-        local.container.borderRadius = contentSize / 2;
-    } else if (size && !stroke) {
-        local.container.width = size;
-        local.container.height = size;
-        local.container.borderRadius = size / 2;
+    if(size) {
+      local.container.width = size;
+      local.container.height = size;
+      local.container.borderRadius = size / 2;
     }
     if (accent) {
         local.container.backgroundColor = palette.accentColor;
@@ -92,11 +72,6 @@ function getStyles(props, theme) {
             local.container,
             props.style.container,
         ],
-        strokeContainer: [
-            badge.strokeContainer,
-            local.strokeContainer,
-            props.style.strokeContainer,
-        ],
         content: [
             badge.content,
             local.content,
@@ -105,21 +80,16 @@ function getStyles(props, theme) {
     };
 }
 
-const mapIconProps = ({ icon, size }) => {
-    let iconProps = {};
-
-    if (typeof icon === 'string') {
-        iconProps.name = icon;
-    } else {
-        iconProps = icon;
-    }
-
-
-    if (!iconProps.size && size) {
-        iconProps.size = size / 2;
-
-    }
-
+const mapIconProps = ({ icon }) => {
+    let {name,type,size,color}=icon;
+    let iconProps = merge(
+      {size:16},
+      {
+        name,
+        type,
+        size,
+        color,
+      });
 
     return iconProps;
 
@@ -135,7 +105,7 @@ class Badge extends PureComponent {
         this.renderChildren = this.renderChildren.bind(this);
     }
     renderContent(styles) {
-        const { text, icon, stroke } = this.props;
+        const { text, icon } = this.props;
 
 
         let content = null;
@@ -155,17 +125,7 @@ class Badge extends PureComponent {
             </View>
         );
 
-
-        if (!stroke) {
-            return contentWrapper;
-        }
-
-
-        return (
-            <View style={styles.strokeContainer}>
-                {contentWrapper}
-            </View>
-        );
+        return contentWrapper
 
     }
     renderChildren() {
@@ -182,10 +142,14 @@ class Badge extends PureComponent {
     }
     render() {
         const styles = getStyles(this.props, this.props.theme);
-
-
+        const nodeStyle={
+          flexDirection: 'row',
+          justifyContent:'center',
+          alignItems:'center',
+          width:this.props.nodeSize
+        }
         return (
-            <View style={{ flexDirection: 'row'}}>
+            <View style={nodeStyle}>
                 {this.renderChildren()}
                 {this.renderContent(styles)}
             </View>
