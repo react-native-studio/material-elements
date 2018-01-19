@@ -52,14 +52,16 @@ class SimpleToolbar extends PureComponent {
         const flattenRightElement=StyleSheet.flatten(styles.rightElement)
         return (
             <View style={styles.container}>
-                <IconToggle
+              {/*CenterElement元素放在中间，则会使得左侧的Icon无法使用onPress*/}
+              {/*在ReactNative 中，当view设置了position属性后，图层变低，但是比其前面的图层高。子view的图层高于父view的图层*/}
+              <CenterElement theme={theme} title={this.props.title}/>
+              <IconToggle
                     key={leftIconName}
                     name={leftIconName}
                     color={flattenLeftElement.color}
                     onPress={this._onLeftIconPress}
                     style={flattenLeftElement}
                 />
-                <CenterElement theme={theme} title={this.props.title}/>
                 {rightIconName&&<IconToggle
                     key={rightIconName}
                     name={rightIconName}
