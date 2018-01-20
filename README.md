@@ -39,3 +39,5 @@ Roboto字体获取方式：./node_modules/material-elements/roboto  <br/>
 - [Toolbar](https://github.com/react-native-studio/material-elements/blob/master/docs/Toolbar.md)
 - [SimpleToolbar](https://github.com/react-native-studio/material-elements/blob/master/docs/SimpleToolbar.md)
 
+#### 后续将完善文档，丰富material-elements组件库
+
