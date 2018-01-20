@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea861f9b-f89e-46ce-894f-a863d069c3e5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -269,6 +270,11 @@
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -386,12 +392,12 @@
       <updated>1515155564290</updated>
       <workItem from="1515155566147" duration="856000" />
       <workItem from="1515206004107" duration="6125000" />
-      <workItem from="1516331719375" duration="15522000" />
+      <workItem from="1516331719375" duration="16055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23977000" />
+    <option name="totallyTimeSpent" value="24510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
