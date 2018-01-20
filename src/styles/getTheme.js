@@ -257,18 +257,11 @@ export default function getTheme(theme, ...more) {
             },
         }, theme.dialog)),
         checkbox: StyleSheet.create(merge({
-            container: {
-                flex: 1,
-                flexDirection: 'row',
-                alignItems: 'center',
+            checkedIcon:{
+              color:palette.primaryColor,
             },
-            icon: {
-                color: palette.primaryColor,
-            },
-            label: {
-                color: black,
-                marginLeft: 20,
-                flex: 1,
+            uncheckedIcon:{
+              color:palette.black
             },
         }, theme.checkbox)),
         divider: StyleSheet.create(merge({
