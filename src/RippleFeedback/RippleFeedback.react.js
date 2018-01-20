@@ -6,7 +6,10 @@ import {
     TouchableNativeFeedback,
     TouchableWithoutFeedback,
     TouchableOpacity,
+    TouchableHighlight,
 } from 'react-native';
+
+import Color from 'color';
 /* eslint-enable import/no-unresolved, import/extensions */
 
 const propTypes = {
@@ -16,10 +19,12 @@ const propTypes = {
     color: PropTypes.string,
     borderless: PropTypes.bool,
     children: PropTypes.node.isRequired,
+    underlayColor:PropTypes.object,//仅仅ios和android API<21有效
 };
 const defaultProps = {
     color: null,
     borderless: true,
+    underlayColor:Color('#000').alpha(0.2)
 };
 
 function isCompatible() {
@@ -44,9 +49,9 @@ class RippleFeedback extends PureComponent {
 
         if (!isCompatible()) {
             return (
-                <TouchableWithoutFeedback {...otherProps}>
-                    {children}
-                </TouchableWithoutFeedback>
+              <TouchableHighlight {...otherProps}>
+                {children}
+              </TouchableHighlight>
             );
         }
 
