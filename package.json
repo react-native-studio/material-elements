@@ -1,6 +1,6 @@
 {
   "name": "material-elements",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "一个基于react native的ui设计",
   "main": "./src/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/2534290808/material-elements.git"
+    "url": "git+https://github.com/react-native-studio/material-elements.git"
   },
   "keywords": [
     "react-native",
@@ -20,9 +20,9 @@
   "author": "lmy2534290808",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/2534290808/material-elements/issues"
+    "url": "https://github.com/react-native-studio/material-elements/issues"
   },
-  "homepage": "https://github.com/2534290808/material-elements#readme",
+  "homepage": "https://github.com/react-native-studio/material-elements#readme",
   "peerDependencies": {
     "react-native-vector-icons": "^4.0.0"
   },
