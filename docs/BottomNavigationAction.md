@@ -2,11 +2,10 @@
 
 ### Usage
 
-Check [this](https://github.com/xotahal/react-native-material-ui/blob/master/docs/BottomNavigation.md) for more infromation on the BottomNavigation component.
 
 ```js
 ...
-import { BottomNavigationAction } from '../react-native-material-ui';
+import { BottomNavigationAction } from 'material-elements';
 ...
 state = {
   navIndex: 0,

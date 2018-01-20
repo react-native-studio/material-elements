@@ -7,10 +7,10 @@
 
 ```js
 ...
-import { BottomNavigation } from 'react-native-material-ui';
+import { BottomNavigation } from 'material-elements';
 ...
 render() {
-    <BottomNavigation active={this.state.active} hidden={false} >
+    <BottomNavigation active={this.state.active} >
         <BottomNavigation.Action
             key="today"
             icon="today"
