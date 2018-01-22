@@ -57,7 +57,7 @@ class Card extends PureComponent {
 
         if (onPress) {
             return (
-                <RippleFeedback onPress={onPress} pointerEvents="box-only">
+                <RippleFeedback useTouchableHighlight={false} onPress={onPress} pointerEvents="box-only">
                     {content}
                 </RippleFeedback>
             );

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea861f9b-f89e-46ce-894f-a863d069c3e5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Card/Card.react.js" afterPath="$PROJECT_DIR$/src/Card/Card.react.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js" afterPath="$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -110,14 +111,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RippleFeedback.react.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RippleFeedback.react.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="51" column="39" lean-forward="false" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+            <state relative-caret-position="317">
+              <caret line="53" column="49" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="49" />
               <folding>
                 <element signature="e#61#106#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Card.react.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Card/Card.react.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="59" column="60" lean-forward="false" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,16 +171,6 @@
                 </folding>
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -219,6 +220,7 @@
         <option value="$PROJECT_DIR$/src/styles/themes/light.js" />
         <option value="$PROJECT_DIR$/docs/BottomSheet.md" />
         <option value="$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js" />
+        <option value="$PROJECT_DIR$/src/Card/Card.react.js" />
       </list>
     </option>
   </component>
@@ -285,20 +287,13 @@
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Card" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="RippleFeedback" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -418,18 +413,18 @@
       <workItem from="1515155566147" duration="856000" />
       <workItem from="1515206004107" duration="6125000" />
       <workItem from="1516331719375" duration="17661000" />
-      <workItem from="1516532038628" duration="4119000" />
+      <workItem from="1516532038628" duration="5844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30235000" />
+    <option name="totallyTimeSpent" value="31960000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32064834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20930232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -463,6 +458,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -488,6 +484,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -495,6 +492,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -678,19 +676,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Card/Card.react.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="19" column="2" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/Card.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="101">
             <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+            <folding>
+              <marker date="1516355648000" expanded="true" signature="140:227" ph="{...}" />
+              <marker date="1516355648000" expanded="true" signature="146:225" ph="&lt;View/&gt;" />
+              <marker date="1516355648000" expanded="true" signature="159:213" ph="&lt;Card/&gt;" />
+              <marker date="1516355648000" expanded="true" signature="264:454" ph="{&quot;onPress&quot;: PropTypes.func...}" />
+              <marker date="1516355648000" expanded="true" signature="354:398" ph="{&quot;container&quot;: ViewPropTypes.style...}" />
+              <marker date="1516355648000" expanded="true" signature="403:424" ph="/** 是否水平铺满 ...*/" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -992,11 +990,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="51" column="39" lean-forward="false" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+        <state relative-caret-position="317">
+          <caret line="53" column="49" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="49" />
           <folding>
             <element signature="e#61#106#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Card/Card.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="59" column="60" lean-forward="false" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
