@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved, import/extensions */
-import { StyleSheet } from 'react-native';
+import { StyleSheet,Dimensions } from 'react-native';
 /* eslint-enable import/no-unresolved, import/extensions */
 
 import Color from 'color';
@@ -20,6 +20,7 @@ function darkenOrLighten(color, ratio = 0.15) {
     return c.luminosity() > 0.5 ? c.darken(ratio) : c.lighten(ratio);
 }
 
+const {width,height}=Dimensions.get('window');
 export default function getTheme(theme, ...more) {
     theme = merge(lightTheme, theme, ...more);
 
@@ -495,29 +496,47 @@ export default function getTheme(theme, ...more) {
         }, theme.toolbar)),
         bottomSheet:StyleSheet.create(merge({
           container:{
-            flex:1,
             ...getPlatformElevation(16),
             backgroundColor:Color('#000').alpha(0.2),
-            top:0,
-            bottom:0,
-            left:0,
-            right:0,
-            position:'absolute'
+            marginHorizontal:0,
+            marginVertical:0,
           },
-          content:{
+          listContent:{
             position:'absolute',
             left:0,
             right:0,
             bottom:0,
             paddingVertical:8,
-            backgroundColor:'#fff'
+            backgroundColor:'#fff',
+            maxHeight:height*16/25,
+
           },
-          titleContainer:{
+          gridContent:{
+            backgroundColor:'#fff',
+            paddingVertical:24,
+            paddingHorizontal:24,
+            position:'absolute',
+            left:0,
+            right:0,
+            bottom:0,
+            flexDirection:'row',
+            flexWrap:'wrap',
+            maxHeight:height*16/25,
+          },
+          listTitleContainer:{
             paddingHorizontal:16,
             height:56,
-            flexDirection:'row',
-            alignItems:'center',
             justifyContent:'flex-start',
+            alignItems:'center',
+            flexDirection:'row',
+            backgroundColor:'#fff'
+          },
+          gridTitleContainer:{
+            width:width-48,
+            height:56,
+            justifyContent:'flex-start',
+            alignItems:'center',
+            flexDirection:'row',
             backgroundColor:'#fff',
           },
           title:{
@@ -527,7 +546,7 @@ export default function getTheme(theme, ...more) {
             //Roboto Regular 16sp，＃000 54％
           }
         },theme.bottomSheet)),
-        bottomSheetListItem:StyleSheet.create({
+        bottomSheetListItem:StyleSheet.create(merge({
           container:{
             paddingHorizontal:16,
             flexDirection:'row',
@@ -543,9 +562,27 @@ export default function getTheme(theme, ...more) {
             color:Color('#000').alpha(0.87),
           },
           icon:{
-            marginRight:16
+            marginRight:16,
           }
-        }),
+        },theme.bottomSheetListItem)),
+        bottomSheetGridItem:StyleSheet.create(merge({
+          container:{
+            alignItems:'center',
+            justifyContent:'center',
+            backgroundColor:'#fff',
+            flexDirection:'column',
+            width:48,
+            marginTop:24,
+          },
+          text:{
+            marginTop:8,//Roboto-Regular 16sp，＃000 87％
+            fontFamily:'Roboto-Regular',
+            fontSize:12,
+            color:Color('#000').alpha(0.87),
+            height:16,
+          }
+
+        },theme.bottomSheetGridItem)),
         toolbarSearchActive: StyleSheet.create(merge({
             container: {
                 backgroundColor: palette.canvasColor,
