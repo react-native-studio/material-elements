@@ -33,8 +33,5 @@ export default {
         // clockCircleColor: faintBlack,
         // shadowColor: fullBlack,
 
-    },
-    avatar:{
-        content:{color:blue500}
-    },
+    }
 };

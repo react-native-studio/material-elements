@@ -541,7 +541,7 @@ export default function getTheme(theme, ...more) {
           },
           title:{
             fontFamily:'Roboto-Regular',
-            fontSize:16,
+            fontSize:18,
             color:Color('#000').alpha(0.54),
             //Roboto Regular 16sp，＃000 54％
           }
@@ -571,7 +571,7 @@ export default function getTheme(theme, ...more) {
             justifyContent:'center',
             backgroundColor:'#fff',
             flexDirection:'column',
-            width:48,
+            width:56,
             marginTop:24,
           },
           text:{
