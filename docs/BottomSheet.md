@@ -1,3 +1,7 @@
+
+<img src="https://github.com/react-native-studio/material-elements/blob/master/Images/BottomSheet/1.png" width="280">
+<img src="https://github.com/react-native-studio/material-elements/blob/master/Images/BottomSheet/2.png" width="280">
+
 # BottomSheet
 
 ### 使用
