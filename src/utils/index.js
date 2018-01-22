@@ -7,8 +7,12 @@ import {
 
 const ViewPropTypes = RNViewPropTypes || View.propTypes;
 const BackAndroid = BackHandler || DeprecatedBackAndroid;
+const MotionCurve=require('./MotionCurve');
+const MotionDuration=require('./MotionDuration');
 
 export {
     ViewPropTypes,
     BackAndroid,
+    MotionCurve,
+    MotionDuration,
 };
