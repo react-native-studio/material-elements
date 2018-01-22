@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea861f9b-f89e-46ce-894f-a863d069c3e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/BottomSheet.md" afterPath="$PROJECT_DIR$/docs/BottomSheet.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js" afterPath="$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="BottomSheet.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BottomSheet.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/BottomSheet.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -111,6 +110,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="RippleFeedback.react.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="51" column="39" lean-forward="false" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+              <folding>
+                <element signature="e#61#106#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="light.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/themes/light.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -149,16 +160,6 @@
                 </folding>
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="isFunction.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/isFunction.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -217,6 +218,7 @@
         <option value="$PROJECT_DIR$/src/BottomSheet/BottomSheet.js" />
         <option value="$PROJECT_DIR$/src/styles/themes/light.js" />
         <option value="$PROJECT_DIR$/docs/BottomSheet.md" />
+        <option value="$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js" />
       </list>
     </option>
   </component>
@@ -278,6 +280,12 @@
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="RippleFeedback" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
@@ -410,18 +418,18 @@
       <workItem from="1515155566147" duration="856000" />
       <workItem from="1515206004107" duration="6125000" />
       <workItem from="1516331719375" duration="17661000" />
-      <workItem from="1516532038628" duration="3697000" />
+      <workItem from="1516532038628" duration="4119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29813000" />
+    <option name="totallyTimeSpent" value="30235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04721635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32064834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -799,14 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/MotionCurve.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -987,6 +987,16 @@
             </folding>
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="51" column="39" lean-forward="false" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+          <folding>
+            <element signature="e#61#106#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

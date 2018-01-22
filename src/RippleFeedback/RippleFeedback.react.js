@@ -49,9 +49,9 @@ class RippleFeedback extends PureComponent {
 
         if (!isCompatible()) {
             return (
-              <TouchableHighlight {...otherProps}>
+              <TouchableWithoutFeedback {...otherProps}>
                 {children}
-              </TouchableHighlight>
+              </TouchableWithoutFeedback>
             );
         }
 
