@@ -12,7 +12,6 @@ const defaultProps = {
     timeout: 2750,
     bottomNavigation: false,
     style: {},
-    button: {},
 };
 
 const STATES={
@@ -55,18 +54,13 @@ class Snackbar extends PureComponent {
          */
         actionText: PropTypes.string,
         /**
-         * Take a look at the Button component for more details.
-         */
-        button: PropTypes.shape({
-            ...Button.propTypes,
-            text: PropTypes.string,
-        }),
-        /**
          * Inline style of snackbar
          */
         style: PropTypes.shape({
             container: ViewPropTypes.style,
             message: ViewPropTypes.style,
+            actionContainer:ViewPropTypes.style,
+            actionText:ViewPropTypes.style,
         }),
     }
     constructor(props) {
@@ -106,23 +100,31 @@ class Snackbar extends PureComponent {
     }
     //得到styles
     getStyles=()=>{
-            const { snackbar } = getTheme();
+      const { snackbar } = getTheme();
 
-            const {style}=this.props;
-            const local = {};
-            return {
-                container: [
-                    snackbar.container,
-                    local.container,
-                    //style.container,
-                ],
-                message: [
-                    snackbar.message,
-                    local.message,
-                    //style.message,
-                ],
-            };
-        }
+      const {style}=this.props;
+      const local = {};
+      return {
+        container: [
+          snackbar.container,
+          local.container,
+          style.container,
+        ],
+        message: [
+          snackbar.message,
+          local.message,
+          style.message,
+        ],
+        actionContainer:[
+          snackbar.actionContainer,
+          style.actionContainer,
+        ],
+        actionText:[
+          snackbar.actionText,
+          style.actionText,
+        ]
+      };
+    }
     setHideTimer() {
         const { timeout, onRequestClose } = this.props;
         if (timeout > 0) {
@@ -184,39 +186,23 @@ class Snackbar extends PureComponent {
     }
 
     renderAction = () => {
-        const { snackbar } = getTheme(this.props.theme);
-        const { button, actionText, onActionPress } = this.props;
-        const styles = {};
+        const {actionText, onActionPress } = this.props;
 
-        if (actionText && (typeof onActionPress === 'function')) {
-            if (button !== 'undefined' && 'style' in button) {
-                if ('container' in button.style) {
-                    styles.container = {
-                        ...StyleSheet.flatten(snackbar.actionContainer),
-                        ...button.style.container,
-                    };
-                }
-                if ('text' in button.style) {
-                    styles.text = {
-                        ...StyleSheet.flatten(snackbar.actionText),
-                        ...button.style.text,
-                    };
-                }
-            } else {
-                styles.container = snackbar.actionContainer;
-                styles.text = snackbar.actionText;
-            }
+        const styles=this.getStyles();
+
+        if(!actionText)return null;
 
             return (
                 <Button
-                    {...button}
-                    style={styles}
+                    style={{
+                      container:StyleSheet.flatten(styles.actionContainer),
+                      text:StyleSheet.flatten(styles.actionText)
+                    }}
                     text={actionText}
                     onPress={onActionPress}
                 />
             );
-        }
-        return null;
+
     }
 
     render() {
