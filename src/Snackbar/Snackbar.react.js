@@ -14,6 +14,12 @@ const defaultProps = {
     style: {},
     button: {},
 };
+
+const STATES={
+  HIDDEN:'HIDDEN',
+  SHOWN:'SHOWN',
+  ANIMATING:'ANIMATING',
+}
 /**
 * Component for snackbars
 * https://material.io/guidelines/components/snackbars-toasts.html
@@ -65,10 +71,13 @@ class Snackbar extends PureComponent {
     }
     constructor(props) {
         super(props);
-        const styles = this._getStyles();
+        const styles = this.getStyles();
+
+        const moveAnimatedValue=props.visible?0:StyleSheet.flatten(styles.container).height;
         this.state = {
             styles,
-            moveAnimated: new Animated.Value(StyleSheet.flatten(styles.container).height),
+            moveAnimated: new Animated.Value(moveAnimatedValue),
+            snackbarState:props.visible?STATES.SHOWN:STATES.HIDDEN,
         };
     }
 
@@ -76,7 +85,7 @@ class Snackbar extends PureComponent {
         const { style, visible, bottomNavigation } = this.props;
 
         if (nextProps.style !== style) {
-            this.setState({ styles: this._getStyles() });
+            this.setState({ styles: this.getStyles() });
         }
 
         if (nextProps.visible !== visible) {
@@ -96,19 +105,21 @@ class Snackbar extends PureComponent {
         clearTimeout(this.hideTimer);
     }
     //得到styles
-    _getStyles=()=>{
-            const { snackbar } = getTheme(this.props.theme);
+    getStyles=()=>{
+            const { snackbar } = getTheme();
+
+            const {style}=this.props;
             const local = {};
             return {
                 container: [
                     snackbar.container,
                     local.container,
-                    this.props.style.container,
+                    //style.container,
                 ],
                 message: [
                     snackbar.message,
                     local.message,
-                    this.props.style.message,
+                    //style.message,
                 ],
             };
         }
@@ -127,22 +138,34 @@ class Snackbar extends PureComponent {
             // TODO: Get bottom navigation height from context.
             toValue = -56;
         }
+        const {snackbarState}=this.state;
+        if(snackbarState===STATES.SHOWN){
+          return;
+        }
         Animated.timing(this.state.moveAnimated, {
             toValue,
             duration: 225,
             easing: Easing.bezier(0.0, 0.0, 0.2, 1),
             useNativeDriver: Platform.OS === 'android',
-        }).start();
+        }).start((finished)=>{
+          finished && this.setState({snackbarState:STATES.SHOWN})
+        });
     }
 
     hide = () => {
-        const { moveAnimated, styles } = this.state;
+        const { moveAnimated, styles,snackbarState } = this.state;
+
+        if(snackbarState===STATES.HIDDEN){
+          return ;
+        }
         Animated.timing(moveAnimated, {
             toValue: (StyleSheet.flatten(styles.container).height),
             duration: 195,
             easing: Easing.bezier(0.4, 0.0, 1, 1),
             useNativeDriver: Platform.OS === 'android',
-        }).start();
+        }).start((finished)=>{
+          finished && this.setState({snackbarState:STATES.HIDDEN})
+        });
     }
 
     move = (bottomNavigation) => {
@@ -198,7 +221,8 @@ class Snackbar extends PureComponent {
 
     render() {
         const { message } = this.props;
-        const { styles, moveAnimated } = this.state;
+        const {moveAnimated,styles } = this.state;
+
 
         return (
             <Animated.View

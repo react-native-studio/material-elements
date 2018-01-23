@@ -430,7 +430,7 @@ export default function getTheme(theme, ...more) {
                 alignItems: 'center',
                 backgroundColor: snackbarColor,
                 paddingHorizontal: 24,
-                ...getPlatformElevation(4),
+                ...getPlatformElevation(6),
                 zIndex: 4,
                 justifyContent:'space-between',
                 position:'absolute',
