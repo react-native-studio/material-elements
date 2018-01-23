@@ -39,4 +39,4 @@ const MotionCurve={
   accelerationCurve,
   sharpCurve,
 }
-export default MotionCurve;
+module.exports=MotionCurve;

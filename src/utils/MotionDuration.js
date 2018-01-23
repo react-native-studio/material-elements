@@ -11,4 +11,4 @@ const MotionDuration={
   enteringDuration,
   leavingDuration,
 }
-export default MotionDuration;
+module.exports= MotionDuration;
