@@ -432,13 +432,17 @@ export default function getTheme(theme, ...more) {
                 paddingHorizontal: 24,
                 ...getPlatformElevation(4),
                 zIndex: 4,
+                justifyContent:'space-between',
+                position:'absolute',
+                left:0,right:0,bottom:0
             },
             message: {
-                flex: 1,
+                //height:spacing.snackbarHeight-28,
                 marginVertical: 14,
                 color: white,
                 ...typography.body2,
                 lineHeight: 14,
+                textAlign:'center'
             },
             actionContainer: {
                 height: 14,
