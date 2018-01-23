@@ -1,22 +1,48 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableHighlight ,View} from 'react-native';
-import Ripple from '../Ripple';
+import { Text, TouchableHighlight ,View} from 'react-native';
 
 import PropTypes from 'prop-types';
 import getTheme from '../styles/getTheme';
 
 import Icon from '../Icon'
+import { ViewPropTypes } from '../utils/index'
 
 class MenuItem extends React.PureComponent{
 
   static propTypes={
+    /**
+     * item是否可用
+     */
     disabled: PropTypes.bool,
+    /**
+     * disabled为true时text的颜色
+     */
     disabledTextColor: PropTypes.string,
+    /**
+     * item 按下时触发
+     */
     onPress: PropTypes.func,
+    /**
+     * item按下时的颜色，
+     */
     underlayColor: TouchableHighlight.propTypes.underlayColor,
+    /**
+     * item中的text
+     */
     text:PropTypes.string,
+    /**
+     * item中的icon
+     */
     icon:PropTypes.shape({
       ...Icon.propTypes
+    }),
+    /**
+     * 自定义的style
+     */
+    style:PropTypes.shape({
+      container:ViewPropTypes.style,
+      text:Text.propTypes.style,
+      icon:PropTypes.object,
     })
   }
 

@@ -31,8 +31,20 @@ const defaultProps={
 }
 class Menu extends React.Component {
   static propTypes = {
+    /**
+     * menu的button，点击button可弹出menu
+     */
     button: PropTypes.node.isRequired,
+    /**
+     *应传入MenuItem 或 MenuDivider组件
+     */
     children: PropTypes.node.isRequired,
+    /**
+     * 用户自定义的style
+     */
+    style:PropTypes.shape({
+      container:ViewPropTypes.style
+    })
   };
 
   state = {
