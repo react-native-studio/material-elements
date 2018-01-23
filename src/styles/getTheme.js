@@ -602,6 +602,33 @@ export default function getTheme(theme, ...more) {
                 color: palette.secondaryTextColor,
             },
         }, theme.toolbarSearchActive)),
+        menu:StyleSheet.create(merge({
+          container:{
+            position: 'absolute',
+            backgroundColor: '#fff',
+            paddingVertical: 8,
+            ...getPlatformElevation(8),
+          }
+        },theme.menu)),
+        menuItem:StyleSheet.create(merge({
+          container:{
+            height: 48,
+            justifyContent: 'flex-start',
+            maxWidth: 248,
+            minWidth: 124,
+            flexDirection:'row',
+            alignItems:'center'
+          },
+          text:{
+              fontSize: 16,
+              //fontWeight: '400',
+              paddingHorizontal: 16,
+              fontFamily:'Roboto-Regular'
+          },
+          icon:{
+            marginLeft:16
+          }
+        },theme.menuItem)),
         simpleToolbar: StyleSheet.create(merge({
             container: {
                 backgroundColor: palette.primaryColor,
