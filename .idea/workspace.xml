@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea861f9b-f89e-46ce-894f-a863d069c3e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Toast/Toast.js" afterPath="$PROJECT_DIR$/src/Toast/Toast.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/getTheme.js" afterPath="$PROJECT_DIR$/src/styles/getTheme.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/spacing.js" afterPath="$PROJECT_DIR$/src/styles/spacing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Toast.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -59,12 +56,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="light.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="light.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/themes/light.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Toast.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/Toast.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="462">
+                <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+                <folding>
+                  <marker date="1516778795000" expanded="true" signature="88:147" ph="{...}" />
+                  <marker date="1516778795000" expanded="true" signature="157:245" ph="{...}" />
+                  <marker date="1516778795000" expanded="true" signature="180:237" ph="&lt;View/&gt;" />
+                </folding>
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -141,6 +155,7 @@
         <option value="$PROJECT_DIR$/src/Ripple/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/Toast/Toast.js" />
+        <option value="$PROJECT_DIR$/docs/Toast.md" />
       </list>
     </option>
   </component>
@@ -191,26 +206,7 @@
             <path>
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Toast" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -332,12 +328,12 @@
       <workItem from="1516331719375" duration="17661000" />
       <workItem from="1516532038628" duration="6383000" />
       <workItem from="1516614937526" duration="35000" />
-      <workItem from="1516688971954" duration="9028000" />
+      <workItem from="1516688971954" duration="9294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41562000" />
+    <option name="totallyTimeSpent" value="41828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -373,16 +369,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/IconToggle.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="269">
-            <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Icon/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="699">
@@ -875,6 +861,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Toast.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="462">
+            <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            <folding>
+              <marker date="1516778795000" expanded="true" signature="88:147" ph="{...}" />
+              <marker date="1516778795000" expanded="true" signature="157:245" ph="{...}" />
+              <marker date="1516778795000" expanded="true" signature="180:237" ph="&lt;View/&gt;" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
