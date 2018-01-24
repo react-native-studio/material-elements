@@ -26,5 +26,6 @@ export { default as Snackbar } from './Snackbar';
 export {default as Ripple} from './Ripple';
 export {default as TextInput} from './TextInput';
 export {default as SimpleToolbar} from './SimpleToolbar';
-export {default as Menu} from './Menu';
 export {default as BottomSheet} from './BottomSheet';
+export {default as Menu} from './Menu';
+export {default as Toast} from './Toast';
