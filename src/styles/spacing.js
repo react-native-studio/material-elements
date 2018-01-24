@@ -5,5 +5,5 @@ export default {
     avatarSize: 40,
     snackbarHeight: 48,
     badgeSize:24,
-    toastHeight:42,
+    toastHeight:45,
 };

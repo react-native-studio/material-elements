@@ -1,27 +1,48 @@
 import React,{Component} from 'react';
-import {StyleSheet,View,Text} from 'react-native';
+import {StyleSheet,View,Text,Dimensions} from 'react-native';
 import PropTypes from 'prop-types';
 import getTheme from '../styles/getTheme';
 import * as Animatable from 'react-native-animatable';
+import { ViewPropTypes } from '../utils/index';
+
 
 const defaultProps={
   style:{}
 }
+
+const DURATION={
+  LONG:3500,
+  SHORT:2100,
+}
+const POSITION={
+
+}
 class Toast extends React.PureComponent{
+
+  static propTypes={
+    /**
+     * 自定义style
+     */
+    style:PropTypes.shape({
+      container:ViewPropTypes.style,
+      textContainer:ViewPropTypes.style,
+      text:Text.propTypes.style,
+    })
+  }
 
   state={
     visible:false
   }
 
-  show=(timeout)=>{
+  show=(text,timeout)=>{
 
     const {visible}=this.state;
 
-    const time=timeout || 2000;
+    const time=timeout || DURATION.SHORT;
 
-    if(visible)return;
+    if(visible || !text)return;
 
-    this.setState({visible:true},()=>{
+    this.setState({visible:true,text},()=>{
 
       setTimeout(()=>{
         this.hide();
@@ -58,7 +79,7 @@ class Toast extends React.PureComponent{
 
      if(!visible)return;
 
-    this.toast && this.toast.fadeOut(375).then(()=>{
+    this.toast && this.toast.fadeOut(1000).then(()=>{
       this.setState({
         visible:false
       })
@@ -69,12 +90,16 @@ class Toast extends React.PureComponent{
 
     const styles=this.getStyles();
 
-    const {text}=this.props;
-
-    const {visible}=this.state;
+    const {visible,text}=this.state;
 
     return(visible?
-        <Animatable.View ref={ref=>this.toast=ref} animation="fadeIn" pointerEvents="none" style={styles.container}>
+        <Animatable.View
+          useNativeDriver
+          duration={400}
+          ref={ref=>this.toast=ref}
+          animation="fadeIn"
+          pointerEvents="none"
+          style={styles.container}>
           <View style={{flex:1}}/>
           <View style={styles.textContainer}>
             <Text  style={styles.text}>{text}</Text>
@@ -84,5 +109,7 @@ class Toast extends React.PureComponent{
     )
   }
 }
+Toast.LONG=DURATION.LONG;
+Toast.SHORT=DURATION.SHORT;
 Toast.defaultProps=defaultProps;
 export default Toast;

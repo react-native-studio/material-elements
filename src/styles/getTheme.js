@@ -460,7 +460,7 @@ export default function getTheme(theme, ...more) {
             justifyContent:'center',
             alignItems:'center',
             position:'absolute',
-            bottom:54
+            bottom:63
           },
           textContainer:{
             flexDirection: 'row',
