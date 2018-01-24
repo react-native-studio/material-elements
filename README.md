@@ -40,4 +40,5 @@ Roboto字体获取方式：./node_modules/material-elements/roboto  <br/>
 - [SimpleToolbar](https://github.com/react-native-studio/material-elements/blob/master/docs/SimpleToolbar.md)
 - [BottomSheet](https://github.com/react-native-studio/material-elements/blob/master/docs/BottomSheet.md)
 - [Menu](https://github.com/react-native-studio/material-elements/blob/master/docs/Menu.md)
+- [Toast](https://github.com/react-native-studio/material-elements/blob/master/docs/Toast.md)
 #### 后续将完善文档，丰富material-elements组件库
