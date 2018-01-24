@@ -7,7 +7,7 @@ import merge from 'lodash/merge';
 
 import { fontWeight } from './typography';
 import {
-    black, grey100, grey500, white, transparent, snackbarColor,
+    black, grey100, grey500, white, transparent, snackbarColor,toastColor,
 } from './colors';
 
 import lightTheme from './themes/light';
@@ -440,9 +440,9 @@ export default function getTheme(theme, ...more) {
                 //height:spacing.snackbarHeight-28,
                 marginVertical: 14,
                 color: white,
-                ...typography.body2,
-                lineHeight: 14,
-                textAlign:'center'
+                fontFamily:'Roboto-Regular',
+                textAlign:'center',
+                fontSize:14
             },
             actionContainer: {
                 height: 14,
@@ -450,8 +450,36 @@ export default function getTheme(theme, ...more) {
             },
             actionText: {
                 color: palette.primaryColor,
+                fontFamily:'Roboto-Medium',
+                fontSize:14,
             },
         }, theme.snackbar)),
+        toast:StyleSheet.create(merge({
+          container:{
+            flexDirection:'row',
+            justifyContent:'center',
+            alignItems:'center',
+            position:'absolute',
+            bottom:54
+          },
+          textContainer:{
+            flexDirection: 'row',
+            height: spacing.toastHeight,
+            alignItems: 'center',
+            backgroundColor: toastColor,
+            paddingHorizontal: 24,
+            //...getPlatformElevation(6),
+            zIndex: 6,
+            justifyContent:'center',
+            borderRadius:21,
+          },
+          text:{
+            color: 'white',
+            fontFamily:'Roboto-Regular',
+            textAlign:'center',
+            fontSize:14
+          }
+        }, theme.toast)),
         // https://material.google.com/components/subheaders.html#
         subheader: StyleSheet.create(merge({
             container: {

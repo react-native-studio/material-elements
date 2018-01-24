@@ -277,3 +277,4 @@ export const transparent = 'transparent';
 
 // https://material.io/guidelines/components/snackbars-toasts.html#snackbars-toasts-specs
 export const snackbarColor = '#323232';
+export const toastColor="#323232";
