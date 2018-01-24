@@ -471,7 +471,7 @@ export default function getTheme(theme, ...more) {
             //...getPlatformElevation(6),
             zIndex: 6,
             justifyContent:'center',
-            borderRadius:21,
+            borderRadius:22,
           },
           text:{
             color: 'white',
