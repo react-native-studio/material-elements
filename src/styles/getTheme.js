@@ -661,6 +661,51 @@ export default function getTheme(theme, ...more) {
             marginLeft:16
           }
         },theme.menuItem)),
+        textField:StyleSheet.create({
+          icon:{
+            marginBottom:16,
+            marginHorizontal:16,
+          },
+          errorMessage:{
+            color:'red',
+            fontSize:12,
+          }
+        },theme.textField),
+        textFieldBase:StyleSheet.create(merge({
+          container:{
+            height: 72,
+            paddingTop: 30,
+            paddingBottom: 7,
+            position: 'relative',
+          },
+          textInput:{
+            fontSize: 16,
+            height: 34,
+            lineHeight: 34
+          }
+        },theme.textFieldBase)),
+        textFieldLabel:StyleSheet.create(merge({
+          container:{
+            position: 'absolute',
+            left: 0,
+            fontSize:16,
+            fontFamily:'Roboto-Regular',
+            top:34
+          },
+          focusText:{
+            color:palette.primaryColor
+          }
+        },theme.textFieldLabel)),
+        textFieldUnderline:StyleSheet.create(merge({
+          container:{
+            height: 1,
+            alignItems: 'center',
+          },
+          underline:{
+            height:2,
+            backgroundColor:palette.primaryColor,
+          }
+        },theme.textFieldUnderline)),
         simpleToolbar: StyleSheet.create(merge({
             container: {
                 backgroundColor: palette.primaryColor,
