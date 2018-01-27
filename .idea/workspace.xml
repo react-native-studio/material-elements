@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea861f9b-f89e-46ce-894f-a863d069c3e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TextField/FloatingLabel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TextField/TextField.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TextField/TextFieldBase.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TextField/Underline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TextField/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TextInput/TextField.js" afterPath="$PROJECT_DIR$/src/TextInput/TextField.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/getTheme.js" afterPath="$PROJECT_DIR$/src/styles/getTheme.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,60 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TextField.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TextInput/TextField.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-              <folding>
-                <marker date="1517036962000" expanded="false" signature="15:223" ph="..." />
-                <marker date="1517036962000" expanded="true" signature="274:2895" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="322:428" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="368:423" ph="{&quot;text&quot;: props.value...}" />
-                <marker date="1517036962000" expanded="true" signature="439:473" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="483:516" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="531:569" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="616:847" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="661:843" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="859:2893" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="1204:2882" ph="&lt;View/&gt;" />
-                <marker date="1517036962000" expanded="true" signature="1302:2306" ph="&lt;TextInput/&gt;" />
-                <marker date="1517036962000" expanded="true" signature="1330:1629" ph="[...]" />
-                <marker date="1517036962000" expanded="true" signature="1381:1423" ph="{&quot;color&quot;: textColor...}" />
-                <marker date="1517036962000" expanded="true" signature="1468:1515" ph="{&quot;color&quot;: textFocusColor...}" />
-                <marker date="1517036962000" expanded="true" signature="1565:1611" ph="{&quot;color&quot;: textBlurColor...}" />
-                <marker date="1517036962000" expanded="true" signature="1656:1845" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="1871:2085" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="2121:2217" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="2315:2470" ph="&lt;Underline/&gt;" />
-                <marker date="1517036962000" expanded="true" signature="2479:2868" ph="&lt;FloatingLabel/&gt;" />
-                <marker date="1517036962000" expanded="true" signature="2919:3416" ph="{&quot;duration&quot;: PropTypes.number...}" />
-                <marker date="1517036962000" expanded="true" signature="3444:3606" ph="{&quot;labelColor&quot;: '##9E9E9E'...}" />
-                <marker date="1517036962000" expanded="true" signature="3642:4024" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="3655:3743" ph="{&quot;position&quot;: 'relative'...}" />
-                <marker date="1517036962000" expanded="true" signature="3761:3849" ph="{&quot;position&quot;: 'relative'...}" />
-                <marker date="1517036962000" expanded="true" signature="3864:3922" ph="{...}" />
-                <marker date="1517036962000" expanded="true" signature="3942:4022" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Underline.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TextInput/Underline.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-132">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="44">
+              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -84,16 +29,6 @@
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Indicator/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FloatingLabel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TextInput/FloatingLabel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -235,11 +170,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TextField/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="673">
+              <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -283,10 +228,10 @@
         <option value="$PROJECT_DIR$/src/Ripple/index.js" />
         <option value="$PROJECT_DIR$/src/Toast/Toast.js" />
         <option value="$PROJECT_DIR$/docs/Toast.md" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/styles/getTheme.js" />
         <option value="$PROJECT_DIR$/src/TextInput/TextField.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -338,12 +283,6 @@
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="TextField" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -470,15 +409,16 @@
       <workItem from="1516870777293" duration="430000" />
       <workItem from="1516975843419" duration="595000" />
       <workItem from="1517031352718" duration="90000" />
-      <workItem from="1517036929437" duration="718000" />
+      <workItem from="1517036929437" duration="809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45048000" />
+    <option name="totallyTimeSpent" value="45139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26286116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1050,14 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TextInput/FloatingLabel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1070,36 +1002,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <marker date="1517036962000" expanded="false" signature="15:223" ph="..." />
-            <marker date="1517036962000" expanded="true" signature="274:2895" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="322:428" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="368:423" ph="{&quot;text&quot;: props.value...}" />
-            <marker date="1517036962000" expanded="true" signature="439:473" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="483:516" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="531:569" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="616:847" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="661:843" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="859:2893" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="1204:2882" ph="&lt;View/&gt;" />
-            <marker date="1517036962000" expanded="true" signature="1302:2306" ph="&lt;TextInput/&gt;" />
-            <marker date="1517036962000" expanded="true" signature="1330:1629" ph="[...]" />
-            <marker date="1517036962000" expanded="true" signature="1381:1423" ph="{&quot;color&quot;: textColor...}" />
-            <marker date="1517036962000" expanded="true" signature="1468:1515" ph="{&quot;color&quot;: textFocusColor...}" />
-            <marker date="1517036962000" expanded="true" signature="1565:1611" ph="{&quot;color&quot;: textBlurColor...}" />
-            <marker date="1517036962000" expanded="true" signature="1656:1845" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="1871:2085" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="2121:2217" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="2315:2470" ph="&lt;Underline/&gt;" />
-            <marker date="1517036962000" expanded="true" signature="2479:2868" ph="&lt;FloatingLabel/&gt;" />
-            <marker date="1517036962000" expanded="true" signature="2919:3416" ph="{&quot;duration&quot;: PropTypes.number...}" />
-            <marker date="1517036962000" expanded="true" signature="3444:3606" ph="{&quot;labelColor&quot;: '##9E9E9E'...}" />
-            <marker date="1517036962000" expanded="true" signature="3642:4024" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="3655:3743" ph="{&quot;position&quot;: 'relative'...}" />
-            <marker date="1517036962000" expanded="true" signature="3761:3849" ph="{&quot;position&quot;: 'relative'...}" />
-            <marker date="1517036962000" expanded="true" signature="3864:3922" ph="{...}" />
-            <marker date="1517036962000" expanded="true" signature="3942:4022" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,6 +1022,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/TextField/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="673">
@@ -1127,10 +1038,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TextField/index.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="44">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
           <folding />
         </state>
       </provider>
