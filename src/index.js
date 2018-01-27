@@ -29,3 +29,4 @@ export {default as SimpleToolbar} from './SimpleToolbar';
 export {default as BottomSheet} from './BottomSheet';
 export {default as Menu} from './Menu';
 export {default as Toast} from './Toast';
+export {default as Indicator} from './Indicator'
