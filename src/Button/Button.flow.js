@@ -1,17 +1,15 @@
 /**
  * @flow
  */
-import React,{Component} from 'react';
-import {StyleSheet,View,Text} from 'react-native';
-import type {ButtonPropTypes} from '../TypeDifinition';
-import merge from 'lodash/merge';
-import getTheme from '../styles/getTheme';
-import light from '../styles/themes/light';
+import React, { PureComponent } from 'react'
+import { StyleSheet,View, Text } from 'react-native'
+import type { ButtonPropTypes } from '../TypeDifinition'
+import getTheme from '../styles/getTheme'
+import light from '../styles/themes/light'
 //$FlowFixMe,使用它可解决后缀名android/ios引入的错误
-import getPlatformElevation from '../styles/getPlatformElevation';
-import RippleFeedback from '../RippleFeedback';
+import getPlatformElevation from '../styles/getPlatformElevation'
+import RippleFeedback from '../RippleFeedback'
 import Icon from '../Icon/Icon.flow'
-
 
 const defaultProps = {
   icon: null,
@@ -23,58 +21,59 @@ const defaultProps = {
   raised: false,
   upperCase: true,
   style: {
-    container:{},
-    icon:{},
-    text:{},
+    container: {},
+    icon: {},
+    text: {},
   },
-  iconPosition:'left'
-};
-type ButtonState={
-  elevation:number,
+  iconPosition: 'left'
 }
-type StylesType={
-  container?:mixed,
-  icon?:mixed,
-  text?:mixed,
+type ButtonState = {
+  elevation: number,
 }
-function getStyles(props, state) {
-  let uiTheme=getTheme()
+type StylesType = {
+  container?: mixed,
+  icon?: mixed,
+  text?: mixed,
+}
+
+function getStyles (props, state) {
+  let uiTheme = getTheme()
   const {
     button,
     buttonFlat,
     buttonRaised,
     buttonDisabled,
     buttonRaisedDisabled,
-  } = uiTheme;
+  } = uiTheme
 
-  const { primary, accent, disabled, raised } = props;
-  const { palette } =light;
+  const {primary, accent, disabled, raised} = props
+  const {palette} = light
 
-  type containerType={
-    backgroundColor?:?string,
+  type containerType = {
+    backgroundColor?: ?string,
   }
-  type localType={
-    container:containerType,
-    icon?:mixed,
-    text?:mixed,
+  type localType = {
+    container: containerType,
+    icon?: mixed,
+    text?: mixed,
   }
-  let  local:localType = {
-    container:{}
-  };
+  let local: localType = {
+    container: {}
+  }
 
   if (!disabled) {
     if (primary && !raised) {
-      local.text = { color: palette.primaryColor };
+      local.text = {color: palette.primaryColor}
     } else if (accent && !raised) {
-      local.text = { color: palette.accentColor };
+      local.text = {color: palette.accentColor}
     }
 
     if (primary && raised) {
-      local.container.backgroundColor = palette.primaryColor;
-      local.text = { color: palette.canvasColor };
+      local.container.backgroundColor = palette.primaryColor
+      local.text = {color: palette.canvasColor}
     } else if (accent && raised) {
-      local.container.backgroundColor = palette.accentColor;
-      local.text = { color: palette.canvasColor };
+      local.container.backgroundColor = palette.accentColor
+      local.text = {color: palette.canvasColor}
     }
   }
 
@@ -82,7 +81,7 @@ function getStyles(props, state) {
     local.container = {
       ...local.container,
       ...getPlatformElevation(state.elevation),
-    };
+    }
   }
 
   return {
@@ -112,70 +111,71 @@ function getStyles(props, state) {
       local.icon,
       props.style.icon,
     ],
-  };
-}
-class Button extends Component<ButtonPropTypes,ButtonState>{
-  props:ButtonPropTypes
-  state:ButtonState={
-    elevation:2
   }
-  static defaultProps:typeof defaultProps=defaultProps
+}
+
+class Button extends PureComponent<ButtonPropTypes, ButtonState> {
+  props: ButtonPropTypes
+  state: ButtonState = {
+    elevation: 2
+  }
+  static defaultProps: typeof defaultProps = defaultProps
 
   onPress = () => {
-    const { text, onPress } = this.props;
+    const {text, onPress} = this.props
 
     if (onPress) {
-      onPress(text);
+      onPress(text)
     }
   }
   setElevation = () => {
     this.setState({
       elevation: 4,
-    });
-  };
+    })
+  }
 
   removeElevation = () => {
     this.setState({
       elevation: 2,
-    });
-  };
+    })
+  }
 
-  renderIcon = (styles:StylesType) => {
-    const { icon } = this.props;
-    const textFlatten = StyleSheet.flatten(styles.text);
+  renderIcon = (styles: StylesType) => {
+    const {icon} = this.props
+    const textFlatten = StyleSheet.flatten(styles.text)
 
     if (!icon) {
-      return null;
+      return null
     }
 
-    const {name,size,color,type}=icon;
+    const {name, size, color, type} = icon
 
-    const iconColor=color || textFlatten.color;
+    const iconColor = color || textFlatten.color
 
-    const iconSize=size ||24;
+    const iconSize = size || 24
 
     return (
       <Icon name={name} size={iconSize} type={type} color={iconColor} style={styles.icon}/>
-    );
+    )
   }
 
-  render() {
-    const { text, disabled, raised, upperCase, onLongPress,iconPosition } = this.props;
+  render () {
+    const {text, disabled, raised, upperCase, onLongPress, iconPosition} = this.props
 
-    const styles = getStyles(this.props, this.state);
+    const styles = getStyles(this.props, this.state)
 
     const content = (
       <View style={styles.container} pointerEvents="box-only">
-        {iconPosition==='left'&&this.renderIcon(styles)}
+        {iconPosition === 'left' && this.renderIcon(styles)}
         <Text style={styles.text}>
           {upperCase ? text.toUpperCase() : text}
         </Text>
-        {iconPosition==='right'&&this.renderIcon(styles)}
+        {iconPosition === 'right' && this.renderIcon(styles)}
       </View>
-    );
+    )
 
     if (disabled) {
-      return content;
+      return content
     }
 
     return (
@@ -188,7 +188,8 @@ class Button extends Component<ButtonPropTypes,ButtonState>{
       >
         {content}
       </RippleFeedback>
-    );
+    )
   }
 }
-export default Button;
+
+export default Button

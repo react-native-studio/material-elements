@@ -1,6 +1,9 @@
 /**
  * @flow
  */
+import React from 'react';
+import {Text,Image} from 'react-native';
+import { ViewPropTypes } from '../utils/index'
 export type IconPropTypes={
   name?:string,
   size?:number,
@@ -48,4 +51,58 @@ export type ButtonPropTypes={
   accent?:boolean,
   primary?:boolean,
   iconPosition:string,
+}
+type actions={
+  icon?:?IconPropTypes,
+  label?:string,
+  name?:string,
+}
+export type ActionButtonProps={
+  actions?: actions,
+  onPress?:()=>void,
+  onLongPress?:()=>void,
+  hidden?:boolean,
+  icon?:IconPropTypes,
+  transition: 'toolbar'|'speedDial',
+  rippleColor?: string,
+  style:{
+    container:mixed,
+    icon:mixed
+  },
+}
+export type RippleFeedbackProps={
+  color?:string,
+  borderless?:boolean,
+  children: React.Component<*>,
+  underlayColor:string,//仅仅ios和android API<21有效
+}
+export type AvatarProps={
+  /**
+   * 传入Image组件属性，avatar渲染Image
+   */
+  image:{
+    ...Image.propTypes
+  },
+  /**
+   * 传入Icon属性，avatar渲染icon
+   */
+  icon:IconPropTypes,
+  text:string,
+  /**
+   * 仅仅用于container尺寸: style: { width: size, height: size, borderRadius: size / 2 }
+   */
+  size:number,
+  /**
+   * avatar样式
+   */
+  style:{
+    container:ViewPropTypes.style,
+    text:Text.propTypes.style,
+  },
+}
+export type DividerProps={
+  inset?: boolean,
+  style: {
+    container?:ViewPropTypes.style
+  },
 }
