@@ -1,14 +1,13 @@
 /**
  * @flow
  */
-import React, { Component } from 'react'
-import { StyleSheet, View, Text } from 'react-native'
-import type { IconPropTypes } from '../TypeDifinition'
-import VectorIcon from 'react-native-vector-icons/MaterialIcons'
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
-import IoniconIcon from 'react-native-vector-icons/Ionicons'
-import MaterialCommunityIconsIcon from 'react-native-vector-icons/MaterialCommunityIcons'
-import getTheme from '../styles/getTheme'
+import React, { PureComponent } from 'react';
+import type { IconPropTypes } from '../TypeDifinition';
+import VectorIcon from 'react-native-vector-icons/MaterialIcons';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import IoniconIcon from 'react-native-vector-icons/Ionicons';
+import MaterialCommunityIconsIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import getTheme from '../styles/getTheme';
 
 const iconType = {
   MaterialIcons: 'MaterialIcons',
@@ -22,7 +21,7 @@ const defaultProps = {
   style: null,
   type: iconType.MaterialIcons
 }
-class Icon extends Component<IconPropTypes> {
+class Icon extends PureComponent<IconPropTypes> {
   props: IconPropTypes
   static iconType:typeof iconType
   static defaultProps: typeof defaultProps = defaultProps
