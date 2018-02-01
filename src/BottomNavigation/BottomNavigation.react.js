@@ -10,7 +10,7 @@ import getTheme from '../styles/getTheme'
 
 const propTypes = {
     /**
-    * The key of selected/active tab
+    * 活跃的tab的key
     */
     active: PropTypes.string,
     /**
@@ -18,7 +18,7 @@ const propTypes = {
     */
     children: PropTypes.node.isRequired,
     /**
-    * Wether or not the BottomNaviagtion should show
+    * 是否隐藏bottom navigation，只有hidden改变时有效
     */
     hidden: PropTypes.bool,
     /**

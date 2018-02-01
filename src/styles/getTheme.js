@@ -153,6 +153,7 @@ export default function getTheme(theme, ...more) {
             },
             icon: {
                 marginRight: 8,
+                marginLeft:8
             },
         }, theme.button)),
         buttonFlat: StyleSheet.create(merge({}, theme.buttonFlat)),

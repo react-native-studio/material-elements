@@ -19,14 +19,12 @@ const propTypes = {
     color: PropTypes.string,
     borderless: PropTypes.bool,
     children: PropTypes.node.isRequired,
-    underlayColor:PropTypes.object,//仅仅ios和android API<21有效,
-    useTouchableHighlight:PropTypes.bool,//是否使用TouchableHighlight，仅仅ios和android API<21有效
+    underlayColor:PropTypes.object,//仅仅ios和android API<21有效
 };
 const defaultProps = {
     color: null,
     borderless: true,
-    underlayColor:Color('#000').alpha(0.2),
-    useTouchableHighlight:true,
+    underlayColor:Color('#000').alpha(0.2)
 };
 
 function isCompatible() {
@@ -39,7 +37,7 @@ function isCompatible() {
 
 class RippleFeedback extends PureComponent {
     render() {
-        const {useTouchableHighlight, children, color, borderless, ...otherProps } = this.props;
+        const { children, color, borderless, ...otherProps } = this.props;
 
         if (Platform.OS === 'web') {
             return (
@@ -50,12 +48,10 @@ class RippleFeedback extends PureComponent {
         }
 
         if (!isCompatible()) {
-
-            const Touchable=useTouchableHighlight?TouchableHighlight:TouchableWithoutFeedback;
             return (
-              <Touchable {...otherProps}>
+              <TouchableHighlight {...otherProps} underlayColor={'rgb(224,224,224)'}>
                 {children}
-              </Touchable>
+              </TouchableHighlight>
             );
         }
 

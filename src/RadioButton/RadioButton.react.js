@@ -5,11 +5,10 @@ import PropTypes from 'prop-types';
 import Checkbox from '../Checkbox';
 
 const propTypes = {
-    label: PropTypes.string.isRequired,
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
     onSelect: PropTypes.func.isRequired,
+
 };
 const defaultProps = {
     theme: 'light',
@@ -19,20 +18,20 @@ const defaultProps = {
 
 class RadioButton extends PureComponent {
     onPress = () => {
-        const { value, checked, disabled, onSelect } = this.props;
+        const {checked, disabled, onSelect } = this.props;
 
         if (disabled && !checked) {
             return;
         }
 
-        onSelect(value);
+        onSelect(!checked);
     }
 
     render() {
         return (
             <Checkbox
-                checkedIcon="radio-button-checked"
-                uncheckedIcon="radio-button-unchecked"
+                checkedIcon={{name:'radio-button-checked'}}//"radio-button-checked"
+                uncheckedIcon={{name:'radio-button-unchecked'}}
                 onCheck={this.onPress}
                 {...this.props}
             />
