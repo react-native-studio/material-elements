@@ -529,7 +529,7 @@ export default function getTheme(theme, ...more) {
         }, theme.toolbar)),
         bottomSheet:StyleSheet.create(merge({
           container:{
-            ...getPlatformElevation(16),
+            //...getPlatformElevation(16),
             backgroundColor:Color('#000').alpha(0.2),
             marginHorizontal:0,
             marginVertical:0,
