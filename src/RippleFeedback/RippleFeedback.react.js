@@ -19,12 +19,14 @@ const propTypes = {
     color: PropTypes.string,
     borderless: PropTypes.bool,
     children: PropTypes.node.isRequired,
-    underlayColor:PropTypes.object,//仅仅ios和android API<21有效
+    underlayColor:PropTypes.any,//仅仅ios和android API<21有效,
+    useTouchableWithoutFeedback:PropTypes.bool,//仅仅ios和android API<21有效
 };
 const defaultProps = {
     color: null,
     borderless: true,
-    underlayColor:Color('#000').alpha(0.2)
+    underlayColor:Color('#000').alpha(0.2),
+    useTouchableWithoutFeedback:false,
 };
 
 function isCompatible() {
@@ -37,7 +39,7 @@ function isCompatible() {
 
 class RippleFeedback extends PureComponent {
     render() {
-        const { children, color, borderless, ...otherProps } = this.props;
+        const {useTouchableWithoutFeedback, children, color, borderless, ...otherProps } = this.props;
 
         if (Platform.OS === 'web') {
             return (
@@ -48,11 +50,21 @@ class RippleFeedback extends PureComponent {
         }
 
         if (!isCompatible()) {
+
+          if(useTouchableWithoutFeedback){
             return (
-              <TouchableHighlight {...otherProps} underlayColor={'rgb(224,224,224)'}>
+              <TouchableWithoutFeedback {...otherProps}>
+                {children}
+              </TouchableWithoutFeedback>
+            );
+          }else{
+            return (
+              <TouchableHighlight {...otherProps}>
                 {children}
               </TouchableHighlight>
-            );
+            )
+          }
+
         }
 
         // we need to get underlayColor as props to this RippleFeedback component, because we can't
