@@ -8,7 +8,7 @@ import Checkbox from '../Checkbox'
 type RadioProps = {
   checked: boolean,
   disabled?: boolean,
-  onSelect: (value: boolean) => void,
+  onSelect?: (value: boolean) => void,
 }
 class RadioButton extends React.PureComponent<RadioProps> {
   props: RadioProps
@@ -16,11 +16,11 @@ class RadioButton extends React.PureComponent<RadioProps> {
   onPress = () => {
     const {checked, disabled, onSelect} = this.props
 
-    if (disabled && !checked) {
+    if (disabled && !checked ) {
       return
     }
 
-    onSelect(!checked)
+    onSelect&&onSelect(!checked)
   }
 
   render () {
