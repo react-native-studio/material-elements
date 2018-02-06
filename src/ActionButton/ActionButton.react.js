@@ -310,6 +310,7 @@ class ActionButton extends PureComponent {
                     onPressIn={() => this.setState({ elevation: 4 })}
                     onPressOut={() => this.setState({ elevation: 2 })}
                     delayPressIn={20}
+                    useTouchableWithoutFeedback
                 >
                     {this.renderIconButton(styles, mainIcon)}
                 </RippleFeedback>
@@ -326,6 +327,7 @@ class ActionButton extends PureComponent {
                     color={this.props.rippleColor}
                     onPress={() => this.onPress(key)}
                     delayPressIn={20}
+                    useTouchableWithoutFeedback
                 >
                     {this.renderIconButton(styles, icon)}
                 </RippleFeedback>);
@@ -372,6 +374,7 @@ class ActionButton extends PureComponent {
                         color={this.props.rippleColor}
                         onPress={() => this.onPress(key)}
                         delayPressIn={20}
+                        useTouchableWithoutFeedback
                     >
                         {this.renderIconButton(styles, icon)}
                     </RippleFeedback>
