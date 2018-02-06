@@ -42,7 +42,7 @@ export default function getTheme(theme, ...more) {
             },
             overlayContainer: {
                 ...StyleSheet.absoluteFillObject,
-                backgroundColor: Color('#fff').alpha(0.8).toString(),
+                backgroundColor: Color('#000').alpha(0.2).toString(),
                 // we need overlay to be above the toolbar - so maybe we could use some variable
                 // to get elevation for toolbar and this overlay
                 ...getPlatformElevation(4),
