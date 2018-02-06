@@ -5,13 +5,14 @@ import React,{Component} from 'react';
 import {StyleSheet,View,Text} from 'react-native';
 import type { IconPropTypes } from '../TypeDifinition/index'
 import getTheme from '../styles/getTheme';
-import IconToggle from '../IconToggle'
+import IconToggle from '../IconToggle';
+import merge from 'lodash/merge';
 type CheckboxProps={
   checked:boolean,
-  onCheck:(value:boolean)=>void,
+  onCheck?:(value:boolean)=>void,
   disabled?:boolean,
-  uncheckedIcon:IconPropTypes,
-  checkedIcon:IconPropTypes,
+  uncheckedIcon?:IconPropTypes,
+  checkedIcon?:IconPropTypes,
 }
 const defaultProps = {
   checked: false,
@@ -25,18 +26,20 @@ const defaultProps = {
 };
 class Checkbox extends React.PureComponent<CheckboxProps>{
   props:CheckboxProps
-  static defaultProps:typeof defaultProps=defaultProps
+  static defaultProps:typeof defaultProps
+  static defaultProps=defaultProps
   getStyles(){
     const { checkbox} =getTheme();
 
     const {checkedIcon,uncheckedIcon}=this.props;
+
     return {
       checkedIcon:[checkbox.checkedIcon,
-        checkedIcon.color&&{color: this.props.checkedIcon.color},
+        checkedIcon&&checkedIcon.color&&{color: checkedIcon.color},
       ],
       uncheckedIcon: [
         checkbox.uncheckedIcon,
-        uncheckedIcon.color&&{color: this.props.uncheckedIcon.color,},
+        uncheckedIcon&&uncheckedIcon.color&&{color: uncheckedIcon.color,},
       ],
     };
   }
@@ -54,13 +57,14 @@ class Checkbox extends React.PureComponent<CheckboxProps>{
 
     const uncheckedIconColor = StyleSheet.flatten(styles.uncheckedIcon).color;
     const checkedIconColor = StyleSheet.flatten(styles.checkedIcon).color;
-    const checkedIconProps={
+
+    const checkedIconProps=checkedIcon&&{
       name:checkedIcon.name,
       size:checkedIcon.size,
       type:checkedIcon.type,
       color:checkedIconColor,
     }
-    const uncheckedIconProps={
+    const uncheckedIconProps=uncheckedIcon&&{
       name:uncheckedIcon.name,
       size:uncheckedIcon.size,
       type:uncheckedIcon.type,
