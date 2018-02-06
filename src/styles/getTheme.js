@@ -123,6 +123,10 @@ export default function getTheme(theme, ...more) {
             },
         }, theme.avatar)),
         badge: StyleSheet.create(merge({
+            outerContainer:{
+              flexDirection: 'row',
+              width:50,
+            },
             container: {
                 position: 'absolute',
                 width: spacing.badgeSize,
@@ -131,6 +135,8 @@ export default function getTheme(theme, ...more) {
                 alignItems: 'center',
                 justifyContent: 'center',
                 backgroundColor: palette.primaryColor,
+                top:-8,
+                right:-8,
             },
             content: {
                 color: palette.canvasColor,
