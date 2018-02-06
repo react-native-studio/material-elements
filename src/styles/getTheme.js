@@ -14,7 +14,7 @@ import lightTheme from './themes/light';
 /* eslint-disable import/no-unresolved, import/extensions */
 import getPlatformElevation from './getPlatformElevation';
 /* eslint-enable import/no-unresolved, import/extensions */
-
+import Metrics from './Metrics'
 function darkenOrLighten(color, ratio = 0.15) {
     const c = Color(color);
     return c.luminosity() > 0.5 ? c.darken(ratio) : c.lighten(ratio);
@@ -710,13 +710,14 @@ export default function getTheme(theme, ...more) {
         simpleToolbar: StyleSheet.create(merge({
             container: {
                 backgroundColor: palette.primaryColor,
-                height: 56,
+                height: Metrics.appBarHeight+Metrics.statusBarHeight,
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent:'space-between',
                 paddingHorizontal: 4,
                 overflow: 'hidden',
                 ...getPlatformElevation(4),
+                paddingTop:Metrics.statusBarHeight
             },
             leftElement: {
                 color: palette.alternateTextColor,
@@ -724,7 +725,7 @@ export default function getTheme(theme, ...more) {
             centerElementContainer: {
                 flex: 1,
                 position:'absolute',
-                top:0,
+                top:Metrics.statusBarHeight,
                 left:0,
                 right:0,
                 bottom:0,
