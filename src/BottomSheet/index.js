@@ -1,1 +1,1 @@
-export {default} from './BottomSheet'
+export {default} from './BottomSheet.flow'

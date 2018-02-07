@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea861f9b-f89e-46ce-894f-a863d069c3e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/METester/ToolbarExample.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Toolbar/CenterElement.flow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Toolbar/LeftElement.flow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Toolbar/RightElement.flow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Toolbar/Toolbar.flow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListItem/ListItem.flow.js" afterPath="$PROJECT_DIR$/src/ListItem/ListItem.flow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListItem/ListItem.react.js" afterPath="$PROJECT_DIR$/src/ListItem/ListItem.react.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Toolbar/Toolbar.react.js" afterPath="$PROJECT_DIR$/src/Toolbar/Toolbar.react.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActionButton/index.js" afterPath="$PROJECT_DIR$/src/ActionButton/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Avatar/index.js" afterPath="$PROJECT_DIR$/src/Avatar/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Badge/index.js" afterPath="$PROJECT_DIR$/src/Badge/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BottomSheet/index.js" afterPath="$PROJECT_DIR$/src/BottomSheet/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Button/index.js" afterPath="$PROJECT_DIR$/src/Button/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Card/index.js" afterPath="$PROJECT_DIR$/src/Card/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Divider/index.js" afterPath="$PROJECT_DIR$/src/Divider/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListItem/index.js" afterPath="$PROJECT_DIR$/src/ListItem/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Menu/index.js" afterPath="$PROJECT_DIR$/src/Menu/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimpleToolbar/index.js" afterPath="$PROJECT_DIR$/src/SimpleToolbar/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Toast/index.js" afterPath="$PROJECT_DIR$/src/Toast/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Toolbar/index.js" afterPath="$PROJECT_DIR$/src/Toolbar/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,30 +28,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="FloatingLabel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TextField/FloatingLabel.js">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1015">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="44">
+              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextField.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TextField/TextField.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Divider/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
+              <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Subheader.react.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Subheader/Subheader.react.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Icon/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -57,32 +60,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Subheader/index.js">
+      <file leaf-file-name="Icon.flow.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Icon/Icon.flow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-18">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="light.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/themes/light.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Toolbar.test.js.snap" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Toolbar/__test__/__snapshots__/Toolbar.test.js.snap">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,14 +76,24 @@
         <entry file="file://$PROJECT_DIR$/src/ListItem/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolbarExample.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/METester/ToolbarExample.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Menu/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RadioButton/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -107,24 +102,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextFieldBase.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TextField/TextFieldBase.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SimpleToolbar/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-887">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="66">
+              <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Toast/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Underline.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TextField/Underline.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Toolbar/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-              <folding>
-                <element signature="e#14#53#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -180,10 +185,22 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/METester/RadioButtonExample.js" />
         <option value="$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/RadioButton/RadioButton.flow.js" />
         <option value="$PROJECT_DIR$/src/Badge/Badge.flow.js" />
         <option value="$PROJECT_DIR$/src/Dialog/Actions.flow.js" />
+        <option value="$PROJECT_DIR$/src/ActionButton/index.js" />
+        <option value="$PROJECT_DIR$/src/Avatar/index.js" />
+        <option value="$PROJECT_DIR$/src/Badge/index.js" />
+        <option value="$PROJECT_DIR$/src/BottomSheet/index.js" />
+        <option value="$PROJECT_DIR$/src/Button/index.js" />
+        <option value="$PROJECT_DIR$/src/Card/index.js" />
+        <option value="$PROJECT_DIR$/src/Divider/index.js" />
+        <option value="$PROJECT_DIR$/src/ListItem/index.js" />
+        <option value="$PROJECT_DIR$/src/Menu/index.js" />
+        <option value="$PROJECT_DIR$/src/SimpleToolbar/index.js" />
+        <option value="$PROJECT_DIR$/src/Toast/index.js" />
+        <option value="$PROJECT_DIR$/src/Toolbar/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -241,34 +258,85 @@
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Avatar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Badge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Button" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Card" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Checkbox" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Dialog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Divider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ListItem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="METester" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="RadioButton" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="SimpleToolbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Snackbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Toast" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Toolbar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Toolbar" type="462c0819:PsiDirectoryNode" />
-              <item name="__test__" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Toolbar" type="462c0819:PsiDirectoryNode" />
-              <item name="__test__" type="462c0819:PsiDirectoryNode" />
-              <item name="__snapshots__" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -399,17 +467,18 @@
       <workItem from="1517460817387" duration="3303000" />
       <workItem from="1517535054234" duration="14000" />
       <workItem from="1517823546636" duration="4880000" />
-      <workItem from="1517897370420" duration="12354000" />
+      <workItem from="1517897370420" duration="12629000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67773000" />
+    <option name="totallyTimeSpent" value="68048000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26286116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26286116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -439,188 +508,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/utils/MotionCurve.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TypeDifinition/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Checkbox/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/METester/CheckboxExample.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roboto/Apache License.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/Metrics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Button/Button.flow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3025">
-          <caret line="168" column="51" lean-forward="false" selection-start-line="168" selection-start-column="41" selection-end-line="168" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Checkbox/Checkbox.flow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="36" column="2" lean-forward="false" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RadioButton/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RadioButton/RadioButton.flow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/METester/MenuExample.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActionButton/ActionButton.react.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.flow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/METester/ActionButtonExample.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Badge/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Badge/Badge.react.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-253">
-          <caret line="122" column="41" lean-forward="false" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/getTheme.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="145" column="25" lean-forward="false" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Badge/Badge.flow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/METester/BadgeExmaple.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ListItem/ListItem.flow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-813">
@@ -727,74 +614,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dialog/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/METester/DialogExample.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Avatar.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <marker date="1516346187000" expanded="true" signature="88:399" ph="{...}" />
-              <marker date="1516346187000" expanded="true" signature="94:397" ph="&lt;View/&gt;" />
-              <marker date="1516346187000" expanded="true" signature="436:1088" ph="{&quot;text&quot;: PropTypes.string...}" />
-              <marker date="1516346187000" expanded="true" signature="442:484" ph="/** 传入Image组件属性，avatar渲染Image ...*/" />
-              <marker date="1516346187000" expanded="true" signature="512:545" ph="{...}" />
-              <marker date="1516346187000" expanded="true" signature="552:590" ph="/** 传入Icon属性，avatar渲染icon ...*/" />
-              <marker date="1516346187000" expanded="true" signature="616:740" ph="{&quot;name&quot;: PropTypes.string...}" />
-              <marker date="1516346187000" expanded="true" signature="747:785" ph="/** 传入text，avatar渲染text组件 ...*/" />
-              <marker date="1516346187000" expanded="true" signature="818:912" ph="/** 仅仅用于container尺寸: style: { width: size, height: size, borderRadius: size / 2 } ...*/" />
-              <marker date="1516346187000" expanded="true" signature="945:970" ph="/** avatar样式 ...*/" />
-              <marker date="1516346187000" expanded="true" signature="998:1084" ph="{&quot;container&quot;: ViewPropTypes.style...}" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ActionButton.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="98">
-            <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="36" />
-            <folding>
-              <marker date="1516342628000" expanded="true" signature="604:751" ph="{...}" />
-              <marker date="1516342628000" expanded="true" signature="610:749" ph="&lt;View/&gt;" />
-              <marker date="1516342628000" expanded="true" signature="788:2048" ph="{&quot;onPress&quot;: PropTypes.func...}" />
-              <marker date="1516342628000" expanded="true" signature="794:986" ph="/** Array of names of icons (or elements) that will be shown after the main button is pressed ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1020:1373" ph="[...]" />
-              <marker date="1516342628000" expanded="true" signature="1155:1364" ph="{&quot;name&quot;: PropTypes.string...}" />
-              <marker date="1516342628000" expanded="true" signature="1195:1279" ph="[...]" />
-              <marker date="1516342628000" expanded="true" signature="1380:1420" ph="/** 按钮onPress时触发,text作为参数传递 ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1454:1498" ph="/** 按钮onLongPress时触发,text作为参数传递 ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1536:1563" ph="/** 是否隐藏button ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1596:1629" ph="/** 可为字符串或者Component ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1660:1720" ph="[...]" />
-              <marker date="1516342628000" expanded="true" signature="1727:1774" ph="/** 当transition为null时，不会产生动画 ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1838:1862" ph="/** 设置水波纹颜色 ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1902:1933" ph="/** 设置button的style ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1961:2044" ph="{&quot;container&quot;: ViewPropTypes.style...}" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Toolbar/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -827,7 +647,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -837,7 +657,7 @@
         <state relative-caret-position="533">
           <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
           <folding>
-            <element signature="e#14#53#0" expanded="true" />
+            <element signature="e#14#53#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -863,7 +683,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -873,7 +693,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -902,7 +722,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ListItem/index.js">
+    <entry file="file://$PROJECT_DIR$/src/METester/ToolbarExample.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -910,10 +730,322 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/METester/ToolbarExample.js">
+    <entry file="file://$PROJECT_DIR$/src/ActionButton/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ActionButton.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="287">
+            <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="36" />
+            <folding>
+              <marker date="1516342628000" expanded="true" signature="604:751" ph="{...}" />
+              <marker date="1516342628000" expanded="true" signature="610:749" ph="&lt;View/&gt;" />
+              <marker date="1516342628000" expanded="true" signature="788:2048" ph="{&quot;onPress&quot;: PropTypes.func...}" />
+              <marker date="1516342628000" expanded="true" signature="794:986" ph="/** Array of names of icons (or elements) that will be shown after the main button is pressed ...*/" />
+              <marker date="1516342628000" expanded="true" signature="1020:1373" ph="[...]" />
+              <marker date="1516342628000" expanded="true" signature="1155:1364" ph="{&quot;name&quot;: PropTypes.string...}" />
+              <marker date="1516342628000" expanded="true" signature="1195:1279" ph="[...]" />
+              <marker date="1516342628000" expanded="true" signature="1380:1420" ph="/** 按钮onPress时触发,text作为参数传递 ...*/" />
+              <marker date="1516342628000" expanded="true" signature="1454:1498" ph="/** 按钮onLongPress时触发,text作为参数传递 ...*/" />
+              <marker date="1516342628000" expanded="true" signature="1536:1563" ph="/** 是否隐藏button ...*/" />
+              <marker date="1516342628000" expanded="true" signature="1596:1629" ph="/** 可为字符串或者Component ...*/" />
+              <marker date="1516342628000" expanded="true" signature="1660:1720" ph="[...]" />
+              <marker date="1516342628000" expanded="true" signature="1727:1774" ph="/** 当transition为null时，不会产生动画 ...*/" />
+              <marker date="1516342628000" expanded="true" signature="1838:1862" ph="/** 设置水波纹颜色 ...*/" />
+              <marker date="1516342628000" expanded="true" signature="1902:1933" ph="/** 设置button的style ...*/" />
+              <marker date="1516342628000" expanded="true" signature="1961:2044" ph="{&quot;container&quot;: ViewPropTypes.style...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Avatar.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1516346187000" expanded="true" signature="88:399" ph="{...}" />
+              <marker date="1516346187000" expanded="true" signature="94:397" ph="&lt;View/&gt;" />
+              <marker date="1516346187000" expanded="true" signature="436:1088" ph="{&quot;text&quot;: PropTypes.string...}" />
+              <marker date="1516346187000" expanded="true" signature="442:484" ph="/** 传入Image组件属性，avatar渲染Image ...*/" />
+              <marker date="1516346187000" expanded="true" signature="512:545" ph="{...}" />
+              <marker date="1516346187000" expanded="true" signature="552:590" ph="/** 传入Icon属性，avatar渲染icon ...*/" />
+              <marker date="1516346187000" expanded="true" signature="616:740" ph="{&quot;name&quot;: PropTypes.string...}" />
+              <marker date="1516346187000" expanded="true" signature="747:785" ph="/** 传入text，avatar渲染text组件 ...*/" />
+              <marker date="1516346187000" expanded="true" signature="818:912" ph="/** 仅仅用于container尺寸: style: { width: size, height: size, borderRadius: size / 2 } ...*/" />
+              <marker date="1516346187000" expanded="true" signature="945:970" ph="/** avatar样式 ...*/" />
+              <marker date="1516346187000" expanded="true" signature="998:1084" ph="{&quot;container&quot;: ViewPropTypes.style...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Badge.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1516354874000" expanded="true" signature="229:380" ph="{...}" />
+              <marker date="1516354874000" expanded="true" signature="233:378" ph="&lt;Badge/&gt;" />
+              <marker date="1516354874000" expanded="true" signature="417:1013" ph="{&quot;children&quot;: PropTypes.node...}" />
+              <marker date="1516354874000" expanded="true" signature="423:447" ph="/** badge ...*/" />
+              <marker date="1516354874000" expanded="true" signature="482:508" ph="/** badge内容 ...*/" />
+              <marker date="1516354874000" expanded="true" signature="541:573" ph="/** badge里的icon内容 ...*/" />
+              <marker date="1516354874000" expanded="true" signature="599:723" ph="{&quot;name&quot;: PropTypes.string...}" />
+              <marker date="1516354874000" expanded="true" signature="730:840" ph="/** badge container style={{ container: { width: size, height: size, borderRadius: size / 2 }}} ...*/" />
+              <marker date="1516354874000" expanded="true" signature="897:944" ph="{&quot;container&quot;: ViewPropTypes.style...}" />
+              <marker date="1516354874000" expanded="true" signature="952:980" ph="/** 整个node的尺寸 ...*/" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/BottomNavigation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1516438007000" expanded="true" signature="459:1314" ph="{...}" />
+              <marker date="1516438007000" expanded="true" signature="465:1312" ph="&lt;BottomNavigation/&gt;" />
+              <marker date="1516438007000" expanded="true" signature="520:693" ph="&lt;BottomNavigation.Action/&gt;" />
+              <marker date="1516438007000" expanded="true" signature="702:879" ph="&lt;BottomNavigation.Action/&gt;" />
+              <marker date="1516438007000" expanded="true" signature="888:1094" ph="&lt;BottomNavigation.Action/&gt;" />
+              <marker date="1516438007000" expanded="true" signature="1103:1288" ph="&lt;BottomNavigation.Action/&gt;" />
+              <marker date="1516438007000" expanded="true" signature="1371:1797" ph="{&quot;active&quot;: PropTypes.string...}" />
+              <marker date="1516438007000" expanded="true" signature="1377:1424" ph="/** The key of selected/active tab ...*/" />
+              <marker date="1516438007000" expanded="true" signature="1459:1505" ph="/** BottomNavigation.Action nodes ...*/" />
+              <marker date="1516438007000" expanded="true" signature="1551:1614" ph="/** Wether or not the BottomNaviagtion should show ...*/" />
+              <marker date="1516438007000" expanded="true" signature="1643:1663" ph="/*...*/" />
+              <marker date="1516438007000" expanded="true" signature="1668:1717" ph="/*...*/" />
+              <marker date="1516438007000" expanded="true" signature="1745:1793" ph="{&quot;container&quot;: View.propTypes.style...}" />
+              <marker date="1516438007000" expanded="true" signature="1845:2504" ph="{&quot;icon&quot;: PropTypes.string.isRequired...}" />
+              <marker date="1516438007000" expanded="true" signature="1851:1928" ph="/** Will be rendered above the label as a content of the action. ...*/" />
+              <marker date="1516438007000" expanded="true" signature="1972:2048" ph="/** Will be rendered under the icon as a content of the action. ...*/" />
+              <marker date="1516438007000" expanded="true" signature="2082:2173" ph="/** True if the action is active (for now it'll be highlight by primary color) ...*/" />
+              <marker date="1516438007000" expanded="true" signature="2217:2262" ph="/** Callback for on press event. ...*/" />
+              <marker date="1516438007000" expanded="true" signature="2296:2346" ph="/** Inline style of bottom navigation ...*/" />
+              <marker date="1516438007000" expanded="true" signature="2374:2500" ph="{&quot;container&quot;: View.propTypes.style...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/BottomNavigationAction.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/BottomSheet.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Button.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1516332948000" expanded="true" signature="140:463" ph="{...}" />
+              <marker date="1516332948000" expanded="true" signature="146:461" ph="&lt;View/&gt;" />
+              <marker date="1516332948000" expanded="true" signature="500:1319" ph="{&quot;disabled&quot;: PropTypes.bool...}" />
+              <marker date="1516332948000" expanded="true" signature="506:543" ph="/** button组件是否可用 ...*/" />
+              <marker date="1516332948000" expanded="true" signature="586:623" ph="/** button组件是否凸起 ...*/" />
+              <marker date="1516332948000" expanded="true" signature="664:703" ph="/** 按下时触发，传递text参数 ...*/" />
+              <marker date="1516332948000" expanded="true" signature="745:783" ph="/** 长按触发，传递text参数 ...*/" />
+              <marker date="1516332948000" expanded="true" signature="829:862" ph="/** text将被显示 ...*/" />
+              <marker date="1516332948000" expanded="true" signature="914:945" ph="/** 是否转换大写 ...*/" />
+              <marker date="1516332948000" expanded="true" signature="989:1028" ph="/** 展示图标，展示在text之前 ...*/" />
+              <marker date="1516332948000" expanded="true" signature="1063:1135" ph="[...]" />
+              <marker date="1516332948000" expanded="true" signature="1146:1188" ph="/** 重写button样式和text样式 ...*/" />
+              <marker date="1516332948000" expanded="true" signature="1220:1315" ph="{&quot;container&quot;: ViewPropTypes.style...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Avatar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Badge/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BottomSheet/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="41" lean-forward="false" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Button/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Card/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Checkbox/Checkbox.flow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Checkbox/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dialog/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Divider/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Icon/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Icon/Icon.flow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ListItem/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RadioButton/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimpleToolbar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Toast/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Toolbar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
           <folding />
         </state>
       </provider>
