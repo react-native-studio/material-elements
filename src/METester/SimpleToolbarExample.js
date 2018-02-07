@@ -6,8 +6,7 @@ export default class SimpleToolbarExample extends Component {
   render () {
     return (
       <View>
-        <SimpleToolbar/>
-        <SimpleToolbar rightIconName="more" leftIconName="menu" title="菜单"/>
+        <SimpleToolbar rightIcon={{name:'more'}} leftIcon={{name:'menu'}} title="菜单"/>
       </View>
     )
   }

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea861f9b-f89e-46ce-894f-a863d069c3e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ListItem/ListItem.flow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/METester/ListItemExample.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/METester/SimpleToolbarExample.js" afterPath="$PROJECT_DIR$/src/METester/SimpleToolbarExample.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimpleToolbar/SimpleToolbar.flow.js" afterPath="$PROJECT_DIR$/src/SimpleToolbar/SimpleToolbar.flow.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,16 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ActionButton.flow.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Badge.react.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Badge/Badge.react.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -79,8 +69,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListItemExample.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ListItemExample.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/METester/ListItemExample.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleToolbar.flow.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SimpleToolbar/SimpleToolbar.flow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleToolbarExample.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/METester/SimpleToolbarExample.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -101,16 +111,6 @@
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Badge/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActionButtonExample.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/METester/ActionButtonExample.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -248,7 +248,7 @@
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="SimpleToolbar" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,10 +271,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/METester" />
+      <recent name="$PROJECT_DIR$/src/SimpleToolbar" />
       <recent name="$PROJECT_DIR$/src/ListItem" />
       <recent name="$PROJECT_DIR$/src/Badge" />
       <recent name="$PROJECT_DIR$/src/styles" />
-      <recent name="$PROJECT_DIR$/src/ActionButton" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -379,12 +379,12 @@
       <workItem from="1517460817387" duration="3303000" />
       <workItem from="1517535054234" duration="14000" />
       <workItem from="1517823546636" duration="4880000" />
-      <workItem from="1517897370420" duration="6102000" />
+      <workItem from="1517897370420" duration="6671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61521000" />
+    <option name="totallyTimeSpent" value="62090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -420,13 +420,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Placeholder/Box.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
@@ -491,13 +484,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/METester/IconExample.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/METester/SimpleToolbarExample.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -837,6 +823,22 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/METester/ListItemExample.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimpleToolbar/SimpleToolbar.flow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/METester/SimpleToolbarExample.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />

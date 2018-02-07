@@ -7,20 +7,21 @@ import getTheme from '../styles/getTheme'
 import { ViewPropTypes } from '../utils/index'
 import CenterElement from './CenterElement.flow'
 import IconToggle from '../IconToggle'
-
+import type { IconPropTypes } from '../TypeDifinition/index'
+type StyleType={
+  container?: ViewPropTypes.style,
+  leftElement?: ViewPropTypes.style,
+  rightElement?: ViewPropTypes.style,
+  centerElement?:ViewPropTypes.style,
+  title?:Text.propTypes.style,
+}
 type SimpleToolbarProps = {
   title?: string,
-  leftIconName?: string,
-  rightIconName?: string,
+  leftIcon?: IconPropTypes,
+  rightIcon?: IconPropTypes,
   onLeftIconPress?: () => void,
   onRightIconPress?: () => void,
-  style: {
-    container?: ViewPropTypes.style,
-    leftElement?: ViewPropTypes.style,
-    rightElement?: ViewPropTypes.style,
-    centerElement?:ViewPropTypes.style,
-    title?:Text.propTypes.style,
-  }
+  style: StyleType,
 }
 const defaultProps = {
   style: {},
@@ -60,12 +61,54 @@ class SimpleToolbar extends PureComponent<SimpleToolbarProps> {
       title:[props.style.title]
     }
   }
+  renderLeftIcon=(styles:StyleType)=>{
 
+    const {leftIcon}=this.props;
+
+    const flattenLeftElement = StyleSheet.flatten(styles.leftElement)
+
+    if(leftIcon){
+      const {name,size,color,type}=leftIcon;
+      const iconToggleProps={
+        name,
+        size,
+        color:color || flattenLeftElement.color,
+        type,
+      }
+      return <IconToggle
+        key={name}
+        {...iconToggleProps}
+        onPress={this._onLeftIconPress}
+        style={flattenLeftElement}
+      />
+    }
+  }
+
+  renderRightIcon=(styles:StyleType)=>{
+
+    const {rightIcon}=this.props;
+
+    const flattenRightElement = StyleSheet.flatten(styles.rightElement)
+
+    if(rightIcon){
+      const {name,size,color,type}=rightIcon;
+      const iconToggleProps={
+        name,
+        size,
+        color:color || flattenRightElement.color,
+        type,
+      }
+      return <IconToggle
+        key={name}
+        {...iconToggleProps}
+        onPress={this._onRightIconPress}
+        style={flattenRightElement}
+      />
+    }
+    return null;
+  }
   render () {
     const styles = this.getStyles()
-    let {leftIconName, rightIconName} = this.props
-    const flattenLeftElement = StyleSheet.flatten(styles.leftElement)
-    const flattenRightElement = StyleSheet.flatten(styles.rightElement)
     return (
       <View style={styles.container}>
         {/*CenterElement元素放在中间，则会使得左侧的Icon无法使用onPress*/}
@@ -77,20 +120,8 @@ class SimpleToolbar extends PureComponent<SimpleToolbarProps> {
           }}
           title={this.props.title}
         />
-        <IconToggle
-          key={leftIconName}
-          name={leftIconName}
-          color={flattenLeftElement.color}
-          onPress={this._onLeftIconPress}
-          style={flattenLeftElement}
-        />
-        {rightIconName && <IconToggle
-          key={rightIconName}
-          name={rightIconName}
-          color={flattenRightElement.color}
-          onPress={this._onRightIconPress}
-          style={flattenRightElement}
-        />}
+        {this.renderLeftIcon(styles)}
+        {this.renderRightIcon(styles)}
       </View>
     )
   }
