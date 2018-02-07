@@ -2,15 +2,15 @@
  * @flow
  */
 import React,{Component} from 'react';
-import {StyleSheet,View,Text} from 'react-native';
+import {StyleSheet,View,Text,Dimensions} from 'react-native';
 import getTheme from '../styles/getTheme';
-import Animatable from 'react-native-animatable';
-import { ViewPropTypes } from '../utils/index'
+import * as Animatable from 'react-native-animatable';
+import { ViewPropTypes } from '../utils/index';
 
 type StyleProps={
-  container:typeof ViewPropTypes.style,
-  textContainer:typeof ViewPropTypes.style,
-  text:typeof Text.propTypes.style,
+  container?: ViewPropTypes.style,
+  textContainer?: ViewPropTypes.style,
+  text?: Text.propTypes.style,
 }
 type ToastProps={
   style:StyleProps
@@ -26,12 +26,13 @@ const DURATION={
   LONG:3500,
   SHORT:2100,
 }
-export default class Toast extends Component<ToastProps,ToastState>{
-  static defaultProps:typeof defaultProps
+class Toast extends Component<ToastProps,ToastState>{
+  static defaultProps:typeof defaultProps=defaultProps
   props:ToastProps
   state:ToastState
+  static SHORT:2100
+  static LONG:3500
   toast:any
-  static defaultProps=defaultProps
   state={
     visible:false,
     text:''
@@ -107,3 +108,6 @@ export default class Toast extends Component<ToastProps,ToastState>{
     )
   }
 }
+Toast.LONG=DURATION.LONG;
+Toast.SHORT=DURATION.SHORT;
+export default Toast

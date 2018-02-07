@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea861f9b-f89e-46ce-894f-a863d069c3e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/METester/SimpleToolbarExample.js" afterPath="$PROJECT_DIR$/src/METester/SimpleToolbarExample.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimpleToolbar/SimpleToolbar.flow.js" afterPath="$PROJECT_DIR$/src/SimpleToolbar/SimpleToolbar.flow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/METester/ToastExample.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Toast/Toast.flow.js" afterPath="$PROJECT_DIR$/src/Toast/Toast.flow.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,18 +18,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Badge.react.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Badge/Badge.react.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-253">
-              <caret line="122" column="41" lean-forward="false" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="getTheme.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/getTheme.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -89,7 +78,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleToolbarExample.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimpleToolbarExample.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/METester/SimpleToolbarExample.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -99,18 +88,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ListItem/index.js">
+      <file leaf-file-name="Toast.flow.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Toast/Toast.flow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="28">
+              <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToastExample.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/METester/ToastExample.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Badge/index.js">
+        <entry file="file://$PROJECT_DIR$/src/ListItem/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -248,7 +247,7 @@
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SimpleToolbar" type="462c0819:PsiDirectoryNode" />
+              <item name="Toast" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,10 +270,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/METester" />
+      <recent name="$PROJECT_DIR$/src/Toast" />
       <recent name="$PROJECT_DIR$/src/SimpleToolbar" />
       <recent name="$PROJECT_DIR$/src/ListItem" />
       <recent name="$PROJECT_DIR$/src/Badge" />
-      <recent name="$PROJECT_DIR$/src/styles" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -379,12 +378,12 @@
       <workItem from="1517460817387" duration="3303000" />
       <workItem from="1517535054234" duration="14000" />
       <workItem from="1517823546636" duration="4880000" />
-      <workItem from="1517897370420" duration="6671000" />
+      <workItem from="1517897370420" duration="7222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62090000" />
+    <option name="totallyTimeSpent" value="62641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -420,13 +419,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="32" column="53" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Container/__test__/Container.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -556,16 +548,6 @@
           <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="6" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Toast/Toast.flow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-430">
-          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="36" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -842,6 +824,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Toast/Toast.flow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/METester/ToastExample.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
