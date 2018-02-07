@@ -130,8 +130,8 @@ class ListItem extends PureComponent {
             numberOfLines: getNumberOfLines(props),
         };
     }
-    componentWillReceiveProps(nextPros) {
-        this.setState({ numberOfLines: getNumberOfLines(nextPros) });
+    componentWillReceiveProps(nextProps) {
+        this.setState({ numberOfLines: getNumberOfLines(nextProps) });
     }
     _getStyles=()=>{
             let props=this.props,state=this.state;

@@ -458,7 +458,7 @@ class ListItem extends React.PureComponent<ListItemProps,ListItemState> {
                       <Menu.Item key={index} text={label} onPress={()=>{
                         const {onRightElementPress,onPressValue}=this.props;
                         onRightElementPress && onRightElementPress({
-                          actions:'menu',
+                          action:'menu',
                           label,
                           index,
                           value:onPressValue
@@ -505,7 +505,7 @@ class ListItem extends React.PureComponent<ListItemProps,ListItemState> {
 
         if (onPress || onLongPress) {
             content = (
-                <RippleFeedback delayPressIn={50} onPress={this.onListItemPressed} onLongPress={this.onListItemLongPressed} >
+                <RippleFeedback useTouchableWithoutFeedback delayPressIn={50} onPress={this.onListItemPressed} onLongPress={this.onListItemLongPressed} >
                     {content}
                 </RippleFeedback>
             );

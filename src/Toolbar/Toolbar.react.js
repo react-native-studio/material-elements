@@ -172,6 +172,7 @@ function getStyles(props) {
 }
 
 class Toolbar extends PureComponent {
+    static propTypes=propTypes
     constructor(props) {
         super(props);
 
@@ -455,6 +456,5 @@ class Toolbar extends PureComponent {
     }
 }
 
-Toolbar.propTypes = propTypes;
 Toolbar.defaultProps = defaultProps;
 export default Toolbar;
