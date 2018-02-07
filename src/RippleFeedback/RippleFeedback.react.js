@@ -25,7 +25,7 @@ const propTypes = {
 const defaultProps = {
     color: null,
     borderless: true,
-    underlayColor:Color('#000').alpha(0.2),
+    underlayColor:'rgb(224,224,224)',
     useTouchableWithoutFeedback:false,
 };
 
