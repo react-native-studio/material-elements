@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea861f9b-f89e-46ce-894f-a863d069c3e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActionButton/index.js" afterPath="$PROJECT_DIR$/src/ActionButton/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Avatar/index.js" afterPath="$PROJECT_DIR$/src/Avatar/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Badge/index.js" afterPath="$PROJECT_DIR$/src/Badge/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BottomSheet/index.js" afterPath="$PROJECT_DIR$/src/BottomSheet/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Button/index.js" afterPath="$PROJECT_DIR$/src/Button/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Card/index.js" afterPath="$PROJECT_DIR$/src/Card/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Divider/index.js" afterPath="$PROJECT_DIR$/src/Divider/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListItem/index.js" afterPath="$PROJECT_DIR$/src/ListItem/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Menu/index.js" afterPath="$PROJECT_DIR$/src/Menu/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimpleToolbar/index.js" afterPath="$PROJECT_DIR$/src/SimpleToolbar/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Toast/index.js" afterPath="$PROJECT_DIR$/src/Toast/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Toolbar/index.js" afterPath="$PROJECT_DIR$/src/Toolbar/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js" afterPath="$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
@@ -38,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Divider/index.js">
+      <file leaf-file-name="ActionButton.flow.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+            <state relative-caret-position="189">
+              <caret line="368" column="0" lean-forward="false" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -63,7 +52,7 @@
       <file leaf-file-name="Icon.flow.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Icon/Icon.flow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -147,6 +136,7 @@
     <findStrings>
       <find>getTheme</find>
       <find>button</find>
+      <find>merge</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/TextInput/TextField.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/METester/RadioButtonExample.js" />
-        <option value="$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js" />
         <option value="$PROJECT_DIR$/src/RadioButton/RadioButton.flow.js" />
         <option value="$PROJECT_DIR$/src/Badge/Badge.flow.js" />
         <option value="$PROJECT_DIR$/src/Dialog/Actions.flow.js" />
@@ -201,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/Toast/index.js" />
         <option value="$PROJECT_DIR$/src/Toolbar/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js" />
       </list>
     </option>
   </component>
@@ -219,7 +209,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="37" />
     <option name="y" value="23" />
     <option name="width" value="702" />
@@ -240,7 +230,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -253,6 +242,12 @@
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ActionButton" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
@@ -342,6 +337,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -353,16 +349,16 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Images/BottomSheet" />
-      <recent name="D:\NPM\material-elements\src\Snackbar" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ActionButton" />
       <recent name="$PROJECT_DIR$/src/METester" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Subheader" />
       <recent name="$PROJECT_DIR$/src/RippleFeedback" />
-      <recent name="$PROJECT_DIR$/src/Dialog" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Images/BottomSheet" />
+      <recent name="D:\NPM\material-elements\src\Snackbar" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -467,12 +463,13 @@
       <workItem from="1517460817387" duration="3303000" />
       <workItem from="1517535054234" duration="14000" />
       <workItem from="1517823546636" duration="4880000" />
-      <workItem from="1517897370420" duration="12629000" />
+      <workItem from="1517897370420" duration="12762000" />
+      <workItem from="1517994119828" duration="129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68048000" />
+    <option name="totallyTimeSpent" value="68310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -512,7 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-813">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -520,7 +516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -528,7 +523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -536,7 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -544,7 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -552,7 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -560,9 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-62">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -570,9 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-210">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -580,10 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#17#51#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -592,15 +573,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="225">
             <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="24" selection-end-column="15" />
-            <folding>
-              <marker date="1516165104000" expanded="true" signature="323:774" ph="{...}" />
-              <marker date="1516165104000" expanded="true" signature="329:772" ph="&lt;View/&gt;" />
-              <marker date="1516165104000" expanded="true" signature="342:760" ph="&lt;Dialog/&gt;" />
-              <marker date="1516165104000" expanded="true" signature="421:567" ph="&lt;Dialog.Content/&gt;" />
-              <marker date="1516165104000" expanded="true" signature="448:541" ph="&lt;Text/&gt;" />
-              <marker date="1516165104000" expanded="true" signature="576:744" ph="&lt;Dialog.Actions/&gt;" />
-              <marker date="1516165104000" expanded="true" signature="603:718" ph="&lt;DialogDefaultActions/&gt;" />
-            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -610,7 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -618,7 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -626,9 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5959">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -636,9 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1848">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -646,9 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -656,9 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
           <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-          <folding>
-            <element signature="e#14#53#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -666,7 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1015">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -674,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-887">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -682,9 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,9 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -702,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -726,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,14 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -779,19 +717,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <marker date="1516346187000" expanded="true" signature="88:399" ph="{...}" />
-              <marker date="1516346187000" expanded="true" signature="94:397" ph="&lt;View/&gt;" />
-              <marker date="1516346187000" expanded="true" signature="436:1088" ph="{&quot;text&quot;: PropTypes.string...}" />
-              <marker date="1516346187000" expanded="true" signature="442:484" ph="/** 传入Image组件属性，avatar渲染Image ...*/" />
-              <marker date="1516346187000" expanded="true" signature="512:545" ph="{...}" />
-              <marker date="1516346187000" expanded="true" signature="552:590" ph="/** 传入Icon属性，avatar渲染icon ...*/" />
-              <marker date="1516346187000" expanded="true" signature="616:740" ph="{&quot;name&quot;: PropTypes.string...}" />
-              <marker date="1516346187000" expanded="true" signature="747:785" ph="/** 传入text，avatar渲染text组件 ...*/" />
-              <marker date="1516346187000" expanded="true" signature="818:912" ph="/** 仅仅用于container尺寸: style: { width: size, height: size, borderRadius: size / 2 } ...*/" />
-              <marker date="1516346187000" expanded="true" signature="945:970" ph="/** avatar样式 ...*/" />
-              <marker date="1516346187000" expanded="true" signature="998:1084" ph="{&quot;container&quot;: ViewPropTypes.style...}" />
-            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -802,18 +727,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <marker date="1516354874000" expanded="true" signature="229:380" ph="{...}" />
-              <marker date="1516354874000" expanded="true" signature="233:378" ph="&lt;Badge/&gt;" />
-              <marker date="1516354874000" expanded="true" signature="417:1013" ph="{&quot;children&quot;: PropTypes.node...}" />
-              <marker date="1516354874000" expanded="true" signature="423:447" ph="/** badge ...*/" />
-              <marker date="1516354874000" expanded="true" signature="482:508" ph="/** badge内容 ...*/" />
-              <marker date="1516354874000" expanded="true" signature="541:573" ph="/** badge里的icon内容 ...*/" />
-              <marker date="1516354874000" expanded="true" signature="599:723" ph="{&quot;name&quot;: PropTypes.string...}" />
-              <marker date="1516354874000" expanded="true" signature="730:840" ph="/** badge container style={{ container: { width: size, height: size, borderRadius: size / 2 }}} ...*/" />
-              <marker date="1516354874000" expanded="true" signature="897:944" ph="{&quot;container&quot;: ViewPropTypes.style...}" />
-              <marker date="1516354874000" expanded="true" signature="952:980" ph="/** 整个node的尺寸 ...*/" />
-            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -824,28 +737,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <marker date="1516438007000" expanded="true" signature="459:1314" ph="{...}" />
-              <marker date="1516438007000" expanded="true" signature="465:1312" ph="&lt;BottomNavigation/&gt;" />
-              <marker date="1516438007000" expanded="true" signature="520:693" ph="&lt;BottomNavigation.Action/&gt;" />
-              <marker date="1516438007000" expanded="true" signature="702:879" ph="&lt;BottomNavigation.Action/&gt;" />
-              <marker date="1516438007000" expanded="true" signature="888:1094" ph="&lt;BottomNavigation.Action/&gt;" />
-              <marker date="1516438007000" expanded="true" signature="1103:1288" ph="&lt;BottomNavigation.Action/&gt;" />
-              <marker date="1516438007000" expanded="true" signature="1371:1797" ph="{&quot;active&quot;: PropTypes.string...}" />
-              <marker date="1516438007000" expanded="true" signature="1377:1424" ph="/** The key of selected/active tab ...*/" />
-              <marker date="1516438007000" expanded="true" signature="1459:1505" ph="/** BottomNavigation.Action nodes ...*/" />
-              <marker date="1516438007000" expanded="true" signature="1551:1614" ph="/** Wether or not the BottomNaviagtion should show ...*/" />
-              <marker date="1516438007000" expanded="true" signature="1643:1663" ph="/*...*/" />
-              <marker date="1516438007000" expanded="true" signature="1668:1717" ph="/*...*/" />
-              <marker date="1516438007000" expanded="true" signature="1745:1793" ph="{&quot;container&quot;: View.propTypes.style...}" />
-              <marker date="1516438007000" expanded="true" signature="1845:2504" ph="{&quot;icon&quot;: PropTypes.string.isRequired...}" />
-              <marker date="1516438007000" expanded="true" signature="1851:1928" ph="/** Will be rendered above the label as a content of the action. ...*/" />
-              <marker date="1516438007000" expanded="true" signature="1972:2048" ph="/** Will be rendered under the icon as a content of the action. ...*/" />
-              <marker date="1516438007000" expanded="true" signature="2082:2173" ph="/** True if the action is active (for now it'll be highlight by primary color) ...*/" />
-              <marker date="1516438007000" expanded="true" signature="2217:2262" ph="/** Callback for on press event. ...*/" />
-              <marker date="1516438007000" expanded="true" signature="2296:2346" ph="/** Inline style of bottom navigation ...*/" />
-              <marker date="1516438007000" expanded="true" signature="2374:2500" ph="{&quot;container&quot;: View.propTypes.style...}" />
-            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -856,7 +747,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -867,7 +757,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -878,21 +767,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <marker date="1516332948000" expanded="true" signature="140:463" ph="{...}" />
-              <marker date="1516332948000" expanded="true" signature="146:461" ph="&lt;View/&gt;" />
-              <marker date="1516332948000" expanded="true" signature="500:1319" ph="{&quot;disabled&quot;: PropTypes.bool...}" />
-              <marker date="1516332948000" expanded="true" signature="506:543" ph="/** button组件是否可用 ...*/" />
-              <marker date="1516332948000" expanded="true" signature="586:623" ph="/** button组件是否凸起 ...*/" />
-              <marker date="1516332948000" expanded="true" signature="664:703" ph="/** 按下时触发，传递text参数 ...*/" />
-              <marker date="1516332948000" expanded="true" signature="745:783" ph="/** 长按触发，传递text参数 ...*/" />
-              <marker date="1516332948000" expanded="true" signature="829:862" ph="/** text将被显示 ...*/" />
-              <marker date="1516332948000" expanded="true" signature="914:945" ph="/** 是否转换大写 ...*/" />
-              <marker date="1516332948000" expanded="true" signature="989:1028" ph="/** 展示图标，展示在text之前 ...*/" />
-              <marker date="1516332948000" expanded="true" signature="1063:1135" ph="[...]" />
-              <marker date="1516332948000" expanded="true" signature="1146:1188" ph="/** 重写button样式和text样式 ...*/" />
-              <marker date="1516332948000" expanded="true" signature="1220:1315" ph="{&quot;container&quot;: ViewPropTypes.style...}" />
-            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -902,7 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,7 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -918,7 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="41" lean-forward="false" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -926,7 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,7 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,9 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -952,7 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +848,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Icon/Icon.flow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -1046,6 +910,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="368" column="0" lean-forward="false" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
           <folding />
         </state>
       </provider>

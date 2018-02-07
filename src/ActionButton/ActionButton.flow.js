@@ -20,6 +20,7 @@ import RippleFeedback from '../RippleFeedback';
 //$FlowFixMe
 import getPlatformElevation from '../styles/getPlatformElevation';
 import getTheme from '../styles/getTheme';
+import merge from 'lodash/merge'
 import type { IconPropTypes } from '../TypeDifinition/index';
 type ActionsType=Array<{
   icon:IconPropTypes,
@@ -52,6 +53,7 @@ type ActionButtonProps={
   style:StyleType,
   size:number,
 }
+
 const defaultProps = {
     actions: null,
     onPress: null,
@@ -364,9 +366,6 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
 
         const {style,...iconProps}=icon;
 
-        const iconProps_=merge()
-
-        console.log(iconProps)
         let result=<Icon style={styles.icon}  {...iconProps} />;
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }} pointerEvents="box-only">
