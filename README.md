@@ -21,26 +21,25 @@ Roboto字体获取方式：./node_modules/material-elements/roboto  <br/>
 
 下面是material-elements所包含的组件
 
-- [Action Button](https://github.com/react-native-studio/material-elements/blob/master/docs/ActionButton.md)
-- [Avatar](https://github.com/react-native-studio/material-elements/blob/master/docs/Avatar.md)
-- [Badge](https://github.com/react-native-studio/material-elements/blob/master/docs/Badge.md)
-- [Bottom Navigation](https://github.com/react-native-studio/material-elements/blob/master/docs/BottomNavigation.md)
-- [Button](https://github.com/react-native-studio/material-elements/blob/master/docs/Button.md)
-- [Card](https://github.com/react-native-studio/material-elements/blob/master/docs/Card.md)
-- [Checkbox](https://github.com/react-native-studio/material-elements/blob/master/docs/Checkbox.md)
-- [Dialog](https://github.com/react-native-studio/material-elements/blob/master/docs/Dialog.md)
+- Action Button
+- Avatar
+- Badge
+- Bottom Navigation
+- Button
+- Card
+- Checkbox
+- Dialog
 - Divider
-- Drawer
-- [Icon](https://github.com/react-native-studio/material-elements/blob/master/docs/Icon.md)
-- [Icon toggles](https://github.com/react-native-studio/material-elements/blob/master/docs/IconToggle.md)
+- Icon
+- Icon toggles
 - List item
 - Radio button
 - Subheader
-- [Toolbar](https://github.com/react-native-studio/material-elements/blob/master/docs/Toolbar.md)
-- [SimpleToolbar](https://github.com/react-native-studio/material-elements/blob/master/docs/SimpleToolbar.md)
-- [BottomSheet](https://github.com/react-native-studio/material-elements/blob/master/docs/BottomSheet.md)
-- [Menu](https://github.com/react-native-studio/material-elements/blob/master/docs/Menu.md)
-- [Toast](https://github.com/react-native-studio/material-elements/blob/master/docs/Toast.md)
+- Toolbar
+- SimpleToolbar
+- BottomSheet
+- Menu
+- Toast
 - TextField
 - Indicator
 #### 后续将完善文档，丰富material-elements组件库
