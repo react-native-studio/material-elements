@@ -156,6 +156,7 @@ export default function getTheme(theme, ...more) {
             text: {
                 color: black,
                 ...typography.buttons,
+                textAlign:'center'
             },
             icon: {
                 marginRight: 8,
@@ -502,12 +503,13 @@ export default function getTheme(theme, ...more) {
         toolbar: StyleSheet.create(merge({
             container: {
                 backgroundColor: palette.primaryColor,
-                height: 56,
+                height: Metrics.statusBarHeight+Metrics.appBarHeight,
                 flexDirection: 'row',
                 alignItems: 'center',
                 paddingHorizontal: 4,
                 overflow: 'hidden',
                 ...getPlatformElevation(4),
+                paddingTop:Metrics.statusBarHeight
             },
             leftElementContainer: {
                 backgroundColor: 'transparent',
@@ -517,8 +519,7 @@ export default function getTheme(theme, ...more) {
             },
             centerElementContainer: {
                 flex: 1,
-               marginLeft: 20,
-
+                marginLeft: 20,
             },
             titleText: {
                 fontFamily,
