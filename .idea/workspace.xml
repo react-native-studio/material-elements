@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea861f9b-f89e-46ce-894f-a863d069c3e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/METester/ToastExample.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Dialog/Actions.flow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Dialog/Content.flow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Dialog/Dialog.flow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Dialog/DialogDefaultActions.flow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Dialog/Title.flow.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Toast/Toast.flow.js" afterPath="$PROJECT_DIR$/src/Toast/Toast.flow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dialog/Dialog.react.js" afterPath="$PROJECT_DIR$/src/Dialog/Dialog.react.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dialog/DialogDefaultActions.react.js" afterPath="$PROJECT_DIR$/src/Dialog/DialogDefaultActions.react.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dialog/index.js" afterPath="$PROJECT_DIR$/src/Dialog/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,46 +24,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="getTheme.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/getTheme.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="145" column="25" lean-forward="false" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Badge.flow.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Badge/Badge.flow.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BadgeExmaple.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/METester/BadgeExmaple.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListItem.flow.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ListItem/ListItem.flow.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-813">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ListItemExample.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/METester/ListItemExample.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,18 +64,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToastExample.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ToastExample.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/METester/ToastExample.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ListItem/index.js">
+      <file leaf-file-name="Dialog.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/Dialog.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="225">
+                <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="24" selection-end-column="15" />
+                <folding>
+                  <marker date="1516165104000" expanded="true" signature="323:774" ph="{...}" />
+                  <marker date="1516165104000" expanded="true" signature="329:772" ph="&lt;View/&gt;" />
+                  <marker date="1516165104000" expanded="true" signature="342:760" ph="&lt;Dialog/&gt;" />
+                  <marker date="1516165104000" expanded="true" signature="421:567" ph="&lt;Dialog.Content/&gt;" />
+                  <marker date="1516165104000" expanded="true" signature="448:541" ph="&lt;Text/&gt;" />
+                  <marker date="1516165104000" expanded="true" signature="576:744" ph="&lt;Dialog.Actions/&gt;" />
+                  <marker date="1516165104000" expanded="true" signature="603:718" ph="&lt;DialogDefaultActions/&gt;" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RippleFeedback.react.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Dialog/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -172,6 +169,7 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/RadioButton/RadioButton.flow.js" />
         <option value="$PROJECT_DIR$/src/Badge/Badge.flow.js" />
+        <option value="$PROJECT_DIR$/src/Dialog/Actions.flow.js" />
       </list>
     </option>
   </component>
@@ -223,6 +221,11 @@
             <path>
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -235,19 +238,7 @@
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ListItem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="METester" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Toast" type="462c0819:PsiDirectoryNode" />
+              <item name="Dialog" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -269,11 +260,11 @@
       <recent name="D:\NPM\material-elements\src\Snackbar" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/RippleFeedback" />
+      <recent name="$PROJECT_DIR$/src/Dialog" />
       <recent name="$PROJECT_DIR$/src/METester" />
       <recent name="$PROJECT_DIR$/src/Toast" />
-      <recent name="$PROJECT_DIR$/src/SimpleToolbar" />
-      <recent name="$PROJECT_DIR$/src/ListItem" />
-      <recent name="$PROJECT_DIR$/src/Badge" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -378,18 +369,17 @@
       <workItem from="1517460817387" duration="3303000" />
       <workItem from="1517535054234" duration="14000" />
       <workItem from="1517823546636" duration="4880000" />
-      <workItem from="1517897370420" duration="7222000" />
+      <workItem from="1517897370420" duration="9671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62641000" />
+    <option name="totallyTimeSpent" value="65090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26286116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26286116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -419,41 +409,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Container/__test__/Container.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Container/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Button/Button.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Button/examples/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Avatar/Avatar.react.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/METester/ButtonExample.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -704,14 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ActionButton/ActionButton.react.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -759,7 +706,7 @@
         <state relative-caret-position="-253">
           <caret line="122" column="41" lean-forward="false" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="41" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,7 +786,73 @@
     <entry file="file://$PROJECT_DIR$/src/METester/ToastExample.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dialog/Content.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dialog/Actions.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dialog/Actions.flow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#17#51#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Dialog.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="225">
+            <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="24" selection-end-column="15" />
+            <folding>
+              <marker date="1516165104000" expanded="true" signature="323:774" ph="{...}" />
+              <marker date="1516165104000" expanded="true" signature="329:772" ph="&lt;View/&gt;" />
+              <marker date="1516165104000" expanded="true" signature="342:760" ph="&lt;Dialog/&gt;" />
+              <marker date="1516165104000" expanded="true" signature="421:567" ph="&lt;Dialog.Content/&gt;" />
+              <marker date="1516165104000" expanded="true" signature="448:541" ph="&lt;Text/&gt;" />
+              <marker date="1516165104000" expanded="true" signature="576:744" ph="&lt;Dialog.Actions/&gt;" />
+              <marker date="1516165104000" expanded="true" signature="603:718" ph="&lt;DialogDefaultActions/&gt;" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RippleFeedback/RippleFeedback.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dialog/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
