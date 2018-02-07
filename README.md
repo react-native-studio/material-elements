@@ -20,7 +20,7 @@ Roboto字体获取方式：./node_modules/material-elements/roboto  <br/>
 ### 使用
 
 下面是material-elements所包含的组件
-
+请见[示例](https://github.com/react-native-studio/material-elements/tree/master/src/METester)
 - Action Button
 - Avatar
 - Badge
