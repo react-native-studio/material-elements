@@ -1,5 +1,5 @@
 # material-elements [![npm version](https://badge.fury.io/js/material-elements.svg)](https://badge.fury.io/js/material-elements)
-一个基于react native的ui设计
+基于material design设计的react native UI库
 ### 第一步 安装
 运行 `npm install --save material-elements` 或者 `yarn add material-elements(需要安装yarn)`
 
