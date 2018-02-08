@@ -10,6 +10,7 @@ import light from '../styles/themes/light'
 import getPlatformElevation from '../styles/getPlatformElevation'
 import RippleFeedback from '../RippleFeedback'
 import Icon from '../Icon/Icon.flow'
+import { ViewPropTypes } from '../utils/index'
 
 const defaultProps = {
   icon: null,
@@ -31,9 +32,9 @@ type ButtonState = {
   elevation: number,
 }
 type StylesType = {
-  container?: mixed,
-  icon?: mixed,
-  text?: mixed,
+  container?: ViewPropTypes.style,
+  icon?: Icon.propTypes.style,
+  text?: Text.propTypes.style,
 }
 
 function getStyles (props, state) {
@@ -46,7 +47,7 @@ function getStyles (props, state) {
     buttonRaisedDisabled,
   } = uiTheme
 
-  const {primary, accent, disabled, raised} = props
+  const {primary, accent, disabled, raised,iconPosition} = props
   const {palette} = light
 
   type containerType = {
@@ -110,6 +111,7 @@ function getStyles (props, state) {
       raised && buttonRaised.icon,
       local.icon,
       props.style.icon,
+      iconPosition==='left'?{marginLeft:0}:{marginRight:0},
     ],
   }
 }

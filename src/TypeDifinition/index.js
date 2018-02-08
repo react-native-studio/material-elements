@@ -5,11 +5,11 @@ import React from 'react';
 import {Text,Image} from 'react-native';
 import { ViewPropTypes } from '../utils/index'
 export type IconPropTypes={
-  name?:string,
-  size?:number,
-  color?:string,
-  type?:string,
-  style?:mixed,
+  name?:?string,
+  size?:?number,
+  color?:?string,
+  type?:?string,
+  style?:?mixed,
 }
 export type ButtonPropTypes={
   /**
@@ -50,7 +50,7 @@ export type ButtonPropTypes={
   },
   accent?:boolean,
   primary?:boolean,
-  iconPosition:string,
+  iconPosition?:'left' | 'right',
 }
 type actions={
   icon?:?IconPropTypes,
@@ -70,34 +70,30 @@ export type ActionButtonProps={
     icon:mixed
   },
 }
-export type RippleFeedbackProps={
-  color?:string,
-  borderless?:boolean,
-  children: React.Component<*>,
-  underlayColor:string,//仅仅ios和android API<21有效
-}
+
 export type AvatarProps={
   /**
    * 传入Image组件属性，avatar渲染Image
    */
-  image:{
+  image?:{
     ...Image.propTypes
   },
   /**
    * 传入Icon属性，avatar渲染icon
    */
-  icon:IconPropTypes,
-  text:string,
+  icon?:IconPropTypes,
+  text?:string,
   /**
    * 仅仅用于container尺寸: style: { width: size, height: size, borderRadius: size / 2 }
    */
-  size:number,
+  size?:number,
   /**
    * avatar样式
    */
   style:{
-    container:ViewPropTypes.style,
-    text:Text.propTypes.style,
+    container?:ViewPropTypes.style,
+    text?:Text.propTypes.style,
+    content?:ViewPropTypes.style,
   },
 }
 export type DividerProps={
