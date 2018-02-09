@@ -11,6 +11,7 @@ import getPlatformElevation from '../styles/getPlatformElevation'
 import RippleFeedback from '../RippleFeedback'
 import Icon from '../Icon/Icon.flow'
 import { ViewPropTypes } from '../utils/index'
+import Color from 'color'
 
 const defaultProps = {
   icon: null,
@@ -162,7 +163,7 @@ class Button extends PureComponent<ButtonPropTypes, ButtonState> {
   }
 
   render () {
-    const {text, disabled, raised, upperCase, onLongPress, iconPosition} = this.props
+    const {text, disabled, raised, upperCase, onLongPress, iconPosition,useTextColorForRippleColor} = this.props
 
     const styles = getStyles(this.props, this.state)
 
@@ -187,6 +188,10 @@ class Button extends PureComponent<ButtonPropTypes, ButtonState> {
         onPressIn={raised ? this.setElevation : null}
         onPressOut={raised ? this.removeElevation : null}
         delayPressIn={50}
+        color={useTextColorForRippleColor&& !raised ? Color(StyleSheet.flatten(styles.text).color).alpha(0.12).toString():null}
+        borderless={useTextColorForRippleColor&&!raised ? false:true}
+        underlayColor={useTextColorForRippleColor&&!raised ? Color(StyleSheet.flatten(styles.text).color).alpha(0.12).toString():'rgb(224,224,224)'}
+
       >
         {content}
       </RippleFeedback>

@@ -51,6 +51,7 @@ export type ButtonPropTypes={
   accent?:boolean,
   primary?:boolean,
   iconPosition?:'left' | 'right',
+  useTextColorForRippleColor:boolean,//是否使用文字颜色用于水波纹颜色，仅仅flatbutton有效
 }
 type actions={
   icon?:?IconPropTypes,

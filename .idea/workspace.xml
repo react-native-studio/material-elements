@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ea861f9b-f89e-46ce-894f-a863d069c3e5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Button/Button.flow.js" afterPath="$PROJECT_DIR$/src/Button/Button.flow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TypeDifinition/index.js" afterPath="$PROJECT_DIR$/src/TypeDifinition/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
@@ -37,127 +38,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getTheme.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/getTheme.js">
+      <file leaf-file-name="Button.flow.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Button/Button.flow.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1518070631000" expanded="true" signature="883:24341" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="1084:24307" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="5438:5917" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="5855:5917" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="9914:9928" ph="{&quot;backgroundColor&quot;: white...}" />
-                <marker date="1518070631000" expanded="true" signature="9914:9939" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="10003:10285" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="10028:10156" ph="{&quot;position&quot;: 'absolute'...}" />
-                <marker date="1518070631000" expanded="true" signature="10188:10274" ph="{&quot;backgroundColor&quot;: grey500...}" />
-                <marker date="1518070631000" expanded="true" signature="10362:10974" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="10387:10461" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="10493:10605" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="10633:10715" ph="{&quot;justifyContent&quot;: 'center'...}" />
-                <marker date="1518070631000" expanded="true" signature="10747:10800" ph="{&quot;flexDirection&quot;: 'row'...}" />
-                <marker date="1518070631000" expanded="true" signature="10837:10877" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="10916:10963" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="11059:11156" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="11084:11145" ph="{&quot;backgroundColor&quot;: transparent...}" />
-                <marker date="1518070631000" expanded="true" signature="11235:11894" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="11260:11311" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="11331:11508" ph="{&quot;flexDirection&quot;: 'row'...}" />
-                <marker date="1518070631000" expanded="true" signature="11533:11573" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="11593:11671" ph="{&quot;position&quot;: 'absolute'...}" />
-                <marker date="1518070631000" expanded="true" signature="11692:11789" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="11810:11883" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="11976:12282" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="12001:12058" ph="{&quot;backgroundColor&quot;: grey100...}" />
-                <marker date="1518070631000" expanded="true" signature="12085:12145" ph="{&quot;color&quot;: palette.primaryColor...}" />
-                <marker date="1518070631000" expanded="true" signature="12172:12271" ph="{&quot;color&quot;: palette.primaryColor...}" />
-                <marker date="1518070631000" expanded="true" signature="12361:12669" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="12386:12572" ph="{&quot;alignItems&quot;: 'center'...}" />
-                <marker date="1518070631000" expanded="true" signature="12592:12658" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-                <marker date="1518070631000" expanded="true" signature="12733:14307" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="12758:12855" ph="{&quot;backgroundColor&quot;: palette.canvasColor...}" />
-                <marker date="1518070631000" expanded="true" signature="12891:13007" ph="{&quot;flexDirection&quot;: 'row'...}" />
-                <marker date="1518070631000" expanded="true" signature="13043:13117" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="13155:13228" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="13291:13429" ph="{&quot;color&quot;: palette.primaryTextColor...}" />
-                <marker date="1518070631000" expanded="true" signature="13454:13507" ph="{&quot;flexDirection&quot;: 'row'...}" />
-                <marker date="1518070631000" expanded="true" signature="13543:13583" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="13612:13747" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-                <marker date="1518070631000" expanded="true" signature="13775:13910" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-                <marker date="1518070631000" expanded="true" signature="13947:14081" ph="{&quot;flexDirection&quot;: 'row'...}" />
-                <marker date="1518070631000" expanded="true" signature="14108:14202" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-                <marker date="1518070631000" expanded="true" signature="14230:14296" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-                <marker date="1518070631000" expanded="true" signature="14444:15438" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="14469:14891" ph="{&quot;flexDirection&quot;: 'row'...}" />
-                <marker date="1518070631000" expanded="true" signature="14914:15156" ph="{&quot;color&quot;: white...}" />
-                <marker date="1518070631000" expanded="true" signature="15187:15268" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="15294:15427" ph="{&quot;color&quot;: palette.primaryColor...}" />
-                <marker date="1518070631000" expanded="true" signature="15496:16209" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="15518:15689" ph="{&quot;flexDirection&quot;: 'row'...}" />
-                <marker date="1518070631000" expanded="true" signature="15715:16044" ph="{&quot;flexDirection&quot;: 'row'...}" />
-                <marker date="1518070631000" expanded="true" signature="16061:16199" ph="{&quot;color&quot;: 'white'...}" />
-                <marker date="1518070631000" expanded="true" signature="16336:16681" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="16361:16446" ph="{&quot;justifyContent&quot;: 'center'...}" />
-                <marker date="1518070631000" expanded="true" signature="16466:16670" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-                <marker date="1518070631000" expanded="true" signature="16743:17855" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="16768:17153" ph="{&quot;backgroundColor&quot;: palette.primaryColor...}" />
-                <marker date="1518070631000" expanded="true" signature="17189:17252" ph="{&quot;backgroundColor&quot;: 'transparent'...}" />
-                <marker date="1518070631000" expanded="true" signature="17279:17345" ph="{&quot;color&quot;: palette.alternateTextColor...}" />
-                <marker date="1518070631000" expanded="true" signature="17383:17455" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="17480:17612" ph="{&quot;fontFamily&quot;: fontFamily...}" />
-                <marker date="1518070631000" expanded="true" signature="17649:17750" ph="{&quot;flexDirection&quot;: 'row'...}" />
-                <marker date="1518070631000" expanded="true" signature="17778:17844" ph="{&quot;color&quot;: palette.alternateTextColor...}" />
-                <marker date="1518070631000" expanded="true" signature="17918:19358" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="17940:18112" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="18136:18349" ph="{&quot;position&quot;: 'absolute'...}" />
-                <marker date="1518070631000" expanded="true" signature="18373:18682" ph="{&quot;backgroundColor&quot;: '##fff'...}" />
-                <marker date="1518070631000" expanded="true" signature="18713:18925" ph="{&quot;justifyContent&quot;: 'flex-start'...}" />
-                <marker date="1518070631000" expanded="true" signature="18956:19163" ph="{&quot;justifyContent&quot;: 'flex-start'...}" />
-                <marker date="1518070631000" expanded="true" signature="19181:19348" ph="{&quot;fontFamily&quot;: 'Roboto-Regular'...}" />
-                <marker date="1518070631000" expanded="true" signature="19432:19933" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="19454:19667" ph="{&quot;flexDirection&quot;: 'row'...}" />
-                <marker date="1518070631000" expanded="true" signature="19684:19865" ph="{&quot;fontFamily&quot;: 'Roboto-Regular'...}" />
-                <marker date="1518070631000" expanded="true" signature="19882:19923" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="20015:20470" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="20037:20240" ph="{&quot;alignItems&quot;: 'center'...}" />
-                <marker date="1518070631000" expanded="true" signature="20257:20459" ph="{&quot;fontFamily&quot;: 'Roboto-Regular'...}" />
-                <marker date="1518070631000" expanded="true" signature="20553:21107" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="20578:20647" ph="{&quot;backgroundColor&quot;: palette.canvasColor...}" />
-                <marker date="1518070631000" expanded="true" signature="20674:20740" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-                <marker date="1518070631000" expanded="true" signature="20806:21002" ph="{&quot;fontFamily&quot;: fontFamily...}" />
-                <marker date="1518070631000" expanded="true" signature="21030:21096" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-                <marker date="1518070631000" expanded="true" signature="21175:21363" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="21197:21353" ph="{&quot;position&quot;: 'absolute'...}" />
-                <marker date="1518070631000" expanded="true" signature="21419:21877" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="21441:21639" ph="{&quot;justifyContent&quot;: 'flex-start'...}" />
-                <marker date="1518070631000" expanded="true" signature="21656:21811" ph="{&quot;fontFamily&quot;: 'Roboto-Regular'...}" />
-                <marker date="1518070631000" expanded="true" signature="21828:21867" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="21932:22122" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="21949:22024" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="22049:22112" ph="{&quot;color&quot;: 'red'...}" />
-                <marker date="1518070631000" expanded="true" signature="22187:22460" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="22209:22338" ph="{&quot;position&quot;: 'relative'...}" />
-                <marker date="1518070631000" expanded="true" signature="22360:22450" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="22531:22790" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="22553:22706" ph="{&quot;position&quot;: 'absolute'...}" />
-                <marker date="1518070631000" expanded="true" signature="22728:22780" ph="{&quot;color&quot;: palette.primaryColor...}" />
-                <marker date="1518070631000" expanded="true" signature="22866:23075" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="22888:22958" ph="{&quot;alignItems&quot;: 'center'...}" />
-                <marker date="1518070631000" expanded="true" signature="22980:23065" ph="{&quot;backgroundColor&quot;: palette.primaryColor...}" />
-                <marker date="1518070631000" expanded="true" signature="23151:24277" ph="{...}" />
-                <marker date="1518070631000" expanded="true" signature="23176:23609" ph="{&quot;backgroundColor&quot;: palette.primaryColor...}" />
-                <marker date="1518070631000" expanded="true" signature="23636:23702" ph="{&quot;color&quot;: palette.alternateTextColor...}" />
-                <marker date="1518070631000" expanded="true" signature="23740:24015" ph="{&quot;position&quot;: 'absolute'...}" />
-                <marker date="1518070631000" expanded="true" signature="24040:24172" ph="{&quot;fontFamily&quot;: fontFamily...}" />
-                <marker date="1518070631000" expanded="true" signature="24200:24266" ph="{&quot;color&quot;: palette.alternateTextColor...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Button.flow.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Button/Button.flow.js">
+      <file leaf-file-name="getTheme.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/getTheme.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -169,7 +61,7 @@
       <file leaf-file-name="Avatar.flow.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Avatar/Avatar.flow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-312">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
@@ -201,7 +93,7 @@
       <file leaf-file-name="ActionButton.flow.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="7656">
               <caret line="368" column="0" lean-forward="false" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
               <folding />
             </state>
@@ -315,7 +207,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="37" />
     <option name="y" value="23" />
     <option name="width" value="702" />
@@ -376,6 +268,12 @@
               <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-elements" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Button" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-elements" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-elements" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="TypeDifinition" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -394,16 +292,16 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/METester" />
-      <recent name="$PROJECT_DIR$/src/Button" />
-      <recent name="$PROJECT_DIR$/src/styles" />
-      <recent name="$PROJECT_DIR$/src/TypeDifinition" />
-      <recent name="$PROJECT_DIR$/src/ActionButton" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Images/BottomSheet" />
       <recent name="D:\NPM\material-elements\src\Snackbar" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Button" />
+      <recent name="$PROJECT_DIR$/src/TypeDifinition" />
+      <recent name="$PROJECT_DIR$/src/METester" />
+      <recent name="$PROJECT_DIR$/src/styles" />
+      <recent name="$PROJECT_DIR$/src/ActionButton" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -510,25 +408,27 @@
       <workItem from="1517823546636" duration="4880000" />
       <workItem from="1517897370420" duration="12762000" />
       <workItem from="1517994119828" duration="129000" />
+      <workItem from="1518141857091" duration="493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71391000" />
+    <option name="totallyTimeSpent" value="72290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26286116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20798065" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -690,24 +590,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="287">
             <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="36" />
-            <folding>
-              <marker date="1516342628000" expanded="true" signature="604:751" ph="{...}" />
-              <marker date="1516342628000" expanded="true" signature="610:749" ph="&lt;View/&gt;" />
-              <marker date="1516342628000" expanded="true" signature="788:2048" ph="{&quot;onPress&quot;: PropTypes.func...}" />
-              <marker date="1516342628000" expanded="true" signature="794:986" ph="/** Array of names of icons (or elements) that will be shown after the main button is pressed ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1020:1373" ph="[...]" />
-              <marker date="1516342628000" expanded="true" signature="1155:1364" ph="{&quot;name&quot;: PropTypes.string...}" />
-              <marker date="1516342628000" expanded="true" signature="1195:1279" ph="[...]" />
-              <marker date="1516342628000" expanded="true" signature="1380:1420" ph="/** 按钮onPress时触发,text作为参数传递 ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1454:1498" ph="/** 按钮onLongPress时触发,text作为参数传递 ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1536:1563" ph="/** 是否隐藏button ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1596:1629" ph="/** 可为字符串或者Component ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1660:1720" ph="[...]" />
-              <marker date="1516342628000" expanded="true" signature="1727:1774" ph="/** 当transition为null时，不会产生动画 ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1838:1862" ph="/** 设置水波纹颜色 ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1902:1933" ph="/** 设置button的style ...*/" />
-              <marker date="1516342628000" expanded="true" signature="1961:2044" ph="{&quot;container&quot;: ViewPropTypes.style...}" />
-            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -833,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,9 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -861,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -869,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -877,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -885,9 +760,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/getTheme.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Avatar/Avatar.flow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/METester/PlaceHolderExample.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/METester/ListItemExample.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7656">
+          <caret line="368" column="0" lean-forward="false" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -907,22 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActionButton/ActionButton.flow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="368" column="0" lean-forward="false" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/METester/ListItemExample.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TypeDifinition/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -931,153 +837,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/getTheme.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1518070631000" expanded="true" signature="883:24341" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="1084:24307" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="5438:5917" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="5855:5917" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="9914:9928" ph="{&quot;backgroundColor&quot;: white...}" />
-            <marker date="1518070631000" expanded="true" signature="9914:9939" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="10003:10285" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="10028:10156" ph="{&quot;position&quot;: 'absolute'...}" />
-            <marker date="1518070631000" expanded="true" signature="10188:10274" ph="{&quot;backgroundColor&quot;: grey500...}" />
-            <marker date="1518070631000" expanded="true" signature="10362:10974" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="10387:10461" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="10493:10605" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="10633:10715" ph="{&quot;justifyContent&quot;: 'center'...}" />
-            <marker date="1518070631000" expanded="true" signature="10747:10800" ph="{&quot;flexDirection&quot;: 'row'...}" />
-            <marker date="1518070631000" expanded="true" signature="10837:10877" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="10916:10963" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="11059:11156" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="11084:11145" ph="{&quot;backgroundColor&quot;: transparent...}" />
-            <marker date="1518070631000" expanded="true" signature="11235:11894" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="11260:11311" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="11331:11508" ph="{&quot;flexDirection&quot;: 'row'...}" />
-            <marker date="1518070631000" expanded="true" signature="11533:11573" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="11593:11671" ph="{&quot;position&quot;: 'absolute'...}" />
-            <marker date="1518070631000" expanded="true" signature="11692:11789" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="11810:11883" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="11976:12282" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="12001:12058" ph="{&quot;backgroundColor&quot;: grey100...}" />
-            <marker date="1518070631000" expanded="true" signature="12085:12145" ph="{&quot;color&quot;: palette.primaryColor...}" />
-            <marker date="1518070631000" expanded="true" signature="12172:12271" ph="{&quot;color&quot;: palette.primaryColor...}" />
-            <marker date="1518070631000" expanded="true" signature="12361:12669" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="12386:12572" ph="{&quot;alignItems&quot;: 'center'...}" />
-            <marker date="1518070631000" expanded="true" signature="12592:12658" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-            <marker date="1518070631000" expanded="true" signature="12733:14307" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="12758:12855" ph="{&quot;backgroundColor&quot;: palette.canvasColor...}" />
-            <marker date="1518070631000" expanded="true" signature="12891:13007" ph="{&quot;flexDirection&quot;: 'row'...}" />
-            <marker date="1518070631000" expanded="true" signature="13043:13117" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="13155:13228" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="13291:13429" ph="{&quot;color&quot;: palette.primaryTextColor...}" />
-            <marker date="1518070631000" expanded="true" signature="13454:13507" ph="{&quot;flexDirection&quot;: 'row'...}" />
-            <marker date="1518070631000" expanded="true" signature="13543:13583" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="13612:13747" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-            <marker date="1518070631000" expanded="true" signature="13775:13910" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-            <marker date="1518070631000" expanded="true" signature="13947:14081" ph="{&quot;flexDirection&quot;: 'row'...}" />
-            <marker date="1518070631000" expanded="true" signature="14108:14202" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-            <marker date="1518070631000" expanded="true" signature="14230:14296" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-            <marker date="1518070631000" expanded="true" signature="14444:15438" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="14469:14891" ph="{&quot;flexDirection&quot;: 'row'...}" />
-            <marker date="1518070631000" expanded="true" signature="14914:15156" ph="{&quot;color&quot;: white...}" />
-            <marker date="1518070631000" expanded="true" signature="15187:15268" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="15294:15427" ph="{&quot;color&quot;: palette.primaryColor...}" />
-            <marker date="1518070631000" expanded="true" signature="15496:16209" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="15518:15689" ph="{&quot;flexDirection&quot;: 'row'...}" />
-            <marker date="1518070631000" expanded="true" signature="15715:16044" ph="{&quot;flexDirection&quot;: 'row'...}" />
-            <marker date="1518070631000" expanded="true" signature="16061:16199" ph="{&quot;color&quot;: 'white'...}" />
-            <marker date="1518070631000" expanded="true" signature="16336:16681" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="16361:16446" ph="{&quot;justifyContent&quot;: 'center'...}" />
-            <marker date="1518070631000" expanded="true" signature="16466:16670" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-            <marker date="1518070631000" expanded="true" signature="16743:17855" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="16768:17153" ph="{&quot;backgroundColor&quot;: palette.primaryColor...}" />
-            <marker date="1518070631000" expanded="true" signature="17189:17252" ph="{&quot;backgroundColor&quot;: 'transparent'...}" />
-            <marker date="1518070631000" expanded="true" signature="17279:17345" ph="{&quot;color&quot;: palette.alternateTextColor...}" />
-            <marker date="1518070631000" expanded="true" signature="17383:17455" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="17480:17612" ph="{&quot;fontFamily&quot;: fontFamily...}" />
-            <marker date="1518070631000" expanded="true" signature="17649:17750" ph="{&quot;flexDirection&quot;: 'row'...}" />
-            <marker date="1518070631000" expanded="true" signature="17778:17844" ph="{&quot;color&quot;: palette.alternateTextColor...}" />
-            <marker date="1518070631000" expanded="true" signature="17918:19358" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="17940:18112" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="18136:18349" ph="{&quot;position&quot;: 'absolute'...}" />
-            <marker date="1518070631000" expanded="true" signature="18373:18682" ph="{&quot;backgroundColor&quot;: '##fff'...}" />
-            <marker date="1518070631000" expanded="true" signature="18713:18925" ph="{&quot;justifyContent&quot;: 'flex-start'...}" />
-            <marker date="1518070631000" expanded="true" signature="18956:19163" ph="{&quot;justifyContent&quot;: 'flex-start'...}" />
-            <marker date="1518070631000" expanded="true" signature="19181:19348" ph="{&quot;fontFamily&quot;: 'Roboto-Regular'...}" />
-            <marker date="1518070631000" expanded="true" signature="19432:19933" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="19454:19667" ph="{&quot;flexDirection&quot;: 'row'...}" />
-            <marker date="1518070631000" expanded="true" signature="19684:19865" ph="{&quot;fontFamily&quot;: 'Roboto-Regular'...}" />
-            <marker date="1518070631000" expanded="true" signature="19882:19923" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="20015:20470" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="20037:20240" ph="{&quot;alignItems&quot;: 'center'...}" />
-            <marker date="1518070631000" expanded="true" signature="20257:20459" ph="{&quot;fontFamily&quot;: 'Roboto-Regular'...}" />
-            <marker date="1518070631000" expanded="true" signature="20553:21107" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="20578:20647" ph="{&quot;backgroundColor&quot;: palette.canvasColor...}" />
-            <marker date="1518070631000" expanded="true" signature="20674:20740" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-            <marker date="1518070631000" expanded="true" signature="20806:21002" ph="{&quot;fontFamily&quot;: fontFamily...}" />
-            <marker date="1518070631000" expanded="true" signature="21030:21096" ph="{&quot;color&quot;: palette.secondaryTextColor...}" />
-            <marker date="1518070631000" expanded="true" signature="21175:21363" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="21197:21353" ph="{&quot;position&quot;: 'absolute'...}" />
-            <marker date="1518070631000" expanded="true" signature="21419:21877" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="21441:21639" ph="{&quot;justifyContent&quot;: 'flex-start'...}" />
-            <marker date="1518070631000" expanded="true" signature="21656:21811" ph="{&quot;fontFamily&quot;: 'Roboto-Regular'...}" />
-            <marker date="1518070631000" expanded="true" signature="21828:21867" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="21932:22122" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="21949:22024" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="22049:22112" ph="{&quot;color&quot;: 'red'...}" />
-            <marker date="1518070631000" expanded="true" signature="22187:22460" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="22209:22338" ph="{&quot;position&quot;: 'relative'...}" />
-            <marker date="1518070631000" expanded="true" signature="22360:22450" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="22531:22790" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="22553:22706" ph="{&quot;position&quot;: 'absolute'...}" />
-            <marker date="1518070631000" expanded="true" signature="22728:22780" ph="{&quot;color&quot;: palette.primaryColor...}" />
-            <marker date="1518070631000" expanded="true" signature="22866:23075" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="22888:22958" ph="{&quot;alignItems&quot;: 'center'...}" />
-            <marker date="1518070631000" expanded="true" signature="22980:23065" ph="{&quot;backgroundColor&quot;: palette.primaryColor...}" />
-            <marker date="1518070631000" expanded="true" signature="23151:24277" ph="{...}" />
-            <marker date="1518070631000" expanded="true" signature="23176:23609" ph="{&quot;backgroundColor&quot;: palette.primaryColor...}" />
-            <marker date="1518070631000" expanded="true" signature="23636:23702" ph="{&quot;color&quot;: palette.alternateTextColor...}" />
-            <marker date="1518070631000" expanded="true" signature="23740:24015" ph="{&quot;position&quot;: 'absolute'...}" />
-            <marker date="1518070631000" expanded="true" signature="24040:24172" ph="{&quot;fontFamily&quot;: fontFamily...}" />
-            <marker date="1518070631000" expanded="true" signature="24200:24266" ph="{&quot;color&quot;: palette.alternateTextColor...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Button/Button.flow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Avatar/Avatar.flow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/METester/PlaceHolderExample.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
           <folding />
         </state>
       </provider>
