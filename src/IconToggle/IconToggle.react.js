@@ -69,7 +69,7 @@ const defaultProps = {
     style: {},
 };
 function getStyles(props, state) {
-    const { iconToggle, palette } =getTheme(props.theme);
+    const { iconToggle, palette } =getTheme();
 
     const local = {};
 
