@@ -4,6 +4,7 @@
 
 |属性名|参数|描述|
 |:---:|:---:|:---:|
+|name|string|icon名称|
 |size|number|icon尺寸|
 |color|string|icon颜色|
 |type|string|icon类型|
