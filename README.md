@@ -30,7 +30,7 @@ Roboto字体获取方式：./node_modules/material-elements/roboto  <br/>
 - Checkbox
 - Dialog
 - Divider
-- Icon
+- [Icon](https://github.com/react-native-studio/material-elements/blob/master/docs/Icon.md)
 - Icon toggles
 - List item
 - Radio button
