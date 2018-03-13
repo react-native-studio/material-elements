@@ -54,6 +54,7 @@ class BottomSheet extends Component<BottomSheetProps> {
   static defaultProps: typeof defaultProps
   static defaultProps = defaultProps
   static GridItem=typeof BSGridItem
+  modal:typeof Modal
   getStyles = () => {
     const {bottomSheet} = getTheme()
 
