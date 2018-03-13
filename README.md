@@ -26,7 +26,7 @@ Roboto字体获取方式：./node_modules/material-elements/roboto  <br/>
 - Badge
 - Bottom Navigation
 - [Button](https://github.com/react-native-studio/material-elements/blob/master/docs/Button.md)
-- Card
+- [Card](https://github.com/react-native-studio/material-elements/blob/master/docs/Card.md)
 - Checkbox
 - Dialog
 - Divider

@@ -1,32 +1,10 @@
 # [Card](https://material.io/guidelines/components/cards.html)
 
-### Usage
+### 属性表格
 
-```js
-...
-import { Card } from 'material-elements';
-...
-render() {
-    <View>
-      <Card>
-        <Text>Hello world!</Text>
-      </Card>
-    </View>
-}
-```
-### API
-```js
-const propTypes = {
-    children: PropTypes.node,
+|属性名|参数|描述|
+|:---:|:---:|:---:|
+|children|node|Card子组件|
+|onPress|func||
+|fullWidth|bool|是否铺满|
 
-    onPress: PropTypes.func,
-
-    style: PropTypes.shape({
-      container:ViewPropTypes.style,
-    }),
-  /**
-   * 是否水平铺满
-   */
-  fullWidth:PropTypes.bool,
-};
-```
