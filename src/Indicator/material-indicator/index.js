@@ -121,7 +121,6 @@ export default class MaterialIndicator extends PureComponent {
         <View style={[{...StyleSheet.absoluteFillObject},{
           justifyContent:'center',alignItems:'center'
         }]}>
-        <Text style={{backgroundColor:'transparent'}}>dsfd</Text>
         </View>
       </View>
     );
