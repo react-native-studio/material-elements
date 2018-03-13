@@ -1,1 +1,1 @@
-export {default} from './material-indicator'
+export {default} from './Indicator'
