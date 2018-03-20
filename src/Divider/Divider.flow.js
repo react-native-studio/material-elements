@@ -1,11 +1,26 @@
 /**
+ * @providesModule Divider
  * @flow
  */
 import React from 'react'
 import { View } from 'react-native'
-import type { DividerProps } from '../TypeDifinition'
 import getTheme from '../styles/getTheme'
-
+import {ViewPropTypes} from "../utils/index";
+/**
+ * Divider组件的属性
+ */
+export type DividerProps={
+  /**
+   * 是否嵌入，如果为真，则marginLeft ：72
+   */
+  inset?: boolean,
+  /**
+   * divider样式
+   */
+  style: {
+    container?:ViewPropTypes.style
+  },
+}
 const defaultProps = {
   inset: false,
   style: {},
@@ -13,7 +28,7 @@ const defaultProps = {
 
 class Divider extends React.PureComponent<DividerProps> {
   props: DividerProps
-  static defaultProps: typeof defaultProps = defaultProps
+  static defaultProps: typeof defaultProps
 
   getStyles = () => {
     let props = this.props
@@ -34,6 +49,7 @@ class Divider extends React.PureComponent<DividerProps> {
   }
 
   render () {
+    
     const styles = this.getStyles()
 
     return (
@@ -41,5 +57,5 @@ class Divider extends React.PureComponent<DividerProps> {
     )
   }
 }
-
+Divider.defaultProps=defaultProps;
 export default Divider
