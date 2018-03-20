@@ -1,17 +1,32 @@
 /**
+ * @providersModule Checkbox
  * @flow
  */
 import React,{Component} from 'react';
 import {StyleSheet,View,Text} from 'react-native';
-import type { IconPropTypes } from '../TypeDifinition/index'
 import getTheme from '../styles/getTheme';
 import IconToggle from '../IconToggle';
-import merge from 'lodash/merge';
-type CheckboxProps={
+import type {IconPropTypes} from "../Icon/Icon.flow";
+export type CheckboxPropTypes={
+  /**
+   * checkbox 是否选中
+   */
   checked:boolean,
+  /**
+   * 点击checkbox时触发
+   */
   onCheck?:(value:boolean)=>void,
+  /**
+   * checkbox是否可用
+   */
   disabled?:boolean,
+  /**
+   * 没选中的icon
+   */
   uncheckedIcon?:IconPropTypes,
+  /**
+   * 选中时的icon
+   */
   checkedIcon?:IconPropTypes,
 }
 const defaultProps = {
@@ -24,8 +39,8 @@ const defaultProps = {
   },
   disabled: false,
 };
-class Checkbox extends React.PureComponent<CheckboxProps>{
-  props:CheckboxProps
+class Checkbox extends React.PureComponent<CheckboxPropTypes>{
+  props:CheckboxPropTypes
   static defaultProps:typeof defaultProps
   static defaultProps=defaultProps
   getStyles(){
