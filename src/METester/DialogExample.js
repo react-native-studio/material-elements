@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {StyleSheet,View,Text} from 'react-native';
 import PropTypes from 'prop-types';
 import Dialog from '../Dialog'
-import DialogDefaultActions from '../Dialog/DialogDefaultActions.react';
+import DialogDefaultActions from '../Dialog/DialogDefaultActions.flow';
 import DialogStackedActions from '../Dialog/DialogStackedActions.react'
 import CenterContainer from './CenterContainer'
 export default class DialogExample extends Component{
