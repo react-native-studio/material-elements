@@ -1,4 +1,5 @@
 /**
+ * @providersModule Card
  * @flow
  */
 import React, { Component } from 'react'
@@ -7,7 +8,7 @@ import { ViewPropTypes } from '../utils/index'
 import getTheme from '../styles/getTheme'
 import RippleFeedback from '../RippleFeedback'
 
-type CardProps = {
+type CardPropTypes = {
   children: mixed,
 
   onPress?: () => void,
@@ -43,8 +44,8 @@ function getStyles (props) {
 const defaultProps={
   style:{}
 }
-class Card extends Component<CardProps> {
-  props: CardProps
+class Card extends Component<CardPropTypes> {
+  props: CardPropTypes
 
   static defaultProps:typeof defaultProps=defaultProps
 
