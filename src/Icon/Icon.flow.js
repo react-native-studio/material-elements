@@ -1,14 +1,40 @@
 /**
+ * @providesModule Icon
  * @flow
+ *
  */
 import React, { PureComponent } from 'react';
-import type { IconPropTypes } from '../TypeDifinition';
+import {Text} from 'react-native';
 import VectorIcon from 'react-native-vector-icons/MaterialIcons';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import IoniconIcon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIconsIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import getTheme from '../styles/getTheme';
-
+/**
+ * icon 属性类型，使用export则可以在外部使用
+ */
+export type IconPropTypes={
+  /**
+   * icon的名字
+   */
+  name?:?string,
+  /**
+   * icon的尺寸
+   */
+  size?:?number,
+  /**
+   * icon的颜色
+   */
+  color?:?string,
+  /**
+   * icon的类型
+   */
+  type?:?string,
+  /**
+   * icon的样式
+   */
+  style?:?Text.style,
+}
 const iconType = {
   MaterialIcons: 'MaterialIcons',
   FontAwesome: 'FontAwesome',
@@ -21,11 +47,14 @@ const defaultProps = {
   style: null,
   type: iconType.MaterialIcons
 }
+
 class Icon extends PureComponent<IconPropTypes> {
   props: IconPropTypes
   static iconType:typeof iconType
-  static defaultProps: typeof defaultProps = defaultProps
-
+  static defaultProps: typeof defaultProps
+  /**
+   * 根据所传递的type获取icon组件
+   */
   getIconComponent = (): typeof VectorIcon | typeof FontAwesomeIcon | typeof IoniconIcon | typeof MaterialCommunityIconsIcon => {
     let type = this.props.type;
     let {MaterialCommunityIcons, FontAwesome, Ionicons, MaterialIcons} = iconType;
@@ -69,4 +98,5 @@ class Icon extends PureComponent<IconPropTypes> {
   }
 }
 Icon.iconType=iconType;
+Icon.defaultProps=defaultProps;
 export default Icon;
