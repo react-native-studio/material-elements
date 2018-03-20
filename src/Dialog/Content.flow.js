@@ -1,12 +1,13 @@
 /**
+ * @providersModule DialogContent
  * @flow
  */
-import { View } from 'react-native'
-import React, { PureComponent } from 'react'
-import getTheme from '../styles/getTheme'
-import { ViewPropTypes } from '../utils/index'
+import { View } from 'react-native';
+import React, { PureComponent } from 'react';
+import getTheme from '../styles/getTheme';
+import { ViewPropTypes } from '../utils/index';
 
-type props = {
+type DialogContentPropTypes = {
   children: any,
   style: {
     contentContainer?: ViewPropTypes.style,
@@ -16,14 +17,15 @@ const defaultProps = {
   style: {},
 }
 
-class DialogContent extends PureComponent<props> {
+class DialogContent extends PureComponent<DialogContentPropTypes> {
 
-  props: props
-  static defaultProps:typeof defaultProps=defaultProps
+  props: DialogContentPropTypes
+
+  static defaultProps:typeof defaultProps
+
   getStyles = () => {
-    let props = this.props
-    const {dialog} = getTheme()
-
+    const props = this.props;
+    const {dialog} = getTheme();
     return {
       contentContainer: [
         dialog.contentContainer,
@@ -33,9 +35,9 @@ class DialogContent extends PureComponent<props> {
   }
 
   render () {
-    const {children} = this.props
+    const {children} = this.props;
 
-    const styles = this.getStyles()
+    const styles = this.getStyles();
 
     return (
       <View style={styles.contentContainer}>
@@ -44,5 +46,5 @@ class DialogContent extends PureComponent<props> {
     )
   }
 }
-
-export default DialogContent
+DialogContent.defaultProps=defaultProps;
+export default DialogContent;
