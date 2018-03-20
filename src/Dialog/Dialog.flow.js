@@ -1,4 +1,5 @@
 /**
+ * @providersModule Dialog
  * @flow
  */
 import { View } from 'react-native'
@@ -13,12 +14,7 @@ import Actions from './Actions.flow'
 import getTheme from '../styles/getTheme'
 import { ViewPropTypes } from '../utils/index'
 
-const propTypes = {
-  onPress: PropTypes.func,
-  children: PropTypes.node.isRequired,
-  style: PropTypes.object,
-}
-type props = {
+type DialogPropTypes = {
   children: any,
   onPress: () => void,
   style: {
@@ -30,9 +26,9 @@ const defaultProps = {
   style: {},
 }
 
-class Dialog extends PureComponent<props> {
+class Dialog extends PureComponent<DialogPropTypes> {
 
-  props:props
+  props:DialogPropTypes
   static Actions:typeof Actions
   static Content:typeof Content
   static Title:typeof Title

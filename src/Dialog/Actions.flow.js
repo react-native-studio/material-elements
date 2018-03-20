@@ -1,4 +1,5 @@
 /**
+ * @providersModule DialogFooter
  * @flow
  */
 import {View} from 'react-native';
@@ -10,16 +11,16 @@ import {ViewPropTypes} from "../utils/index";
 const defaultProps = {
     style: {},
 };
-type props={
+type DialogFooterPropTypes={
     children:any,
     style:{
         actionsContainer?:ViewPropTypes.style,
     }
 }
-class DialogFooter extends PureComponent<props> {
+class DialogFooter extends PureComponent<DialogFooterPropTypes> {
 
-    props:props
-    static defaultProps:typeof defaultProps=defaultProps
+    props:DialogFooterPropTypes
+    static defaultProps:typeof defaultProps
 
     getStyles = () => {
         let props = this.props;
@@ -45,5 +46,5 @@ class DialogFooter extends PureComponent<props> {
         );
     }
 }
-
+DialogFooter.defaultProps=defaultProps;
 export default DialogFooter;

@@ -9,7 +9,7 @@ import { ViewPropTypes } from '../utils/index'
 const defaultProps = {
   style: {},
 }
-type props = {
+type DialogHeaderPropTypes = {
   children: any,
   style: {
     titleContainer?: ViewPropTypes.style,
@@ -17,9 +17,9 @@ type props = {
   }
 }
 
-class DialogHeader extends PureComponent<props> {
-  props:props
-  static defaultProps:typeof defaultProps=defaultProps
+class DialogHeader extends PureComponent<DialogHeaderPropTypes> {
+  props:DialogHeaderPropTypes
+  static defaultProps:typeof defaultProps
   getStyles = () => {
     let props = this.props
 
@@ -51,4 +51,5 @@ class DialogHeader extends PureComponent<props> {
     )
   }
 }
-export default DialogHeader
+DialogHeader.defaultProps=defaultProps;
+export default DialogHeader;

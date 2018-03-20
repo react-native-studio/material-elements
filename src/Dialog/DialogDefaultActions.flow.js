@@ -1,4 +1,5 @@
 /**
+ * @providersModule DialogDefaultActions
  * @flow
  */
 import React, { PureComponent } from 'react'
@@ -7,7 +8,7 @@ import Button from '../Button'
 import getTheme from '../styles/getTheme'
 import { ViewPropTypes } from '../utils/index'
 
-type props = {
+type DialogDefaultActionsPropTypes = {
   actions: Array<string>,
   onActionPress: (string) => void,
   style:{
@@ -18,12 +19,12 @@ const defaultProps = {
   style: {},
 }
 
-class DialogDefaultActions extends PureComponent<props> {
+class DialogDefaultActions extends PureComponent<DialogDefaultActionsPropTypes> {
 
-  props: props
+  props: DialogDefaultActionsPropTypes
   static defaultProps:typeof defaultProps
   onActionPressed:(string)=>void
-  constructor (props:props) {
+  constructor (props:DialogDefaultActionsPropTypes) {
     super(props)
 
     this.onActionPressed = this.onActionPressed.bind(this)
@@ -69,6 +70,6 @@ class DialogDefaultActions extends PureComponent<props> {
   }
 }
 
-DialogDefaultActions.defaultProps = defaultProps
+DialogDefaultActions.defaultProps = defaultProps;
 
-export default DialogDefaultActions
+export default DialogDefaultActions;
