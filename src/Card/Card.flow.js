@@ -3,7 +3,6 @@
  */
 import React, { Component } from 'react'
 import { StyleSheet, View, Text } from 'react-native'
-import PropTypes from 'prop-types'
 import { ViewPropTypes } from '../utils/index'
 import getTheme from '../styles/getTheme'
 import RippleFeedback from '../RippleFeedback'
@@ -46,6 +45,7 @@ const defaultProps={
 }
 class Card extends Component<CardProps> {
   props: CardProps
+
   static defaultProps:typeof defaultProps=defaultProps
 
   render () {
