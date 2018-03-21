@@ -30,11 +30,10 @@ export type AvatarPropTypes={
   /**
    * avatar样式
    */
-  style:AvatarStyle,
+  style?:AvatarStyle,
 }
 type AvatarStyle={
   container?:ViewPropTypes.style,
-  text?:Text.propTypes.style,
   content?:ViewPropTypes.style,
 }
 const defaultProps = {
@@ -47,7 +46,7 @@ const defaultProps = {
 
 function getStyles(props) {
   const { avatar } = getTheme();
-  const { size } = props;
+  const { size ,style} = props;
   const local = {};
   if (size) {
     local.container = {
@@ -60,17 +59,17 @@ function getStyles(props) {
     container: [
       avatar.container,
       local.container,
-      props.style.container,
+      style?style.container:{},
     ],
     content: [
       avatar.content,
       local.content,
-      props.style.content,
+      style?style.content:{},
     ],
     image:[
       avatar.container,
       local.container,
-      props.style.container,
+      style?style.container:{},
     ]
   };
 }

@@ -7,15 +7,15 @@ import { StyleSheet, View, Text } from 'react-native'
 import { ViewPropTypes } from '../utils/index'
 import getTheme from '../styles/getTheme'
 import RippleFeedback from '../RippleFeedback'
-
+type CardStyle={
+  container?:ViewPropTypes.style,
+}
 type CardPropTypes = {
   children: mixed,
 
   onPress?: () => void,
 
-  style: {
-    container?: ViewPropTypes.style,
-  },
+  style?:CardStyle,
   /**
    * 是否水平铺满
    */
@@ -37,7 +37,7 @@ function getStyles (props) {
     container: [
       card.container,
       local.container,
-      props.style.container,
+      props.style?props.style.container:{},
     ],
   }
 }
