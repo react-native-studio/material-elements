@@ -6,21 +6,22 @@ import { View, Text } from 'react-native'
 import { ViewPropTypes } from '../utils/index'
 import getTheme from '../styles/getTheme'
 
-const defaultProps = {
-  style: {}
+type CenterElementStyle={
+  titleText?: Text.propTypes.style,
+  centerElementContainer?: ViewPropTypes.style,
 }
-type CenterElementProps = {
-  style: {
-    titleText?: Text.propTypes.style,
-    centerElementContainer?: ViewPropTypes.style,
-  },
+type CenterElementPropTypes = {
+  style:CenterElementStyle,
   title?: string
 }
 
-class CenterElement extends PureComponent<CenterElementProps> {
+const defaultProps = {
+  style: {}
+}
+class CenterElement extends PureComponent<CenterElementPropTypes> {
 
+  props: CenterElementPropTypes
   static defaultProps: typeof defaultProps
-  props: CenterElementProps
   static defaultProps = defaultProps
   getStyles = () => {
     let props = this.props
