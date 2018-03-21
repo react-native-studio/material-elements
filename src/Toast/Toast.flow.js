@@ -13,7 +13,7 @@ type StyleProps={
   text?: Text.propTypes.style,
 }
 type ToastProps={
-  style:StyleProps
+  style:StyleProps | typeof defaultProps.style
 }
 type ToastState={
   visible:boolean,

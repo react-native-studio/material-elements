@@ -34,14 +34,14 @@ type Actions = {
   actions: Array<IconPropTypes>
 }
 type ToolbarProps = {
-  onLeftElementPress: (any) => void,
-  style: StyleType,
-  onPress: () => void,
+  onLeftElementPress?: (any) => void,
+  style: StyleType | typeof defaultProps.style,
+  onPress?: () => void,
   leftElement: IconPropTypes | React.Component<any>,
-  onLeftElementPress: () => void,
+  onLeftElementPress?: () => void,
   centerElement: React.Component<any> | string,
   rightElement: IconPropTypes | React.Component<any> | Actions | MenuType,
-  onRightElementPress: (any) => void,
+  onRightElementPress?: (any) => void,
 
 }
 const defaultProps = {
