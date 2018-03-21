@@ -12,7 +12,7 @@ import typography from '../typography';
 export default {
     spacing,
     typography,
-    fontFamily: 'Roboto',
+    //fontFamily: 'Roboto',
     palette: {
         // main theme colors
         primaryColor: blue500,

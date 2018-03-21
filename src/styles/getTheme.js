@@ -25,8 +25,8 @@ const {width,height}=Dimensions.get('window');
 export default function getTheme(theme, ...more) {
     theme = merge(lightTheme, theme, ...more);
 
-    const { spacing, fontFamily, typography, palette } = theme;
-    const baseTheme = { spacing, fontFamily, typography, palette };
+    const { spacing, typography, palette } = theme;
+    const baseTheme = { spacing, typography, palette };
 
     theme = merge({
         actionButton: StyleSheet.create(merge({
