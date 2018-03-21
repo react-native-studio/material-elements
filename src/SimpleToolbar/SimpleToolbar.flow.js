@@ -7,21 +7,21 @@ import getTheme from '../styles/getTheme'
 import { ViewPropTypes } from '../utils/index'
 import CenterElement from './CenterElement.flow'
 import IconToggle from '../IconToggle'
-import type { IconPropTypes } from '../TypeDifinition/index'
-type StyleType={
+import type {IconPropTypes} from "../Icon/Icon.flow";
+type SimpleToolbarStyle={
   container?: ViewPropTypes.style,
   leftElement?: ViewPropTypes.style,
   rightElement?: ViewPropTypes.style,
   centerElement?:ViewPropTypes.style,
   title?:Text.propTypes.style,
 }
-type SimpleToolbarProps = {
-  title?: string,
+type SimpleToolbarPropTypes = {
+  title: string,
   leftIcon?: IconPropTypes,
   rightIcon?: IconPropTypes,
   onLeftIconPress?: () => void,
   onRightIconPress?: () => void,
-  style: StyleType,
+  style: SimpleToolbarStyle | typeof defaultProps.style,
 }
 const defaultProps = {
   style: {},
@@ -29,8 +29,8 @@ const defaultProps = {
   rightIconName: null,
 }
 
-class SimpleToolbar extends PureComponent<SimpleToolbarProps> {
-  props: SimpleToolbarProps
+class SimpleToolbar extends PureComponent<SimpleToolbarPropTypes> {
+  props: SimpleToolbarPropTypes
   static defaultProps: typeof defaultProps
   static defaultProps = defaultProps
   _onLeftIconPress = () => {
@@ -61,7 +61,7 @@ class SimpleToolbar extends PureComponent<SimpleToolbarProps> {
       title:[props.style.title]
     }
   }
-  renderLeftIcon=(styles:StyleType)=>{
+  renderLeftIcon=(styles:SimpleToolbarStyle)=>{
 
     const {leftIcon}=this.props;
 
@@ -84,7 +84,7 @@ class SimpleToolbar extends PureComponent<SimpleToolbarProps> {
     }
   }
 
-  renderRightIcon=(styles:StyleType)=>{
+  renderRightIcon=(styles:SimpleToolbarStyle)=>{
 
     const {rightIcon}=this.props;
 
