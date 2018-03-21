@@ -59,27 +59,27 @@ type Actions={
  * ListItem 属性类型
  */
 export type ListItemPropTypes={
-  dense:boolean,
+  dense?:boolean,
   /**
    * 是否有分割线
    */
-  divider:boolean,
+  divider?:boolean,
   /**
    * ListItem 按下时触发
    */
-  onPress:(value:any)=>void,
+  onPress?:(value:any)=>void,
   /**
    * ListItem 长按时触发
    */
-  onLongPress:(value:any)=>void,
+  onLongPress?:(value:any)=>void,
   /**
    * 行数设置
    */
-  numberOfLines:NumberOfLines,
+  numberOfLines?:NumberOfLines,
   /**
    * ListItem 样式设置
    */
-  style:ListItemStyle,
+  style:ListItemStyle | typeof defaultProps.style,
   /**
    * 左边元素内容，可以是icon也可以是Component
    */
@@ -104,7 +104,7 @@ export type ListItemPropTypes={
    * 右边元素按下时触发
    */
   onRightElementPress:(value?:any)=>void,
-  onPressValue:any,
+  onPressValue?:any,
 }
 type ListItemState={
   numberOfLines:NumberOfLines
