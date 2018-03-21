@@ -46,7 +46,7 @@ export type ButtonPropTypes={
   /**
    * 重写button样式和text样式
    */
-  style:ButtonStyle,
+  style?:ButtonStyle,
   /**
    * button强调色
    */
@@ -62,7 +62,7 @@ export type ButtonPropTypes={
   /**
    * 是否使用文字颜色用于水波纹颜色
    */
-  useTextColorForRippleColor:boolean,//是否使用文字颜色用于水波纹颜色，仅仅flatbutton有效
+  useTextColorForRippleColor?:boolean,//是否使用文字颜色用于水波纹颜色，仅仅flatbutton有效
 }
 
 const defaultProps = {
@@ -90,7 +90,7 @@ type ButtonStyle = {
   text?: Text.propTypes.style,
 }
 
-function getStyles (props, state) {
+function getStyles (props:ButtonPropTypes, state) {
   let uiTheme = getTheme()
   const {
     button,
@@ -100,7 +100,7 @@ function getStyles (props, state) {
     buttonRaisedDisabled,
   } = uiTheme
 
-  const {primary, accent, disabled, raised,iconPosition} = props
+  const {primary, accent, disabled, raised,iconPosition,style} = props
   const {palette} = light
 
   type containerType = {
@@ -146,7 +146,7 @@ function getStyles (props, state) {
       (!raised && disabled) && buttonDisabled.container,
       (raised && disabled) && buttonRaisedDisabled.container,
       local.container,
-      props.style.container,
+      style?style.container:{},
     ],
     text: [
       button.text,
@@ -155,7 +155,7 @@ function getStyles (props, state) {
       (!raised && disabled) && buttonDisabled.text,
       (raised && disabled) && buttonRaisedDisabled.text,
       local.text,
-      props.style.text,
+      style?style.text:{},
     ],
     icon: [
       button.icon,
@@ -163,7 +163,7 @@ function getStyles (props, state) {
       disabled && buttonDisabled.icon,
       raised && buttonRaised.icon,
       local.icon,
-      props.style.icon,
+      style?style.icon:{},
       iconPosition==='left'?{marginLeft:0}:{marginRight:0},
     ],
   }
