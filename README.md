@@ -5,17 +5,8 @@
 
 
 #### link
-material-elements 依赖于react-native-vector-icons <br/>
+material-elements 依赖于react-native-vector-icons 
 `react-native link react-native-vector-icons`
-
-#### Android
-复制font里的文件到android工程下<br/>
-`./node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf -> ./android/app/src/main/assets/fonts`
-
-#### IOS Add Roboto Font
-
-Roboto字体获取方式：./node_modules/material-elements/roboto  <br/>
-[xcode添加字体文件](http://blog.csdn.net/huanghuanghonghong/article/details/52723364),如有疑问，请提交issues
 
 ### 使用
 
