@@ -12,7 +12,6 @@ import {
     Easing,
     Platform,
 } from 'react-native';
-import PropTypes from 'prop-types';
 import { ViewPropTypes } from '../utils';
 import Icon from '../Icon';
 import IconToggle from '../IconToggle';
@@ -20,14 +19,13 @@ import RippleFeedback from '../RippleFeedback';
 //$FlowFixMe
 import getPlatformElevation from '../styles/getPlatformElevation';
 import getTheme from '../styles/getTheme';
-import merge from 'lodash/merge'
-import type { IconPropTypes } from '../TypeDifinition/index';
+import type {IconPropTypes} from "../Icon/Icon.flow";
 type ActionsType=Array<{
   icon:IconPropTypes,
   label:string,
   name:string,
 }>
-type StyleType={
+type ActionButtonStyle={
   positionContainer?:ViewPropTypes.style,
   toolbarPositionContainer?:ViewPropTypes.style,
   container?:ViewPropTypes.style,
@@ -42,16 +40,30 @@ type StyleType={
   speedDialActionIcon?:ViewPropTypes.style,
   icon?:ViewPropTypes.style
 }
-type ActionButtonProps={
-  actions:ActionsType,
-  onPress:(text:mixed)=>void,
-  onLongPress:(text:mixed)=>void,
-  hidden:boolean,
-  icon:IconPropTypes,
-  transition:'toolbar'| 'speedDial',
-  rippleColor:string,
-  style:StyleType,
-  size:number,
+type ActionButtonPropTypes={
+  actions?:ActionsType,
+  onPress?:(text:mixed)=>void,
+  onLongPress?:(text:mixed)=>void,
+  hidden?:boolean,
+  icon?:IconPropTypes,
+  transition?:'toolbar'| 'speedDial',
+  rippleColor?:string,
+  style:{
+    positionContainer?:ViewPropTypes.style,
+    toolbarPositionContainer?:ViewPropTypes.style,
+    container?:ViewPropTypes.style,
+    overlayContainer?:ViewPropTypes.style,
+    toolbarContainer?:ViewPropTypes.style,
+    toolbarActionContainer?:ViewPropTypes.style,
+    speedDialContainer?:ViewPropTypes.style,
+    speedDialActionContainer?:ViewPropTypes.style,
+    speedDialActionLabel?:ViewPropTypes.style,
+    speedDialActionLabelContainer?:ViewPropTypes.style,
+    speedDialActionIconContainer?:ViewPropTypes.style,
+    speedDialActionIcon?:ViewPropTypes.style,
+    icon?:ViewPropTypes.style
+  },
+  size?:number,
 }
 
 const defaultProps = {
@@ -69,11 +81,11 @@ type ActionButtonState={
   elevation: number,
   scaleValue: Animated.Value,
 }
-function getStyles(props:ActionButtonProps, state:ActionButtonState) {
+function getStyles(props:ActionButtonPropTypes, state:ActionButtonState) {
     const { actionButton } = getTheme();
     const { size } = props;
 
-    const local:StyleType = {
+    const local:ActionButtonStyle = {
         container: {},
     };
 
@@ -159,13 +171,13 @@ function getStyles(props:ActionButtonProps, state:ActionButtonState) {
     };
 }
 
-class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
+class ActionButton extends PureComponent<ActionButtonPropTypes,ActionButtonState> {
 
-    props:ActionButtonProps
+    props:ActionButtonPropTypes
     state:ActionButtonState
     static defaultProps:typeof defaultProps
     static defaultProps=defaultProps
-    constructor(props:ActionButtonProps) {
+    constructor(props:ActionButtonPropTypes) {
         super(props);
 
         const scaleValue = props.hidden ? 0.01 : 1;
@@ -176,7 +188,7 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
             scaleValue: new Animated.Value(scaleValue),
         };
     }
-    componentWillReceiveProps(nextProps:ActionButtonProps) {
+    componentWillReceiveProps(nextProps:ActionButtonPropTypes) {
         if (nextProps.hidden !== this.props.hidden) {
             if (nextProps.hidden === true) {
                 this.hide();
@@ -185,7 +197,7 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
             }
         }
     }
-    componentWillUpdate(nextProps:ActionButtonProps, nextState:ActionButtonState) {
+    componentWillUpdate(nextProps:ActionButtonPropTypes, nextState:ActionButtonState) {
         if (this.state.render !== nextState.render) {
             LayoutAnimation.easeInEaseOut();
         }
@@ -237,13 +249,13 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
             useNativeDriver: Platform.OS === 'android',
          }).start();
     }
-    renderToolbarTransition = (styles:StyleType) => {
+    renderToolbarTransition = (styles:ActionButtonStyle) => {
         const { actions } = this.props;
 
         return (
             <View style={styles.toolbarPositionContainer}>
                 <View key="main-button" style={styles.toolbarContainer}>
-                    {actions.map((action) => {
+                    {actions&&actions.map((action) => {
                         return this.renderToolbarLabelAction(
                             styles, action.icon, action.label, action.name);
                     })}
@@ -251,7 +263,7 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
             </View>
         );
     }
-    renderSpeedDialTransition = (styles:StyleType) => {
+    renderSpeedDialTransition = (styles:ActionButtonStyle) => {
         const { actions } = this.props;
 
         return (
@@ -260,7 +272,7 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
                     <View style={styles.overlayContainer}>
                         <View style={[styles.positionContainer, styles.speedDialContainer]}>
                             <View style={{ alignItems: 'flex-end', marginBottom: 16 }}>
-                                {actions.map((action) => {
+                                {actions&&actions.map((action) => {
                                     return this.renderLabelAction(
                                         styles, action.icon, action.label, action.name);
                                 })}
@@ -272,11 +284,11 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
             </View>
         );
     }
-    renderMainButton = (styles:StyleType) => {
+    renderMainButton = (styles:ActionButtonStyle) => {
         const { onLongPress, icon } = this.props;
         const { render } = this.state;
 
-        const mainIcon = render !== 'button' ? {name:'clear'} : icon;
+        const mainIcon:IconPropTypes =render !== 'button' ? {name:'clear'} :icon?icon:{};
 
         return (
             <View key="main-button" style={styles.container}>
@@ -294,7 +306,7 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
             </View>
         );
     }
-    renderToolbarAction = (styles:StyleType, icon:IconPropTypes, name:string) => {
+    renderToolbarAction = (styles:ActionButtonStyle, icon:IconPropTypes, name:string) => {
         let content;
         const key = this.getActionItemKey({ icon, name });
 
@@ -326,7 +338,7 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
     /**
     * TODO: implement labels for toolbar?
     */
-    renderToolbarLabelAction = (styles:StyleType, icon:IconPropTypes, label:string, name:string) => {
+    renderToolbarLabelAction = (styles:ActionButtonStyle, icon:IconPropTypes, label:string, name:string) => {
         const key = this.getActionItemKey({ icon, name });
         return (
             <View key={key} style={styles.toolbarActionContainer}>
@@ -334,7 +346,7 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
             </View>
         );
     }
-    renderAction = (styles:StyleType, icon:IconPropTypes, name:string) => {
+    renderAction = (styles:ActionButtonStyle, icon:IconPropTypes, name:string) => {
         const key = this.getActionItemKey({ icon, name });
         return (
             <View key={key} style={styles.speedDialActionIconContainer}>
@@ -351,7 +363,7 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
             </View>
         );
     }
-    renderLabelAction = (styles:StyleType, icon:IconPropTypes, label:string, name:string) => {
+    renderLabelAction = (styles:ActionButtonStyle, icon:IconPropTypes, label:string, name:string) => {
         const key = this.getActionItemKey({ icon, name });
         return (
             <View key={key} style={styles.speedDialActionContainer}>
@@ -362,7 +374,7 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
             </View>
         );
     }
-    renderIconButton = (styles:StyleType, icon:IconPropTypes) => {
+    renderIconButton = (styles:ActionButtonStyle, icon:IconPropTypes) => {
 
         const {style,...iconProps}=icon;
 
@@ -373,7 +385,7 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
             </View>
         );
     }
-    renderButton = (styles:StyleType) => (
+    renderButton = (styles:ActionButtonStyle) => (
         <Animated.View style={styles.positionContainer}>
             {this.renderMainButton(styles)}
         </Animated.View>
@@ -381,7 +393,7 @@ class ActionButton extends PureComponent<ActionButtonProps,ActionButtonState> {
     render() {
         const { render } = this.state;
 
-        const styles = getStyles(this.props, this.state);
+        const styles = getStyles(this.props,this.state);
 
         if (render === 'toolbar') {
             return this.renderToolbarTransition(styles);
