@@ -244,9 +244,9 @@ export default function getTheme(theme, ...more) {
                 paddingHorizontal: 24,
             },
             titleText: {
-                ...material.titleObject,
                 fontSize: 20,
                 fontWeight: 'bold',
+                ...material.titleObject,
                 color: 'black',
             },
             contentContainer: {
@@ -523,9 +523,9 @@ export default function getTheme(theme, ...more) {
                 marginLeft: 20,
             },
             titleText: {
+                ...typography.appBar,
                 ...material.titleObject,
                 color: palette.alternateTextColor,
-                ...typography.appBar,
             },
             rightElementContainer: {
                 flexDirection: 'row',
@@ -633,11 +633,11 @@ export default function getTheme(theme, ...more) {
             },
             centerElementContainer: { },
             titleText: {
-                ...material.titleObject,
                 flex: 1,
                 marginLeft: 16,
-                color: palette.primaryTextColor,
                 fontWeight: fontWeight.normal,
+                ...material.titleObject,
+                color: palette.primaryTextColor,
             },
             rightElement: {
                 color: palette.secondaryTextColor,
@@ -742,9 +742,9 @@ export default function getTheme(theme, ...more) {
                 alignItems:'center',
             },
             titleText: {
-              ...material.titleObject,
-                color: palette.alternateTextColor,
                 ...typography.appBar,
+                ...material.titleObject,
+                color: palette.alternateTextColor,
             },
             rightElement: {
                 color: palette.alternateTextColor,
