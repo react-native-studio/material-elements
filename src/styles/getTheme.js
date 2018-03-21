@@ -15,6 +15,7 @@ import lightTheme from './themes/light';
 import getPlatformElevation from './getPlatformElevation';
 /* eslint-enable import/no-unresolved, import/extensions */
 import Metrics from './Metrics'
+import {material,systemWeights} from '../Typography'
 function darkenOrLighten(color, ratio = 0.15) {
     const c = Color(color);
     return c.luminosity() > 0.5 ? c.darken(ratio) : c.lighten(ratio);
@@ -243,7 +244,7 @@ export default function getTheme(theme, ...more) {
                 paddingHorizontal: 24,
             },
             titleText: {
-                fontFamily,
+                ...material.titleObject,
                 fontSize: 20,
                 fontWeight: 'bold',
                 color: 'black',
@@ -448,7 +449,7 @@ export default function getTheme(theme, ...more) {
                 //height:spacing.snackbarHeight-28,
                 marginVertical: 14,
                 color: white,
-                fontFamily:'Roboto-Regular',
+                ...systemWeights.regular,
                 textAlign:'center',
                 fontSize:14
             },
@@ -483,7 +484,7 @@ export default function getTheme(theme, ...more) {
           },
           text:{
             color: 'white',
-            fontFamily:'Roboto-Regular',
+            ...systemWeights.regular,
             textAlign:'center',
             fontSize:14
           }
@@ -522,7 +523,7 @@ export default function getTheme(theme, ...more) {
                 marginLeft: 20,
             },
             titleText: {
-                fontFamily,
+                ...material.titleObject,
                 color: palette.alternateTextColor,
                 ...typography.appBar,
             },
@@ -580,7 +581,7 @@ export default function getTheme(theme, ...more) {
             backgroundColor:'#fff',
           },
           title:{
-            fontFamily:'Roboto-Regular',
+            ...systemWeights.regular,
             fontSize:18,
             color:Color('#000').alpha(0.54),
             //Roboto Regular 16sp，＃000 54％
@@ -597,7 +598,7 @@ export default function getTheme(theme, ...more) {
           },
           text:{
             marginLeft:16,//Roboto-Regular 16sp，＃000 87％
-            fontFamily:'Roboto-Regular',
+            ...systemWeights.regular,
             fontSize:16,
             color:Color('#000').alpha(0.87),
           },
@@ -616,7 +617,7 @@ export default function getTheme(theme, ...more) {
           },
           text:{
             marginTop:8,//Roboto-Regular 16sp，＃000 87％
-            fontFamily:'Roboto-Regular',
+            ...systemWeights.regular,
             fontSize:12,
             color:Color('#000').alpha(0.87),
             height:16,
@@ -632,7 +633,7 @@ export default function getTheme(theme, ...more) {
             },
             centerElementContainer: { },
             titleText: {
-                fontFamily,
+                ...material.titleObject,
                 flex: 1,
                 marginLeft: 16,
                 color: palette.primaryTextColor,
@@ -663,7 +664,8 @@ export default function getTheme(theme, ...more) {
               fontSize: 16,
               //fontWeight: '400',
               paddingHorizontal: 16,
-              fontFamily:'Roboto-Regular'
+
+              ...systemWeights.regular
           },
           icon:{
             marginLeft:16
@@ -697,7 +699,7 @@ export default function getTheme(theme, ...more) {
             position: 'absolute',
             left: 0,
             fontSize:16,
-            fontFamily:'Roboto-Regular',
+            ...systemWeights.regular,
             top:34
           },
           focusText:{
@@ -740,7 +742,7 @@ export default function getTheme(theme, ...more) {
                 alignItems:'center',
             },
             titleText: {
-                fontFamily,
+              ...material.titleObject,
                 color: palette.alternateTextColor,
                 ...typography.appBar,
             },
