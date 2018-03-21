@@ -1,9 +1,9 @@
 /**
+ * @providersModule Button
  * @flow
  */
 import React, { PureComponent } from 'react'
 import { StyleSheet,View, Text } from 'react-native'
-import type { ButtonPropTypes } from '../TypeDifinition'
 import getTheme from '../styles/getTheme'
 import light from '../styles/themes/light'
 //$FlowFixMe,使用它可解决后缀名android/ios引入的错误
@@ -12,6 +12,58 @@ import RippleFeedback from '../RippleFeedback'
 import Icon from '../Icon/Icon.flow'
 import { ViewPropTypes } from '../utils/index'
 import Color from 'color'
+import type {IconPropTypes} from "../Icon/Icon.flow";
+
+export type ButtonPropTypes={
+  /**
+   * button组件是否可用
+   */
+  disabled?: boolean,
+  /**
+   * button组件是否凸起
+   */
+  raised?:boolean,
+  /**
+   * 按下时触发，传递text参数
+   */
+  onPress?:(text:string)=>void,
+  /**
+   * 长按触发，传递text参数
+   */
+  onLongPress?:(text:string)=>void,
+  /**
+   * text将被显示
+   */
+  text: string,
+  /**
+   * 是否转换大写
+   */
+  upperCase?: boolean,
+  /**
+   * 展示图标，展示在text之前
+   */
+  icon?: IconPropTypes,
+  /**
+   * 重写button样式和text样式
+   */
+  style:ButtonStyle,
+  /**
+   * button强调色
+   */
+  accent?:boolean,
+  /**
+   * button主题色
+   */
+  primary?:boolean,
+  /**
+   * icon位置
+   */
+  iconPosition?:'left' | 'right',
+  /**
+   * 是否使用文字颜色用于水波纹颜色
+   */
+  useTextColorForRippleColor:boolean,//是否使用文字颜色用于水波纹颜色，仅仅flatbutton有效
+}
 
 const defaultProps = {
   icon: null,
@@ -23,16 +75,16 @@ const defaultProps = {
   raised: false,
   upperCase: true,
   style: {
-    container: {},
-    icon: {},
-    text: {},
   },
   iconPosition: 'left'
 }
 type ButtonState = {
   elevation: number,
 }
-type StylesType = {
+/**
+ * button style
+ */
+type ButtonStyle = {
   container?: ViewPropTypes.style,
   icon?: Icon.propTypes.style,
   text?: Text.propTypes.style,
@@ -122,7 +174,7 @@ class Button extends PureComponent<ButtonPropTypes, ButtonState> {
   state: ButtonState = {
     elevation: 2
   }
-  static defaultProps: typeof defaultProps = defaultProps
+  static defaultProps: typeof defaultProps
 
   onPress = () => {
     const {text, onPress} = this.props
@@ -143,7 +195,7 @@ class Button extends PureComponent<ButtonPropTypes, ButtonState> {
     })
   }
 
-  renderIcon = (styles: StylesType) => {
+  renderIcon = (styles: ButtonStyle) => {
     const {icon} = this.props
     const textFlatten = StyleSheet.flatten(styles.text)
 
@@ -198,5 +250,5 @@ class Button extends PureComponent<ButtonPropTypes, ButtonState> {
     )
   }
 }
-
+Button.defaultProps=defaultProps
 export default Button
