@@ -1,9 +1,42 @@
+/**
+ * @providesModule Avatar
+ * @flow
+ */
 import React,{PureComponent} from 'react';
 import {StyleSheet,View,Text,Image} from 'react-native';
-import type {AvatarProps} from '../TypeDifinition';
 import getTheme from '../styles/getTheme';
 import Icon from '../Icon/Icon.flow';
-
+import type {IconPropTypes} from "../Icon/Icon.flow";
+import {ViewPropTypes} from '../utils';
+export type AvatarPropTypes={
+  /**
+   * 传入Image组件属性，avatar渲染Image
+   */
+  image?:{
+    ...Image.propTypes
+  },
+  /**
+   * 传入Icon属性，avatar渲染icon
+   */
+  icon?:IconPropTypes,
+  /**
+   * 传入text
+   */
+  text?:string,
+  /**
+   * 仅仅用于container尺寸: style: { width: size, height: size, borderRadius: size / 2 }
+   */
+  size?:number,
+  /**
+   * avatar样式
+   */
+  style:AvatarStyle,
+}
+type AvatarStyle={
+  container?:ViewPropTypes.style,
+  text?:Text.propTypes.style,
+  content?:ViewPropTypes.style,
+}
 const defaultProps = {
   image: null,
   icon: null,
@@ -15,9 +48,7 @@ const defaultProps = {
 function getStyles(props) {
   const { avatar } = getTheme();
   const { size } = props;
-
   const local = {};
-
   if (size) {
     local.container = {
       height: size,
@@ -25,7 +56,6 @@ function getStyles(props) {
       borderRadius: size / 2,
     };
   }
-
   return {
     container: [
       avatar.container,
@@ -44,14 +74,13 @@ function getStyles(props) {
     ]
   };
 }
-class Avatar extends PureComponent<AvatarProps>{
-  props:AvatarProps
-  static defaultProps:typeof defaultProps=defaultProps
-
+class Avatar extends PureComponent<AvatarPropTypes>{
+  props:AvatarPropTypes
+  static defaultProps:typeof defaultProps
+  static defaultProps=defaultProps
 
   render() {
     const { image, icon, text } = this.props;
-
     let content = null;
     const { avatar, spacing } =getTheme();
     const styles = getStyles(this.props);
@@ -59,9 +88,8 @@ class Avatar extends PureComponent<AvatarProps>{
     if (icon) {
       const color = icon.color || StyleSheet.flatten(avatar.content).color;
       const size = icon.size || spacing.iconSize;
-      const name=icon.name;
-      const type=icon.type;
-      content = <Icon name={name} type={type} color={color} size={size} />;
+      const name=icon.name,type=icon.type,iconProps={color,size,name,type};
+      content = <Icon {...iconProps} />;
     } else if (text) {
       content = <Text style={styles.content}>{text}</Text>;
     } else if (image) {
@@ -70,8 +98,7 @@ class Avatar extends PureComponent<AvatarProps>{
 
 
     return (
-      <View style={[styles.container,{overflow: 'hidden',
-      }]} >
+      <View style={[styles.container,{overflow: 'hidden'}]} >
         {content}
       </View>
     );
