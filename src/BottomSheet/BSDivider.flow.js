@@ -6,7 +6,7 @@ import merge from 'lodash/merge';
 import Color from 'color';
 
 const {width}=Dimensions.get('window');
-type BSDividerProps = {
+type BSDividerPropTypes = {
   style?: ?{
     container: ViewPropTypes.style,
   }
@@ -14,8 +14,8 @@ type BSDividerProps = {
 const defaultProps={
   style:{}
 }
-class BSDivider extends Component<BSDividerProps> {
-  props: BSDividerProps
+class BSDivider extends Component<BSDividerPropTypes> {
+  props: BSDividerPropTypes
   static defaultProps:typeof defaultProps=defaultProps
   getStyles = () => {
 

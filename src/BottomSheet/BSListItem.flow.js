@@ -6,8 +6,8 @@ import { StyleSheet, View, Text } from 'react-native';
 import getTheme from '../styles/getTheme';
 import Icon from '../Icon/Icon.flow';
 import RippleFeedBack from '../RippleFeedback';
-import type {IconPropTypes} from '../TypeDifinition';
 import { ViewPropTypes } from '../utils/index';
+import type {IconPropTypes} from "../Icon/Icon.flow";
 type StyleTypes={
   container?:ViewPropTypes.style,
   text?:Text.propTypes.style,

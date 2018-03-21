@@ -11,7 +11,7 @@ import BSGridItem from './BSGridItem.flow'
 import Modal from '../Modalbox/ModalBox'
 import { MotionDuration, MotionCurve } from '../utils'
 
-type StyleTypes = {
+type BottomSheetStyle = {
   container?: ViewPropTypes.style,
   listContent?: ViewPropTypes.style,
   gridContent?: ViewPropTypes.style,
@@ -20,7 +20,8 @@ type StyleTypes = {
   title?: Text.propTypes.style,
 }
 type RenderType = 'grid' | 'list'
-type BottomSheetProps = {
+
+type BottomSheetPropTypes = {
   /**
    * bottomsheet的title
    */
@@ -37,18 +38,26 @@ type BottomSheetProps = {
    * buttonsheet进入时触发
    */
   onOpened: () => void,
-
+  /**
+   * 渲染的类型有list和grid
+   */
   renderType: RenderType,
-  style: StyleTypes,
+  /**
+   * 样式设置
+   */
+  style: BottomSheetStyle,
+  /**
+   * 子元素
+   */
   children: mixed,
 }
 const defaultProps = {
   style: {},
 }
 
-class BottomSheet extends Component<BottomSheetProps> {
+class BottomSheet extends Component<BottomSheetPropTypes> {
 
-  props: BottomSheetProps
+  props: BottomSheetPropTypes
   static Divider: typeof BSDivider
   static ListItem: typeof BSListItem
   static defaultProps: typeof defaultProps
@@ -88,7 +97,7 @@ class BottomSheet extends Component<BottomSheetProps> {
     }
   }
 
-  renderTitle (styles: StyleTypes) {
+  renderTitle (styles: BottomSheetStyle) {
 
     const {title, renderType} = this.props
 
