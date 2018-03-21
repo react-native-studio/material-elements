@@ -1,8 +1,8 @@
 /**
+ * @providersModule ListItem
  * @flow
  */
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import {
     StyleSheet,
     View,
@@ -10,7 +10,7 @@ import {
     TouchableWithoutFeedback,
     NativeModules,
     findNodeHandle,
-  Platform
+    Platform,
 } from 'react-native';
 
 import Divider from '../Divider';
@@ -24,7 +24,7 @@ import Menu from '../Menu'
 
 const UIManager = NativeModules.UIManager;
 
-type StyleType={
+type ListItemStyle={
   container?:ViewPropTypes.style,
   content?:ViewPropTypes.style,
   contentViewContainer?:ViewPropTypes.style,
@@ -41,27 +41,68 @@ type StyleType={
   rightElement?:Text.propTypes.style
 }
 type NumberOfLines=1 | 2 |3 | 'dynamic';
+/**
+ * Menu类型
+ */
 type MenuType={
   menu:{
     labels:Array<string>
   }
 };
+/**
+ * Actions类型
+ */
 type Actions={
   actions:Array<IconPropTypes>
 }
-type ListItemProps={
+/**
+ * ListItem 属性类型
+ */
+export type ListItemPropTypes={
   dense:boolean,
+  /**
+   * 是否有分割线
+   */
   divider:boolean,
+  /**
+   * ListItem 按下时触发
+   */
   onPress:(value:any)=>void,
+  /**
+   * ListItem 长按时触发
+   */
   onLongPress:(value:any)=>void,
+  /**
+   * 行数设置
+   */
   numberOfLines:NumberOfLines,
-  style:StyleType,
+  /**
+   * ListItem 样式设置
+   */
+  style:ListItemStyle,
+  /**
+   * 左边元素内容，可以是icon也可以是Component
+   */
   leftElement:IconPropTypes| React.Component<any>,
+  /**
+   * 右边元素内容，相对于左边元素，增加了MenuType，Actions，Array<IconPropTypes>类型
+   */
   rightElement:IconPropTypes | React.Component<any> |MenuType|Actions|Array<IconPropTypes>,
-  centerElement: string| React.Component<any>|{primaryText:string,
-    secondaryText:string,tertiaryText:string},
+  /**
+   * 中间元素，可以是文字，组件和{primaryText:string,secondaryText:string,tertiaryText:string} json组合
+   */
+  centerElement: string| React.Component<any>|{primaryText:string, secondaryText:string,tertiaryText:string},
+  /**
+   * 子元素
+   */
   children:any,
+  /**
+   * 左边元素按下时触发
+   */
   onLeftElementPress:(value?:any)=>void,
+  /**
+   * 右边元素按下时触发
+   */
   onRightElementPress:(value?:any)=>void,
   onPressValue:any,
 }
@@ -90,7 +131,7 @@ function getNumberOfSecondaryTextLines(numberOfLines:NumberOfLines) {
 
     return numberOfLines - 1;
 }
-function getNumberOfLines(props:ListItemProps) {
+function getNumberOfLines(props:ListItemPropTypes) {
     const { numberOfLines, centerElement } = props;
 
     if (centerElement && centerElement.secondaryText && centerElement.tertiaryText
@@ -106,7 +147,7 @@ function getNumberOfLines(props:ListItemProps) {
 /**
 * Please see this: https://material.google.com/components/lists.html#lists-specs
 */
-function getListItemHeight(props:ListItemProps, state:ListItemState) {
+function getListItemHeight(props:ListItemPropTypes, state:ListItemState) {
     const { leftElement, dense } = props;
     const { numberOfLines } = state;
 
@@ -128,21 +169,21 @@ function getListItemHeight(props:ListItemProps, state:ListItemState) {
 
     return null;
 }
-class ListItem extends React.PureComponent<ListItemProps,ListItemState> {
+class ListItem extends React.PureComponent<ListItemPropTypes,ListItemState> {
 
-    props:ListItemProps
+    props:ListItemPropTypes
     state:ListItemState
     androidMenu:any
     iosMenu:any
-    static defaultProps:typeof defaultProps=defaultProps
-    constructor(props:ListItemProps) {
+    static defaultProps:typeof defaultProps
+    constructor(props:ListItemPropTypes) {
         super(props);
 
         this.state = {
             numberOfLines: getNumberOfLines(props),
         };
     }
-    componentWillReceiveProps(nextProps:ListItemProps) {
+    componentWillReceiveProps(nextProps:ListItemPropTypes) {
         this.setState({ numberOfLines: getNumberOfLines(nextProps) });
     }
     getStyles=()=>{
@@ -279,7 +320,7 @@ class ListItem extends React.PureComponent<ListItemProps,ListItemState> {
             onRightElementPress(onPressValue);
         }
     }
-    renderLeftElement = (styles:StyleType) => {
+    renderLeftElement = (styles:ListItemStyle) => {
         const { leftElement } = this.props;
 
         if (!leftElement) {
@@ -333,7 +374,7 @@ class ListItem extends React.PureComponent<ListItemProps,ListItemState> {
             </View>
         );
     }
-    renderCenterElement = (styles:StyleType) => {
+    renderCenterElement = (styles:ListItemStyle) => {
         const { centerElement } = this.props;
         const numberOfLines = getNumberOfSecondaryTextLines(this.state.numberOfLines);
         let content = null;
@@ -387,7 +428,7 @@ class ListItem extends React.PureComponent<ListItemProps,ListItemState> {
             </View>
         );
     }
-    renderRightElement = (styles:StyleType) => {
+    renderRightElement = (styles:ListItemStyle) => {
         const { rightElement } = this.props;
 
         let content = [];
@@ -446,9 +487,10 @@ class ListItem extends React.PureComponent<ListItemProps,ListItemState> {
                           name="more-vert"
                           color={flattenRightElement.color}
                           onPress={() =>{
+                            //如果是android平台使用UIManager.showPopupMenu
                             if(Platform.OS==='android'){
                               this.onMenuPressed((rightElement:any).menu.labels)
-                            }else{
+                            }else{//如果是ios平台使用Menu组件，应为ios没有实现UIManager.showPopupMenu
                               this.iosMenu && this.iosMenu.show()
                             }
                           }}
@@ -488,7 +530,7 @@ class ListItem extends React.PureComponent<ListItemProps,ListItemState> {
 
         return <Divider />;
     }
-    renderContent = (styles:StyleType) => (
+    renderContent = (styles:ListItemStyle) => (
         <View style={styles.contentViewContainer} pointerEvents="box-none">
             {this.renderLeftElement(styles)}
             {this.renderCenterElement(styles)}
@@ -522,4 +564,5 @@ class ListItem extends React.PureComponent<ListItemProps,ListItemState> {
         );
     }
 }
+ListItem.defaultProps=defaultProps
 export default ListItem;
