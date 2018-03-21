@@ -5,7 +5,10 @@
 
 
 #### link
-material-elements 依赖于react-native-vector-icons 
+material-elements 依赖于react-native-vector-icons <br/>
+ 运行 `yarn add react-native-vector-icons`
+ <br/>
+ 将vector-icons链入工程
 `react-native link react-native-vector-icons`
 
 ### 使用
