@@ -126,7 +126,6 @@ export default function getTheme(theme, ...more) {
         badge: StyleSheet.create(merge({
             outerContainer:{
               flexDirection: 'row',
-              width:50,
             },
             container: {
                 position: 'absolute',
