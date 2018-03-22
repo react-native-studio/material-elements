@@ -8,7 +8,8 @@ type TypographyPropTypes={
   variant:string | typeof defaultProps.variant,
   style:{
     text?:Text.style,
-  }
+  },
+  children?:string | typeof Text
 }
 const defaultProps={
   variant:'body1',
