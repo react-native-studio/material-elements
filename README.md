@@ -35,4 +35,5 @@ material-elements 依赖于react-native-vector-icons <br/>
 - Toast
 - TextField
 - Indicator
+- [Typography](https://github.com/react-native-studio/material-elements/blob/master/docs/Typography.md)
 #### 后续将完善文档，丰富material-elements组件库
