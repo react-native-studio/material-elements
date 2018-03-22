@@ -11,7 +11,10 @@ type TypographyPropTypes={
   }
 }
 const defaultProps={
-  variant:'body1'
+  variant:'body1',
+  style:{
+
+  }
 }
 class Typography extends PureComponent<TypographyPropTypes>{
 
@@ -20,15 +23,15 @@ class Typography extends PureComponent<TypographyPropTypes>{
   static defaultProps:typeof defaultProps
 
   render(){
-    const {style,variant}=this.props;
+    const {style,variant,children}=this.props;
     const styles={
       text:[
-        ...material[variant+'Object'],
+        {...material[variant+'Object']},
         style.text,
       ]
     }
 
-    return(<Text style={styles.text}/>)
+    return(<Text style={styles.text} children={children}/>)
   }
 }
 Typography.defaultProps=defaultProps
