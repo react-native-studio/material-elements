@@ -16,7 +16,7 @@ import CenterElement from './CenterElement.flow'
 import RightElement from './RightElement.flow'
 import IconToggle from '../IconToggle'
 import getTheme from '../styles/getTheme'
-import type { IconPropTypes } from '../TypeDifinition/index'
+import type { IconPropTypes } from '../Icon/Icon.flow'
 
 type StyleType = {
   container?: ViewPropTypes.style,

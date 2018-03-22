@@ -19,7 +19,7 @@ import IconToggle from '../IconToggle';
 import RippleFeedback from '../RippleFeedback';
 import getTheme from '../styles/getTheme'
 import { ViewPropTypes } from '../utils/index'
-import type { IconPropTypes } from '../TypeDifinition/index'
+import type { IconPropTypes } from '../Icon/Icon.flow'
 import Menu from '../Menu'
 
 const UIManager = NativeModules.UIManager;

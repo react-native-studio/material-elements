@@ -3,7 +3,7 @@
  */
 import React, { Component } from 'react'
 import { StyleSheet, View, Text ,Dimensions} from 'react-native'
-import type { IconPropTypes } from '../TypeDifinition'
+import type { IconPropTypes } from '../Icon/Icon.flow'
 import getTheme from '../styles/getTheme'
 import { ViewPropTypes } from '../utils/index'
 import Icon from '../Icon/Icon.flow'

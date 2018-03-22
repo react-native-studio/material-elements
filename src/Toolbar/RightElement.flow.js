@@ -5,8 +5,8 @@ import React, { PureComponent } from 'react'
 import { View, StyleSheet, NativeModules, findNodeHandle ,Text,Platform} from 'react-native'
 import IconToggle from '../IconToggle'
 import getTheme from '../styles/getTheme'
-import type { IconPropTypes } from '../TypeDifinition/index'
 import Menu from '../Menu';
+import type {IconPropTypes} from "../Icon/Icon.flow";
 type MenuType={
   menu:{ labels:Array<string> | Array<{text:string,icon:IconPropTypes}>}
 };

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import { Animated, Easing, Platform, StyleSheet,View,Text, } from 'react-native'
 import getTheme from '../styles/getTheme'
 import IconToggle from '../IconToggle'
-import type { IconPropTypes } from '../TypeDifinition/index'
+import type { IconPropTypes } from '../Icon/Icon.flow'
 import { ViewPropTypes } from '../utils/index'
 
 type StyleType = {
