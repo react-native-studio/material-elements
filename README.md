@@ -18,7 +18,6 @@ material-elements 依赖于react-native-vector-icons <br/>
 - Action Button
 - Avatar
 - Badge
-- Bottom Navigation
 - [Button](https://github.com/react-native-studio/material-elements/blob/master/docs/Button.md)
 - [Card](https://github.com/react-native-studio/material-elements/blob/master/docs/Card.md)
 - Checkbox
