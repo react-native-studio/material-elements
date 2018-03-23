@@ -2,43 +2,48 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Home"
+            "text": "Install\n\n\ninstall  material-elements\n\n\n\u8fd0\u884c \nnpm install --save material-elements\n \n\n\n\u5982\u679c\u4f60\u5b89\u88c5\u4e86yarn\uff0c\u53ef\u4ee5\u4f7f\u7528 \nyarn add material-elements\n\n\ninstall react-native-vector-icons\n\n\nmaterial-elements \u4f9d\u8d56\u4e8ereact-native-vector-icons \n\n\u8fd0\u884c \nnpm install --save react-native-vector-icons\n\n\n\u5982\u679c\u4f60\u5b89\u88c5\u4e86yarn\uff0c\u4f60\u53ef\u4ee5\u4f7f\u7528\nyarn add react-native-vector-icons\n\n\n\u5c06vector-icons link \u5230\u5de5\u7a0b\u4e2d\n\n\nreact-native link react-native-vector-icons\n\n\nusage\n\n\nimport\n \n{\nButton\n}\n \nfrom\n \nmaterial-elements\n;\n\n\n\nButton\n \ntext\n=\ntext\n \nonPress\n=\n{()=\n{}}\n/", 
+            "title": "Install"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
-        }, 
-        {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
-        }, 
-        {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
-        }, 
-        {
-            "location": "/about/", 
-            "text": "Coepit ne barbara dixit natas\n\n\nQuaesita oborto deae ipso velat circumfusaeque Aurorae\n\n\nLorem \nmarkdownum eodem\n obusta \ntenebo\n adiere ferit, tribulique annos\n\nthalamos\n, qui raptos parabat. Cum cerebro licet, qui\nharena \nfacit iura relinquam\n Daedale sinit lacrimaeque, et terris pennis.\nAnimorum o esset Naides vero vidit et Cinyras inpia!\n\n\nheuristic_upnp = visual_radcab(4 + ddrOverwrite, win_lag_io);\nsourceCdAtm += character_system_wais.caps_hfs(motion.refresh_cloud_avatar(\n        prompt(fragmentation, input)), installGateway +\n        controlImpactMultithreading, character);\nvar menu_usb = 69;\n\n\n\nUbi ne arboribus ab manum, succumbere, salutem Arabas funera danda et quoque\npaciscor. Apertas operi.\n\n\n\n\nLuce est\n\n\nCursu grata\n\n\nIubet Liternum ictus Anchisae posses in ipsa\n\n\nLunae monstri suae\n\n\nIn coniuge amico unda longum saepe corpore\n\n\n\n\nTum ora tremulo oculi\n\n\nConiungere hoc tua ille sequitur nec, ceu frenis nivea matertera lymphis.\nPaterque placet altissimus \nfibras\n, cui\npro positosque amnes, qui vult, haud dum concilio o genitor Cecropio; unda. Ut\neadem et obscuraque \npedum\n annisque cum toto\nstatuistis vultus e metallis mitto, mea in fuit dominum, fuit. Bellum \nrursus\ntantummodo subiectis\n, si raro tantum revellere septem\n\nsummoque\n ursaeque. Quae fatentis facit\nrequiescere petit.\n\n\nIniqui mihi in vulgata proles: Stygias domus causam, hi saxum delphines, pennas\nad. Gavisus ille, tanta ereptus Atalanta. Pede sedem, pollice iram. Admonuit\nvictu in sine, \nego\n genae laborum autumnum volucrum\ntemplisque in summae, Gyaros stipite est terrae. Partim meum incursant imagine\nnullis vellet ego nobis frondibus dummodo lauro, Oresteae Canentem quereretur\nartus.\n\n\nif (2 + workstation_mashup(activeBatchEdutainment, bug)) {\n    barebones_rw = visual;\n}\nif (server_facebook_point.full(web(horse_p))) {\n    edutainmentChip.folderAppletBrouter(73, vga + 8, iscsi.computingTime(\n            macro_ivr_rootkit, search));\n    system = tcpNtfsNode;\n    link_batch_multiplatform.utfMedia = dimmDigital(directory, 3 +\n            search_mbr_vdu, real_hexadecimal);\n}\nqwerty = keyGateway + mirrored + eupPpiProtocol * cdfs;\n\n\n\nCum natura quater neque equi cerae populosque haut quoque, sine \nora\n presso\net opto littera. \nQuis Nec nunc\n meum, multoque Aeneae,\n\nconiugis\n, humo Nioben \nrepetebam recto\n.\n\n\nUndas\n manu stricto artes \ncontentus\n, me scelerato illa dum; deicit. Nec\nmihi Cererem aquas inposita; falsi sit venires morerne. Nolle tamquam retro in\nspiritus nunc, \naberat quoque\n accersite tibi, sive, priorum umida non est tum\nvaluissent.", 
-            "title": "About"
-        }, 
-        {
-            "location": "/about/#coepit-ne-barbara-dixit-natas", 
+            "location": "/#install", 
             "text": "", 
-            "title": "Coepit ne barbara dixit natas"
+            "title": "Install"
         }, 
         {
-            "location": "/about/#quaesita-oborto-deae-ipso-velat-circumfusaeque-aurorae", 
-            "text": "Lorem  markdownum eodem  obusta  tenebo  adiere ferit, tribulique annos thalamos , qui raptos parabat. Cum cerebro licet, qui\nharena  facit iura relinquam  Daedale sinit lacrimaeque, et terris pennis.\nAnimorum o esset Naides vero vidit et Cinyras inpia!  heuristic_upnp = visual_radcab(4 + ddrOverwrite, win_lag_io);\nsourceCdAtm += character_system_wais.caps_hfs(motion.refresh_cloud_avatar(\n        prompt(fragmentation, input)), installGateway +\n        controlImpactMultithreading, character);\nvar menu_usb = 69;  Ubi ne arboribus ab manum, succumbere, salutem Arabas funera danda et quoque\npaciscor. Apertas operi.   Luce est  Cursu grata  Iubet Liternum ictus Anchisae posses in ipsa  Lunae monstri suae  In coniuge amico unda longum saepe corpore", 
-            "title": "Quaesita oborto deae ipso velat circumfusaeque Aurorae"
+            "location": "/#install-material-elements", 
+            "text": "\u8fd0\u884c  npm install --save material-elements    \u5982\u679c\u4f60\u5b89\u88c5\u4e86yarn\uff0c\u53ef\u4ee5\u4f7f\u7528  yarn add material-elements", 
+            "title": "install  material-elements"
         }, 
         {
-            "location": "/about/#tum-ora-tremulo-oculi", 
-            "text": "Coniungere hoc tua ille sequitur nec, ceu frenis nivea matertera lymphis.\nPaterque placet altissimus  fibras , cui\npro positosque amnes, qui vult, haud dum concilio o genitor Cecropio; unda. Ut\neadem et obscuraque  pedum  annisque cum toto\nstatuistis vultus e metallis mitto, mea in fuit dominum, fuit. Bellum  rursus\ntantummodo subiectis , si raro tantum revellere septem summoque  ursaeque. Quae fatentis facit\nrequiescere petit.  Iniqui mihi in vulgata proles: Stygias domus causam, hi saxum delphines, pennas\nad. Gavisus ille, tanta ereptus Atalanta. Pede sedem, pollice iram. Admonuit\nvictu in sine,  ego  genae laborum autumnum volucrum\ntemplisque in summae, Gyaros stipite est terrae. Partim meum incursant imagine\nnullis vellet ego nobis frondibus dummodo lauro, Oresteae Canentem quereretur\nartus.  if (2 + workstation_mashup(activeBatchEdutainment, bug)) {\n    barebones_rw = visual;\n}\nif (server_facebook_point.full(web(horse_p))) {\n    edutainmentChip.folderAppletBrouter(73, vga + 8, iscsi.computingTime(\n            macro_ivr_rootkit, search));\n    system = tcpNtfsNode;\n    link_batch_multiplatform.utfMedia = dimmDigital(directory, 3 +\n            search_mbr_vdu, real_hexadecimal);\n}\nqwerty = keyGateway + mirrored + eupPpiProtocol * cdfs;  Cum natura quater neque equi cerae populosque haut quoque, sine  ora  presso\net opto littera.  Quis Nec nunc  meum, multoque Aeneae, coniugis , humo Nioben  repetebam recto .  Undas  manu stricto artes  contentus , me scelerato illa dum; deicit. Nec\nmihi Cererem aquas inposita; falsi sit venires morerne. Nolle tamquam retro in\nspiritus nunc,  aberat quoque  accersite tibi, sive, priorum umida non est tum\nvaluissent.", 
-            "title": "Tum ora tremulo oculi"
+            "location": "/#install-react-native-vector-icons", 
+            "text": "material-elements \u4f9d\u8d56\u4e8ereact-native-vector-icons  \n\u8fd0\u884c  npm install --save react-native-vector-icons  \u5982\u679c\u4f60\u5b89\u88c5\u4e86yarn\uff0c\u4f60\u53ef\u4ee5\u4f7f\u7528 yarn add react-native-vector-icons  \u5c06vector-icons link \u5230\u5de5\u7a0b\u4e2d  react-native link react-native-vector-icons", 
+            "title": "install react-native-vector-icons"
+        }, 
+        {
+            "location": "/#usage", 
+            "text": "import   { Button }   from   material-elements ;  Button   text = text   onPress = {()= {}} /", 
+            "title": "usage"
+        }, 
+        {
+            "location": "/Avatar/", 
+            "text": "Avatar\n\n\nUsage\n\n\n...\n\n\nimport\n \n{\n \nAvatar\n \n}\n \nfrom\n \nmaterial-elements\n;\n\n\n...\n\n\nrender\n()\n \n{\n\n    \nView\n\n        \nAvatar\n \ntext\n=\nA\n \n/\n\n                \nAvatar\n \nicon\n=\n{{\nname\n:\nperson\n,\ncolor\n:\nblue\n}}\n/\n\n                \nAvatar\n \nicon\n=\n{{\nname\n:\nhistory\n,\nsize\n:\n20\n}}\n/\n\n                \nAvatar\n \nicon\n=\n{{\nname\n:\nmic\n}}\n \nsize\n=\n{\n75\n}\n \n/\n\n                \nAvatar\n \nimage\n=\n{{\nsource\n:\nrequire\n(\n../Images/launch-icon.png\n)}}\n/\n\n    \n/View\n\n\n}\n\n\n\n\n\n\nAPI\n\n\nconst\n \npropTypes\n \n=\n \n{\n\n    \n/**\n\n\n    * \u4f20\u5165Image\u7ec4\u4ef6\u5c5e\u6027\uff0cavatar\u6e32\u67d3Image\n\n\n    */\n\n    \nimage\n:\n \nPropTypes\n.\nshape\n({\n\n      \n...\nImage\n.\npropTypes\n,\n\n    \n}),\n\n    \n/**\n\n\n    * \u4f20\u5165Icon\u5c5e\u6027\uff0cavatar\u6e32\u67d3icon\n\n\n    */\n\n    \nicon\n:\nPropTypes\n.\nshape\n({\n\n      \nname\n:\nPropTypes\n.\nstring\n,\n\n      \ncolor\n:\nPropTypes\n.\nstring\n,\n\n      \nsize\n:\nPropTypes\n.\nnumber\n,\n\n      \ntype\n:\nPropTypes\n.\nstring\n,\n\n    \n}),\n\n    \n/**\n\n\n    * \u4f20\u5165text\uff0cavatar\u6e32\u67d3text\u7ec4\u4ef6\n\n\n    */\n\n    \ntext\n:\n \nPropTypes\n.\nstring\n,\n\n    \n/**\n\n\n    * \u4ec5\u4ec5\u7528\u4e8econtainer\u5c3a\u5bf8: style: { width: size, height: size, borderRadius: size / 2 }\n\n\n    */\n\n    \nsize\n:\n \nPropTypes\n.\nnumber\n,\n\n    \n/**\n\n\n    * avatar\u6837\u5f0f\n\n\n    */\n\n    \nstyle\n:\n \nPropTypes\n.\nshape\n({\n\n        \ncontainer\n:\n \nViewPropTypes\n.\nstyle\n,\n\n        \ncontent\n:\n \nText\n.\npropTypes\n.\nstyle\n,\n\n    \n}),\n\n\n};", 
+            "title": "Avatar"
+        }, 
+        {
+            "location": "/Avatar/#avatar", 
+            "text": "", 
+            "title": "Avatar"
+        }, 
+        {
+            "location": "/Avatar/#usage", 
+            "text": "...  import   {   Avatar   }   from   material-elements ;  ...  render ()   { \n     View \n         Avatar   text = A   / \n                 Avatar   icon = {{ name : person , color : blue }} / \n                 Avatar   icon = {{ name : history , size : 20 }} / \n                 Avatar   icon = {{ name : mic }}   size = { 75 }   / \n                 Avatar   image = {{ source : require ( ../Images/launch-icon.png )}} / \n     /View  }", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/Avatar/#api", 
+            "text": "const   propTypes   =   { \n     /**      * \u4f20\u5165Image\u7ec4\u4ef6\u5c5e\u6027\uff0cavatar\u6e32\u67d3Image      */ \n     image :   PropTypes . shape ({ \n       ... Image . propTypes , \n     }), \n     /**      * \u4f20\u5165Icon\u5c5e\u6027\uff0cavatar\u6e32\u67d3icon      */ \n     icon : PropTypes . shape ({ \n       name : PropTypes . string , \n       color : PropTypes . string , \n       size : PropTypes . number , \n       type : PropTypes . string , \n     }), \n     /**      * \u4f20\u5165text\uff0cavatar\u6e32\u67d3text\u7ec4\u4ef6      */ \n     text :   PropTypes . string , \n     /**      * \u4ec5\u4ec5\u7528\u4e8econtainer\u5c3a\u5bf8: style: { width: size, height: size, borderRadius: size / 2 }      */ \n     size :   PropTypes . number , \n     /**      * avatar\u6837\u5f0f      */ \n     style :   PropTypes . shape ({ \n         container :   ViewPropTypes . style , \n         content :   Text . propTypes . style , \n     }),  };", 
+            "title": "API"
         }
     ]
 }
