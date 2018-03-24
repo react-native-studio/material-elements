@@ -9,19 +9,14 @@ export default class BottomSheetExample extends Component{
   }
   render(){
     return(<View style={{flex:1}}>
-      <Text onPress={()=>{
-        this.setState({visible:true})
-      }}>openBottomSheetListItem</Text>
-      <Text onPress={()=>{
-        this.setState({visible1:true})
-      }}>openBottomSheetGridItem</Text>
-      <BottomSheet style={{container:{backgroundColor:'transparent'}}} renderType="list"  title="bottomSheet" onClosed={()=>{
+      <BottomSheet renderType="list"  title="操作" onClosed={()=>{
         this.setState({visible:false})
-      }} visible={this.state.visible}>
-        <BottomSheet.ListItem onPress={()=>{alert('1')}} text="arrow-back" icon={{name:'arrow-back'}}/>
-        <BottomSheet.ListItem text="arrow-back" icon={{name:'arrow-back'}}/>
+      }} visible={true}>
+        <BottomSheet.ListItem text="分享" icon={{name:'share'}}/>
+        <BottomSheet.ListItem text="上传" icon={{name:'cloud-upload'}}/>
+        <BottomSheet.ListItem text="复制" icon={{name:'content-copy'}}/>
         <BottomSheet.Divider/>
-        <BottomSheet.ListItem text="arrow-back" icon={{name:'arrow-back'}}/>
+        <BottomSheet.ListItem text="打印" icon={{name:'print'}}/>
       </BottomSheet>
       <BottomSheet style={{container:{backgroundColor:'transparent'}}} renderType="grid"  title="bottomSheet" onClosed={()=>{
         this.setState({visible1:false})
