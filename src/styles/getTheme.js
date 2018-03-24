@@ -537,7 +537,7 @@ export default function getTheme(theme, ...more) {
         bottomSheet:StyleSheet.create(merge({
           container:{
             //...getPlatformElevation(16),
-            backgroundColor:Color('#000').alpha(0.2),
+            backgroundColor:'transparent',//,Color('#000').alpha(0.2),
             marginHorizontal:0,
             marginVertical:0,
           },
