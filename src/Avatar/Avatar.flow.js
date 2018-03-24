@@ -78,27 +78,36 @@ class Avatar extends PureComponent<AvatarPropTypes>{
   static defaultProps:typeof defaultProps
   static defaultProps=defaultProps
 
-  render() {
-    const { image, icon, text } = this.props;
-    let content = null;
-    const { avatar, spacing } =getTheme();
-    const styles = getStyles(this.props);
-
-    if (icon) {
-      const color = icon.color || StyleSheet.flatten(avatar.content).color;
-      const size = icon.size || spacing.iconSize;
-      const name=icon.name,type=icon.type,iconProps={color,size,name,type};
-      content = <Icon {...iconProps} />;
-    } else if (text) {
-      content = <Text style={styles.content}>{text}</Text>;
-    } else if (image) {
-      content = <Image style={styles.image} {...image}/>;
+  renderContent=()=>{
+    let {image,icon,text}=this.props;
+    let {avatar,spacing} =getTheme();
+    const styles=getStyles(this.props);
+    //如果icon属性不为空
+    if(icon){
+      const color=icon.color || StyleSheet.flatten(avatar.content).color;
+      const size=icon.size || spacing.iconSize;
+      const iconProps={
+        name:icon.name,
+        type:icon.type,
+        size,
+        color,
+      }
+      return <Icon {...iconProps}/>
     }
-
-
+    //text属性不为空
+    if(text){
+      return <Text style={styles.content}>{text}</Text>
+    }
+    //image属行不为空
+    if(image){
+      return <Image {...image} style={styles.image}/>
+    }
+  }
+  render() {
+    const styles=getStyles(this.props);
     return (
       <View style={[styles.container,{overflow: 'hidden'}]} >
-        {content}
+        {this.renderContent()}
       </View>
     );
   }
