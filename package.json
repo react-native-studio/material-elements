@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/react-native-studio/material-elements#readme",
   "peerDependencies": {
-    "react-native-vector-icons": "^4.0.0"
+    "react-native-vector-icons": "^4.0.0",
+    "fbjs":"*"
   },
   "dependencies": {
     "color": "^1.0.3",
