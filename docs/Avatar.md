@@ -1,53 +1,30 @@
-# Avatar
+# **Avatar**
 
-### Usage
+
+<img width="285" src="../images/avatar.png"/>
+
+### 使用
 
 ```js
-...
 import { Avatar } from 'material-elements';
-...
-render() {
-    <View>
-        <Avatar text="A" />
-                <Avatar icon={{name:'person',color:'blue'}}/>
-                <Avatar icon={{name:'history',size:20}}/>
-                <Avatar icon={{name:'mic'}} size={75} />
-                <Avatar image={{source:require('../Images/launch-icon.png')}}/>
-    </View>
-}
+
+        <Avatar text="m"/>
+        <Avatar text="m" size={60}/>
+        <Avatar text="m" size={100}/>
+        <Avatar icon={{name: 'menu'}}/>
+        <Avatar icon={{name: 'menu'}} size={60}/>
+        <Avatar icon={{name: 'menu'}} size={100}/>
+        <Avatar image={{source: require('./Images/launch-icon.png')}}/>
+        <Avatar image={{source: require('./Images/launch-icon.png')}} size={60}/>
+        <Avatar image={{source: require('./Images/launch-icon.png')}} size={100}/>
 ```
+
 ### API
-```js
-const propTypes = {
-    /**
-    * 传入Image组件属性，avatar渲染Image
-    */
-    image: PropTypes.shape({
-      ...Image.propTypes,
-    }),
-    /**
-    * 传入Icon属性，avatar渲染icon
-    */
-    icon:PropTypes.shape({
-      name:PropTypes.string,
-      color:PropTypes.string,
-      size:PropTypes.number,
-      type:PropTypes.string,
-    }),
-    /**
-    * 传入text，avatar渲染text组件
-    */
-    text: PropTypes.string,
-    /**
-    * 仅仅用于container尺寸: style: { width: size, height: size, borderRadius: size / 2 }
-    */
-    size: PropTypes.number,
-    /**
-    * avatar样式
-    */
-    style: PropTypes.shape({
-        container: ViewPropTypes.style,
-        content: Text.propTypes.style,
-    }),
-};
-```
+
+|属性|类型|默认值|说明|
+|:---:|:---:|:---:|:---:|
+|text|string|无|显示在Avatar中文字|
+|icon|{name:string,size:number,type:string,color:string}|无|显示在avatar中的icon|
+|image|Image.props|无|可设置所有Image属性|
+|size|number|48|avatar的尺寸|
+|style|{container:ViewPropTypes.style,content:Text.style}||content作用于Text组件|
