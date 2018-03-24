@@ -48,21 +48,7 @@ type ActionButtonPropTypes={
   icon?:IconPropTypes,
   transition?:'toolbar'| 'speedDial',
   rippleColor?:string,
-  style:{
-    positionContainer?:ViewPropTypes.style,
-    toolbarPositionContainer?:ViewPropTypes.style,
-    container?:ViewPropTypes.style,
-    overlayContainer?:ViewPropTypes.style,
-    toolbarContainer?:ViewPropTypes.style,
-    toolbarActionContainer?:ViewPropTypes.style,
-    speedDialContainer?:ViewPropTypes.style,
-    speedDialActionContainer?:ViewPropTypes.style,
-    speedDialActionLabel?:ViewPropTypes.style,
-    speedDialActionLabelContainer?:ViewPropTypes.style,
-    speedDialActionIconContainer?:ViewPropTypes.style,
-    speedDialActionIcon?:ViewPropTypes.style,
-    icon?:ViewPropTypes.style
-  },
+  style:ActionButtonStyle | typeof defaultProps.style,
   size?:number,
 }
 
