@@ -22,11 +22,12 @@ type SimpleToolbarPropTypes = {
   onLeftIconPress?: () => void,
   onRightIconPress?: () => void,
   style: SimpleToolbarStyle | typeof defaultProps.style,
+  material?:boolean
 }
 const defaultProps = {
   style: {},
   leftIconName: 'arrow-back',
-  rightIconName: null,
+  material:true //默认以material样式显示
 }
 
 class SimpleToolbar extends PureComponent<SimpleToolbarPropTypes> {
@@ -108,19 +109,22 @@ class SimpleToolbar extends PureComponent<SimpleToolbarPropTypes> {
     return null;
   }
   render () {
-    const styles = this.getStyles()
+    const styles = this.getStyles();
+    const {material}=this.props;
     return (
       <View style={styles.container}>
         {/*CenterElement元素放在中间，则会使得左侧的Icon无法使用onPress*/}
         {/*在ReactNative 中，当view设置了position属性后，图层变低，但是比其前面的图层高。子view的图层高于父view的图层*/}
+        {material&&this.renderLeftIcon(styles)}
         <CenterElement
+          material={material}
           style={{
             centerElementContainer:styles.centerElement,
             titleText:styles.title,
           }}
           title={this.props.title}
         />
-        {this.renderLeftIcon(styles)}
+        {!material&&this.renderLeftIcon(styles)}
         {this.renderRightIcon(styles)}
       </View>
     )

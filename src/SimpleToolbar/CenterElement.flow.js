@@ -12,7 +12,8 @@ type CenterElementStyle={
 }
 type CenterElementPropTypes = {
   style:CenterElementStyle,
-  title?: string
+  title?: string,
+  material?:boolean
 }
 
 const defaultProps = {
@@ -28,7 +29,7 @@ class CenterElement extends PureComponent<CenterElementPropTypes> {
     let {simpleToolbar} = getTheme()
     return {
       centerElementContainer: [
-        simpleToolbar.centerElementContainer,
+        props.material?{flex:1,marginLeft:20}:simpleToolbar.centerElementContainer,
         props.style.centerElementContainer
       ],
       titleText: [
