@@ -1,13 +1,7 @@
-//******************************************************************
-//Copyright (C) 2017 Xinhua Daily Press Group Co,Ltd. All Rights Reserved.
-//-----------------------------------------------------------------------
-//系统名 ： 江苏新华报业传媒集团交汇点II期工程
-//子模块 ： 交回号，号外动画
-//-----------------------------------------------------------------------
-//版本        作者     日期         说明    参考
-//1.0.      黎明宇  2017/12/29      新建
+/**
+ *@flow
+ */
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
 import {
   Text,
   View,
@@ -15,17 +9,49 @@ import {
   Easing,
   StyleSheet,
   TouchableWithoutFeedback,
-} from 'react-native'
+} from 'react-native';
+import {ViewPropTypes} from "../../utils/index";
+type ScrollVerticalPropTypes = {
+  scrollHeight?: number,
+  delay?: number,
+  duration?: number,
+  kbContainer?: ViewPropTypes.style,
+  data?: Array<{ title: string }>,
+  scrollStyle?: ViewPropTypes.style,
+  textStyle?: Text.style,
+  onItemPress?: ({ title: string }) => void,
+  onChange: (number) => void,
+  enableAnimation?:boolean
 
-export default class ScrollVertical extends Component {
-  static defaultProps = {
-    enableAnimation: true,
-  };
+}
+const defaultProps = {
+  enableAnimation: true,
+}
+type ScrollVerticalState = {
+  translateValue: Animated.Value,
+  scrollHeight: number,
+  delay: number,
+  duration: number,
+  enableAnimation: boolean,
+  kb_tempValue: number,
+  kb_contentOffsetY: number,
+  kb_content: Array<{ title: string }>
 
-  constructor(props) {
+}
+
+class ScrollVertical extends Component<ScrollVerticalPropTypes, ScrollVerticalState> {
+  props: ScrollVerticalPropTypes
+
+  state: ScrollVerticalState
+  static defaultProps: typeof defaultProps
+  static defaultProps = defaultProps
+  animation: any
+
+
+  constructor(props: ScrollVerticalPropTypes) {
     super(props)
-    let translateValue= new Animated.ValueXY({x: 0, y: 0})
-    translateValue.addListener(({x,y})=>{
+    let translateValue = new Animated.ValueXY({x: 0, y: 0})
+    translateValue.addListener(({x, y}) => {
       // Log('value',x,y)
     })
     this.state = {
@@ -67,10 +93,10 @@ export default class ScrollVertical extends Component {
     )
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: ScrollVerticalPropTypes) {
 
     this.setState({
-        enableAnimation: nextProps.enableAnimation?true:false
+        enableAnimation: nextProps.enableAnimation ? true : false
       }, () => {
         this.startAnimation();
       }
@@ -95,20 +121,20 @@ export default class ScrollVertical extends Component {
 
   _createKbItem(kbItem, index) {
     return (
-      <TouchableWithoutFeedback key={index} onPress={()=>this.props.onItemPress && this.props.onItemPress(kbItem)}>
-      <View
-            style={[{justifyContent: 'center', height: this.state.scrollHeight}, this.props.scrollStyle]}>
-        <Text style={[styles.kb_text_c, this.props.textStyle]} numberOfLines={1}>{kbItem.title}</Text>
-      </View>
+      <TouchableWithoutFeedback key={index} onPress={() => this.props.onItemPress && this.props.onItemPress(kbItem)}>
+        <View
+          style={[{justifyContent: 'center', height: this.state.scrollHeight}, this.props.scrollStyle]}>
+          <Text style={[styles.kb_text_c, this.props.textStyle]} numberOfLines={1}>{kbItem.title}</Text>
+        </View>
       </TouchableWithoutFeedback>
     )
   }
 
   startAnimation = () => {
     if (this.state.enableAnimation) {
-      if(!this.animation){
+      if (!this.animation) {
         this.animation = setTimeout(() => {
-          this.animation=null;
+          this.animation = null;
           this._startAnimation();
         }, this.state.delay);
       }
@@ -121,7 +147,7 @@ export default class ScrollVertical extends Component {
     if (this.animation) {
       clearTimeout(this.animation);
     }
-    if(this.state.translateValue){
+    if (this.state.translateValue) {
       this.state.translateValue.removeAllListeners();
     }
   }
@@ -130,7 +156,7 @@ export default class ScrollVertical extends Component {
     this.state.kb_tempValue -= this.state.scrollHeight;
     if (this.props.onChange) {
       let index = Math.abs(this.state.kb_tempValue) / (this.state.scrollHeight);
-      this.props.onChange(index<this.state.kb_content.length-1?index:0);
+      this.props.onChange(index < this.state.kb_content.length - 1 ? index : 0);
     }
     Animated.sequence([
 
@@ -156,7 +182,6 @@ export default class ScrollVertical extends Component {
         this.startAnimation();
 
 
-
       })
   }
 }
@@ -172,3 +197,4 @@ const styles = StyleSheet.create({
     color: '#181818',
   }
 })
+export default ScrollVertical
