@@ -24,12 +24,12 @@ export { default as RadioButton } from './RadioButton';
 export { default as Subheader } from './Subheader';
 export { default as Toolbar } from './Toolbar';
 export { default as Snackbar } from './Snackbar';
-export {default as Ripple} from './Ripple';
-export {default as TextField} from './TextField';
-export {default as SimpleToolbar} from './SimpleToolbar';
-export {default as BottomSheet} from './BottomSheet';
-export {default as Menu} from './Menu';
-export {default as Toast} from './Toast';
-export {default as Indicator} from './Indicator';
-export {default as Placeholder} from './Placeholder';
-export {default as Typography} from './Typography/Typography'
+export { default as Ripple } from './Ripple';
+export { default as TextField } from './TextField';
+export { default as SimpleToolbar } from './SimpleToolbar';
+export { default as BottomSheet } from './BottomSheet';
+export { default as Menu } from './Menu';
+export { default as Toast } from './Toast';
+export { default as Indicator } from './Indicator';
+export { default as Placeholder } from './Placeholder';
+export { default as Typography } from './Typography/Typography'
