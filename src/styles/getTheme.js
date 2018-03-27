@@ -183,44 +183,6 @@ export default function getTheme(theme, ...more) {
                 color: palette.disabledTextColor,
             },
         }, theme.buttonRaisedDisabled)),
-        bottomNavigation: StyleSheet.create(merge({
-            container: {
-                flexDirection: 'row',
-                height: 56,
-                backgroundColor: palette.canvasColor,
-                borderTopColor: palette.borderColor,
-                borderTopWidth: StyleSheet.hairlineWidth,
-                ...getPlatformElevation(8),
-                zIndex: 8,
-            },
-        }, theme.bottomNavigation)),
-        bottomNavigationAction: StyleSheet.create(merge({
-            container: {
-                flex: 1,
-                alignItems: 'center',
-                maxWidth: 168,
-                minWidth: 80,
-                paddingBottom: 12,
-                paddingTop: 8,
-                paddingLeft: 12,
-                paddingRight: 12,
-            },
-            label: {
-                fontSize: 12,
-                textAlign: 'center',
-                color: palette.secondaryTextColor,
-            },
-            containerActive: {
-                paddingTop: 6,
-            },
-            iconActive: {
-                color: palette.primaryColor,
-            },
-            labelActive: {
-                color: palette.primaryColor,
-                fontSize: 14,
-            },
-        }, theme.bottomNavigationAction)),
         card: StyleSheet.create(merge({
             container: {
                 backgroundColor: palette.canvasColor,
@@ -279,93 +241,6 @@ export default function getTheme(theme, ...more) {
                 height: StyleSheet.hairlineWidth,
             },
         }, theme.divider)),
-        drawer: StyleSheet.create(merge({
-            container: {
-                flex: 1,
-                backgroundColor: white,
-            },
-        }, theme.drawer)),
-        drawerHeader: StyleSheet.create(merge({
-            container: {
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-            },
-            contentContainer: {
-                backgroundColor: grey500,
-                height: 150,
-            },
-        }, theme.drawerHeader)),
-        drawerHeaderAccount: StyleSheet.create(merge({
-            container: {
-                flex: 1,
-                paddingBottom: 8,
-            },
-            accountContainer: {
-                flex: 1,
-                paddingHorizontal: 16,
-                marginBottom: 8,
-            },
-            topContainer: {
-                flex: 1,
-                justifyContent: 'center',
-            },
-            avatarsContainer: {
-                flexDirection: 'row',
-            },
-            activeAvatarContainer: {
-                flex: 1,
-            },
-            inactiveAvatarContainer: {
-                paddingLeft: 8,
-            },
-        }, theme.drawerHeaderAccount)),
-        drawerHeaderListItem: StyleSheet.create(merge({
-            container: {
-                backgroundColor: transparent,
-            },
-        }, theme.drawerHeaderListItem)),
-        drawerSection: StyleSheet.create(merge({
-            container: {
-                paddingVertical: 8,
-            },
-            item: {
-                flex: 1,
-                flexDirection: 'row',
-                alignItems: 'center',
-                height: 48,
-                paddingLeft: 16,
-            },
-            subheader: {
-                flex: 1,
-            },
-            icon: {
-                position: 'absolute',
-                top: 13,
-            },
-            value: {
-                flex: 1,
-                paddingLeft: 56,
-                top: 2,
-            },
-            label: {
-                paddingRight: 16,
-                top: 2,
-            },
-        }, theme.drawerSection)),
-        drawerSectionActiveItem: StyleSheet.create(merge({
-            container: {
-                backgroundColor: grey100,
-            },
-            leftElement: {
-                color: palette.primaryColor,
-            },
-            primaryText: {
-                ...typography.buttons,
-                color: palette.primaryColor,
-            },
-        }, theme.drawerSectionActiveItem)),
         iconToggle: StyleSheet.create(merge({
             container: {
                 width: spacing.iconSize * 2,
