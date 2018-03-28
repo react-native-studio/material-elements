@@ -11,10 +11,10 @@ import { ELEVATION_ZINDEX } from '../styles/constants';
 import Icon from '../Icon';
 
 const propTypes = {
-  /**
-   * icon颜色
-   */
-  color: PropTypes.string,
+    /**
+    * icon颜色
+    */
+    color: PropTypes.string,
     /**
     * icon按下的颜色
     */
@@ -38,7 +38,7 @@ const propTypes = {
     /**
     * icon的name
     */
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     /**
     * It'll be used instead of icon (see props name) if exists
     */
