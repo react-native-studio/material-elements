@@ -37,6 +37,11 @@ class Toast extends Component<ToastProps,ToastState>{
     visible:false,
     text:''
   }
+  timer:TimeoutID
+
+  componentWillUnmount(){
+    this.timer && clearTimeout(this.timer)
+  }
   show=(text:string,timeout:number):void=>{
 
     const {visible}=this.state;
@@ -47,7 +52,7 @@ class Toast extends Component<ToastProps,ToastState>{
 
     this.setState({visible:true,text},()=>{
 
-      setTimeout(()=>{
+    this.timer=setTimeout(()=>{
         this.hide();
       },time)
     })
