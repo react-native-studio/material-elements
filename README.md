@@ -7,7 +7,8 @@
 
 
 #### link
-material-elements 依赖于react-native-vector-icons <br/>
+ material-elements 依赖于react-native-vector-icons 
+
  运行 `yarn add react-native-vector-icons`
  <br/>
  <br/>
