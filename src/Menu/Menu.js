@@ -44,7 +44,8 @@ class Menu extends React.Component {
      */
     style:PropTypes.shape({
       container:ViewPropTypes.style
-    })
+    }),
+    containerStyle:ViewPropTypes.style
   };
 
   state = {
@@ -127,12 +128,13 @@ class Menu extends React.Component {
   getStyles=()=>{
     const {menu}=getTheme();
 
-    const {style}=this.props;
+    const {style,containerStyle}=this.props;
 
     return {
       container:[
         menu.container,
         style.container,
+        containerStyle,
       ]
     }
   }
