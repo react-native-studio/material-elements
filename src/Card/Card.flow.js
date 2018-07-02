@@ -20,24 +20,22 @@ type CardPropTypes = {
    * 是否水平铺满
    */
   fullWidth?: boolean,
+  containerStyle?:ViewPropTypes.style,
 }
 
 function getStyles (props) {
-  const {card} = getTheme()
-
-  const local = {}
-
+  const {card} = getTheme(),local={};
   if (props.fullWidth) {
     local.container = {
       marginHorizontal: 0,
     }
   }
-
   return {
     container: [
       card.container,
       local.container,
       props.style?props.style.container:{},
+      props.containerStyle,
     ],
   }
 }
