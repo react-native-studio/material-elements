@@ -17,6 +17,8 @@ type props = {
   leftElement: IconPropTypes | React.Component<any>,
   style: StyleType,
   onLeftElementPress: () => void,
+  leftElementContainerStyle?:ViewPropTypes.style,
+  leftElementStyle?:ViewPropTypes.style,
 }
 const defaultProps = {
   leftElement: null,
@@ -31,10 +33,12 @@ function getStyles (props: props) {
     leftElementContainer: [
       toolbar.leftElementContainer,
       props.style.leftElementContainer,
+      props.leftElementContainerStyle
     ],
     leftElement: [
       toolbar.leftElement,
       props.style.leftElement,
+      props.leftElementStyle
     ],
   }
 }

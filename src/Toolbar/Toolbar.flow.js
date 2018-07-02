@@ -42,6 +42,13 @@ type ToolbarProps = {
   centerElement: React.Component<any> | string,
   rightElement: IconPropTypes | React.Component<any> | Actions | MenuType,
   onRightElementPress?: (any) => void,
+  containerStyle?:ViewPropTypes.style,
+  leftElementContainerStyle?:ViewPropTypes.style,
+  leftElement?:ViewPropTypes.style,
+  rightElementContainerStyle?:ViewPropTypes.style,
+  rightElementStyle?:ViewPropTypes.style,
+  centerElementContainerStyle?:ViewPropTypes.style,
+  titleStyle?:ViewPropTypes.style,
 
 }
 const defaultProps = {
@@ -60,6 +67,7 @@ function getStyles (props: ToolbarProps) {
     container: [
       toolbar.container,
       props.style.container,
+      props.containerStyle
     ],
   }
 }

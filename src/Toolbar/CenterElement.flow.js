@@ -15,6 +15,8 @@ type CenterElementProps = {
   onPress: () => void,
   style: StyleType,
   haveLeftElement?: boolean,
+  centerElementContainerStyle?:ViewPropTypes.style,
+  titleStyle?:Text.propTypes.style,
 }
 const defaultProps = {
   onPress: null,
@@ -38,10 +40,12 @@ function getStyles (props: CenterElementProps) {
       toolbar.centerElementContainer,
       local.centerElementContainer,
       props.style.centerElementContainer,
+      props.centerElementContainerStyle
     ],
     titleText: [
       toolbar.titleText,
       props.style.titleText,
+      props.titleStyle
     ],
   }
 }

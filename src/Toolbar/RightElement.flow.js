@@ -7,6 +7,7 @@ import IconToggle from '../IconToggle'
 import getTheme from '../styles/getTheme'
 import Menu from '../Menu';
 import type {IconPropTypes} from "../Icon/Icon.flow";
+import {ViewPropTypes} from "../utils";
 type MenuType={
   menu:{ labels:Array<string> | Array<{text:string,icon:IconPropTypes}>}
 };
@@ -17,6 +18,8 @@ type RightElementProps = {
   rightElement: IconPropTypes | React.Component<any> | Actions | MenuType,
   style: any,
   onRightElementPress: (any)=>void,
+  rightElementStyle?:ViewPropTypes.style,
+  rightElementContainerStyle?:ViewPropTypes.style,
 }
 const defaultProps = {
   rightElement: null,
@@ -31,10 +34,12 @@ function getStyles (props: RightElementProps) {
     rightElementContainer: [
       toolbar.rightElementContainer,
       props.style.rightElementContainer,
+      props.rightElementContainerStyle
     ],
     rightElement: [
       toolbar.rightElement,
       props.style.rightElement,
+      props.rightElementStyle
     ],
   }
 }
