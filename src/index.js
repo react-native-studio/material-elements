@@ -4,7 +4,6 @@
 import * as Color from './styles/colors';
 
 export { Color };
-export { default as ThemeProvider } from './styles/ThemeProvider.react';
 export { default as RippleFeedback } from './RippleFeedback';
 // components
 export { default as ActionButton } from './ActionButton';
