@@ -8,7 +8,7 @@ import getTheme from '../styles/getTheme';
 import Icon from '../Icon/Icon.flow';
 import type {IconPropTypes} from "../Icon/Icon.flow";
 import {ViewPropTypes} from '../utils';
-export type AvatarPropTypes={
+export type AvatarProps={
   /**
    * 传入Image组件属性，avatar渲染Image
    */
@@ -31,6 +31,19 @@ export type AvatarPropTypes={
    * avatar样式
    */
   style?:AvatarStyle,
+  /**
+   * avatar container style
+   */
+  containerStyle?:ViewPropTypes.style,
+  /**
+   * avatar内容style，如果为icon则为icon style,
+   * 如果为text，则为text style
+   */
+  contentStyle?:ViewPropTypes.style,
+  /**
+   * 图片资源
+   */
+  source?:string | number,
 }
 type AvatarStyle={
   container?:ViewPropTypes.style,
@@ -46,7 +59,12 @@ const defaultProps = {
 
 function getStyles(props) {
   const { avatar } = getTheme();
-  const { size ,style} = props;
+  const {
+    size,
+    style,
+    containerStyle,
+    contentStyle,
+  } = props;
   const local = {};
   if (size) {
     local.container = {
@@ -60,26 +78,29 @@ function getStyles(props) {
       avatar.container,
       local.container,
       style?style.container:{},
+      containerStyle,
     ],
     content: [
       avatar.content,
       local.content,
       style?style.content:{},
+      contentStyle
     ],
     image:[
       avatar.container,
       local.container,
       style?style.container:{},
+      containerStyle,
     ]
   };
 }
-class Avatar extends PureComponent<AvatarPropTypes>{
-  props:AvatarPropTypes
+class Avatar extends PureComponent<AvatarProps>{
+  props:AvatarProps
   static defaultProps:typeof defaultProps
   static defaultProps=defaultProps
 
   renderContent=()=>{
-    let {image,icon,text}=this.props;
+    let {image,icon,text,source}=this.props;
     let {avatar,spacing} =getTheme();
     const styles=getStyles(this.props);
     //如果icon属性不为空
@@ -100,7 +121,9 @@ class Avatar extends PureComponent<AvatarPropTypes>{
     }
     //image属行不为空
     if(image){
-      return <Image {...image} style={styles.image}/>
+      let {source:_source,...otherProps} = image
+      let nativeSource = source || _source;
+      return <Image {...otherProps} source={nativeSource} style={styles.image}/>
     }
   }
   render() {
