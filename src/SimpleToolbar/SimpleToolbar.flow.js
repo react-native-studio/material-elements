@@ -22,7 +22,12 @@ type SimpleToolbarPropTypes = {
   onLeftIconPress?: () => void,
   onRightIconPress?: () => void,
   style: SimpleToolbarStyle | typeof defaultProps.style,
-  center?:boolean//title是否处于center
+  center?:boolean,//title是否处于center
+  containerStyle?:ViewPropTypes.style,
+  leftElementStyle?:ViewPropTypes.style,
+  rightElementStyle?:ViewPropTypes.style,
+  titleStyle?:Text.propTypes.style,
+  centerElementStyle?:ViewPropTypes.style,
 }
 const defaultProps = {
   style: {},
@@ -49,17 +54,26 @@ class SimpleToolbar extends PureComponent<SimpleToolbarPropTypes> {
       container: [
         simpleToolbar.container,
         props.style.container,
+        props.containerStyle,
       ],
       leftElement: [
         simpleToolbar.leftElement,
-        props.style.leftElement
+        props.style.leftElement,
+        props.leftElementStyle
       ],
       rightElement: [
         simpleToolbar.rightElement,
-        props.style.rightElement
+        props.style.rightElement,
+        props.rightElementStyle
       ],
-      centerElement:[props.style.centerElement],
-      title:[props.style.title]
+      centerElement:[
+        props.style.centerElement,
+        props.centerElementStyle
+      ],
+      title:[
+        props.style.title,
+        props.titleStyle
+      ]
     }
   }
   renderLeftIcon=(styles:SimpleToolbarStyle)=>{
