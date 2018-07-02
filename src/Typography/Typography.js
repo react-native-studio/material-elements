@@ -9,7 +9,8 @@ type TypographyPropTypes={
   style:{
     text?:Text.style,
   },
-  children?:string | typeof Text
+  children?:string | typeof Text,
+  textStyle?:Text.propTypes.style
 }
 const defaultProps={
   variant:'body1',
@@ -24,11 +25,12 @@ class Typography extends PureComponent<TypographyPropTypes>{
   static defaultProps:typeof defaultProps
 
   render(){
-    const {style,variant,children}=this.props;
+    const {style,variant,children,textStyle}=this.props;
     const styles={
       text:[
         {...material[variant+'Object']},
         style.text,
+        textStyle
       ]
     }
 
