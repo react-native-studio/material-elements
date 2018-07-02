@@ -14,7 +14,7 @@ import { ViewPropTypes } from '../utils/index'
 import Color from 'color'
 import type {IconPropTypes} from "../Icon/Icon.flow";
 
-export type ButtonPropTypes={
+export type ButtonProps={
   /**
    * button组件是否可用
    */
@@ -46,7 +46,7 @@ export type ButtonPropTypes={
   /**
    * 重写button样式和text样式
    */
-  style?:ButtonStyle,
+  style?:ButtonStyle | typeof defaultProps.style,
   /**
    * button强调色
    */
@@ -63,6 +63,18 @@ export type ButtonPropTypes={
    * 是否使用文字颜色用于水波纹颜色
    */
   useTextColorForRippleColor?:boolean,//是否使用文字颜色用于水波纹颜色，仅仅flatbutton有效
+  /**
+   * button的container style
+   */
+  containerStyle?:ViewPropTypes.style,
+  /**
+   * button的text style
+   */
+  textStyle?:Text.propTypes.style,
+  /**
+   * button的icon style
+   */
+  iconStyle?:Icon.propTypes.style,
 }
 
 const defaultProps = {
@@ -90,7 +102,7 @@ type ButtonStyle = {
   text?: Text.propTypes.style,
 }
 
-function getStyles (props:ButtonPropTypes, state) {
+function getStyles (props:ButtonProps, state) {
   let uiTheme = getTheme()
   const {
     button,
@@ -100,7 +112,17 @@ function getStyles (props:ButtonPropTypes, state) {
     buttonRaisedDisabled,
   } = uiTheme
 
-  const {primary, accent, disabled, raised,iconPosition,style} = props
+  const {
+    primary,
+    accent,
+    disabled,
+    raised,
+    iconPosition,
+    style,
+    containerStyle,
+    textStyle,
+    iconStyle,
+  } = props
   const {palette} = light
 
   type containerType = {
@@ -147,6 +169,7 @@ function getStyles (props:ButtonPropTypes, state) {
       (raised && disabled) && buttonRaisedDisabled.container,
       local.container,
       style?style.container:{},
+      containerStyle,
     ],
     text: [
       button.text,
@@ -156,6 +179,7 @@ function getStyles (props:ButtonPropTypes, state) {
       (raised && disabled) && buttonRaisedDisabled.text,
       local.text,
       style?style.text:{},
+      textStyle,
     ],
     icon: [
       button.icon,
@@ -165,12 +189,13 @@ function getStyles (props:ButtonPropTypes, state) {
       local.icon,
       style?style.icon:{},
       iconPosition==='left'?{marginLeft:0}:{marginRight:0},
+      iconStyle,
     ],
   }
 }
 
-class Button extends PureComponent<ButtonPropTypes, ButtonState> {
-  props: ButtonPropTypes
+class Button extends PureComponent<ButtonProps, ButtonState> {
+  props: ButtonProps
   state: ButtonState = {
     elevation: 2
   }
