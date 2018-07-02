@@ -203,11 +203,9 @@ class Button extends PureComponent<ButtonProps, ButtonState> {
 
   onPress = () => {
     const {text, onPress} = this.props
-
-    if (onPress) {
-      onPress(text)
-    }
+    onPress && onPress(text);
   }
+
   setElevation = () => {
     this.setState({
       elevation: 4,
@@ -222,26 +220,29 @@ class Button extends PureComponent<ButtonProps, ButtonState> {
 
   renderIcon = (styles: ButtonStyle) => {
     const {icon} = this.props
-    const textFlatten = StyleSheet.flatten(styles.text)
-
+    const iconFlatten = StyleSheet.flatten(styles.icon)
     if (!icon) {
       return null
     }
-
     const {name, size, color, type} = icon
-
-    const iconColor = color || textFlatten.color
-
+    const iconColor = color || iconFlatten.color
     const iconSize = size || 24
-
+    const iconProps={name,size:iconSize,type,color:iconColor}
     return (
-      <Icon name={name} size={iconSize} type={type} color={iconColor} style={styles.icon}/>
+      <Icon {...iconProps} style={styles.icon}/>
     )
   }
 
   render () {
-    const {text, disabled, raised, upperCase, onLongPress, iconPosition,useTextColorForRippleColor} = this.props
-
+    const {
+      text,
+      disabled,
+      raised,
+      upperCase,
+      onLongPress,
+      iconPosition,
+      useTextColorForRippleColor
+    } = this.props
     const styles = getStyles(this.props, this.state)
 
     const content = (
