@@ -13,7 +13,10 @@ type StyleProps={
   text?: Text.propTypes.style,
 }
 type ToastProps={
-  style:StyleProps | typeof defaultProps.style
+  style:StyleProps | typeof defaultProps.style,
+  containerStyle?:ViewPropTypes.style,
+  textContainerStyle?:ViewPropTypes.style,
+  textStyle?:Text.propTypes.style,
 }
 type ToastState={
   visible:boolean,
@@ -73,20 +76,28 @@ class Toast extends Component<ToastProps,ToastState>{
 
     const {toast}=getTheme();
 
-    const {style}=this.props;
+    const {
+      style,
+      containerStyle,
+      textContainerStyle,
+      textStyle,
+    }=this.props;
 
     return {
       container:[
         toast.container,
         style.container,
+        containerStyle,
       ],
       textContainer:[
         toast.textContainer,
         style.textContainer,
+        textContainerStyle,
       ],
       text:[
         toast.text,
         style.text,
+        textStyle,
       ]
 
     }
