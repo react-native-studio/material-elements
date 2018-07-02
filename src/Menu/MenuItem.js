@@ -43,12 +43,20 @@ class MenuItem extends React.PureComponent{
       container:ViewPropTypes.style,
       text:Text.propTypes.style,
       icon:PropTypes.object,
-    })
+    }),
+    containerStyle:ViewPropTypes.style,
+    textStyle:Text.propTypes.style,
+    iconStyle:Text.propTypes.style,
   }
 
   getStyles=()=>{
 
-    const {style}=this.props;
+    const {
+      style,
+      containerStyle,
+      textStyle,
+      iconStyle,
+    }=this.props;
 
     const {menuItem}=getTheme();
 
@@ -56,14 +64,17 @@ class MenuItem extends React.PureComponent{
       container:[
         menuItem.container,
         style.container,
+        containerStyle,
       ],
       text:[
         menuItem.text,
         style.text,
+        textStyle,
       ],
       icon:[
         menuItem.icon,
         style.icon,
+        iconStyle,
       ]
     }
   }
