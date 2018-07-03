@@ -11,19 +11,21 @@ const defaultProps = {
   inset: false,
   lines: 1,
 }
-type props = {
+type SubheaderProps = {
   text: string,
   inset?: boolean,
   lines?: number,
   style: {
     container?: ViewPropTypes.style,
     text?: Text.propTypes.style
-  }
+  },
+  containerStyle?:ViewPropTypes.style,
+  textStyle?:Text.propTypes.style,
 }
 
-class Subheader extends PureComponent<props> {
+class Subheader extends PureComponent<SubheaderProps> {
 
-  props: props
+  props: SubheaderProps
   static defaultProps: typeof defaultProps
   getStyles = () => {
     const {subheader} = getTheme()
@@ -32,10 +34,12 @@ class Subheader extends PureComponent<props> {
         subheader.container,
         {paddingLeft: this.props.inset ? 72 : 16},
         this.props.style.container,
+        this.props.containerStyle
       ],
       text: [
         subheader.text,
         this.props.style.text,
+        this.props.textStyle
       ],
     }
   }
