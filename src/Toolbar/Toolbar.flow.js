@@ -44,7 +44,7 @@ type ToolbarProps = {
   onRightElementPress?: (any) => void,
   containerStyle?:ViewPropTypes.style,
   leftElementContainerStyle?:ViewPropTypes.style,
-  leftElement?:ViewPropTypes.style,
+  leftElementStyle?:ViewPropTypes.style,
   rightElementContainerStyle?:ViewPropTypes.style,
   rightElementStyle?:ViewPropTypes.style,
   centerElementContainerStyle?:ViewPropTypes.style,
