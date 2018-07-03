@@ -72,7 +72,9 @@ class RightElement extends PureComponent<RightElementProps> {
         actionsMap = rightElement
       } else if (rightElement && rightElement.actions) {
         actionsMap = rightElement.actions
-      } else if (rightElement && !rightElement.menu) {
+      } else if (rightElement &&
+        !React.isValidElement(rightElement) &&
+        !rightElement.menu) {
         actionsMap = [rightElement]
       }
     }

@@ -87,8 +87,7 @@ class Toolbar extends PureComponent<ToolbarProps> {
 
     return (
       <Animated.View
-        style={
-          styles.container}
+        style={styles.container}
       >
         <LeftElement
           {...this.props}
