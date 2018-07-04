@@ -16,7 +16,7 @@ type StyleType = {
 type props = {
   leftElement: IconPropTypes | React.Component<any>,
   style: StyleType,
-  onLeftElementPress: () => void,
+  onPress: () => void,
   leftElementContainerStyle?:ViewPropTypes.style,
   leftElementStyle?:ViewPropTypes.style,
 }
@@ -51,7 +51,7 @@ class LeftElement extends PureComponent<props> {
   render () {
     const styles = getStyles(this.props)
     const {
-      onLeftElementPress,
+      onPress,
       leftElement,
     } = this.props
 
@@ -67,7 +67,6 @@ class LeftElement extends PureComponent<props> {
       )
     }
 
-    let onPress = onLeftElementPress
     const flattenLeftElement = StyleSheet.flatten(styles.leftElement)
 
     const {name, size, color, type} = (leftElement: any)
