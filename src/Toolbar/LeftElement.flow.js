@@ -68,9 +68,7 @@ class LeftElement extends PureComponent<props> {
     }
     /**
      * 在ES6中函数和类本质是一样的，而在react中，<Element/>这样
-     * 的语法相当于new一个类或者调用一个函数，所以当leftElement
-     * 为一个函数时，其实是继承了React.Component的，完全可以使用
-     * <Element/>实例化
+     * 的语法相当于new一个类或者调用一个函数
      *
      * 知识点增加：
      * javascript中基于原型链的继承
@@ -82,7 +80,7 @@ class LeftElement extends PureComponent<props> {
     if(typeof leftElement === 'function'){
       return (
         <Animated.View style={styles.leftElementContainer}>
-           <leftElement/>
+          {leftElement()}
         </Animated.View>
       );
     }

@@ -15,7 +15,7 @@ type Actions={
   actions:Array<IconPropTypes>
 }
 type RightElementProps = {
-  rightElement: IconPropTypes | React.Component<any> | Actions | MenuType | ()=>React.Component<*>,
+  rightElement?: IconPropTypes | React.Component<any> | Actions | MenuType | ()=>React.Component<*>,
   style: any,
   onPress: (any)=>void,
   rightElementStyle?:ViewPropTypes.style,
@@ -110,7 +110,7 @@ class RightElement extends PureComponent<RightElementProps> {
       result.push(React.cloneElement((rightElement:any), {key: 'customRightElement'}))
     }
     if (typeof rightElement === 'function'){
-      result.push(<rightElement/>)
+      result.push(rightElement())
     }
 
     if (rightElement && rightElement.menu) {

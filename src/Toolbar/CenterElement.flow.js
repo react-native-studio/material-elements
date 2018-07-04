@@ -68,7 +68,7 @@ class CenterElement extends PureComponent<CenterElementProps> {
         </Text>
       )
     } else if (typeof centerElement === 'function'){
-      content = <centerElement/>
+      content = centerElement();
     }else{
       content = centerElement
     }
