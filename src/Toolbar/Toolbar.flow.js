@@ -91,7 +91,7 @@ class Toolbar extends PureComponent<ToolbarProps> {
       >
         <LeftElement
           {...this.props}
-          onLeftElementPress={onLeftElementPress}
+          onPress={onLeftElementPress}
         />
         <CenterElement
           {...this.props}
@@ -99,7 +99,7 @@ class Toolbar extends PureComponent<ToolbarProps> {
         />
         <RightElement
           {...this.props}
-          onRightElementPress={onRightElementPress}
+          onPress={onRightElementPress}
         />
       </Animated.View>
     )
