@@ -11,7 +11,7 @@ type StyleType = {
   titleText?: Text.propTypes.style,
 }
 type CenterElementProps = {
-  centerElement: string | React.Component<any>,
+  centerElement?: string | React.Component<any> | ()=>React.Component<any>,
   onPress: () => void,
   style: StyleType,
   haveLeftElement?: boolean,
@@ -67,7 +67,9 @@ class CenterElement extends PureComponent<CenterElementProps> {
           {centerElement}
         </Text>
       )
-    } else {
+    } else if (typeof centerElement === 'function'){
+      content = <centerElement/>
+    }else{
       content = centerElement
     }
 

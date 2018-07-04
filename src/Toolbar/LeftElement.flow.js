@@ -14,7 +14,7 @@ type StyleType = {
   leftElement?: Text.propTypes.style,
 }
 type props = {
-  leftElement: IconPropTypes | React.Component<any>,
+  leftElement: IconPropTypes | React.Component<any> | ()=>?React.Component<*>,
   style: StyleType,
   onPress: () => void,
   leftElementContainerStyle?:ViewPropTypes.style,
@@ -65,6 +65,26 @@ class LeftElement extends PureComponent<props> {
           {React.cloneElement((leftElement: any), {key: 'customLeftElement'})}
         </Animated.View>
       )
+    }
+    /**
+     * 在ES6中函数和类本质是一样的，而在react中，<Element/>这样
+     * 的语法相当于new一个类或者调用一个函数，所以当leftElement
+     * 为一个函数时，其实是继承了React.Component的，完全可以使用
+     * <Element/>实例化
+     *
+     * 知识点增加：
+     * javascript中基于原型链的继承
+     * 1，每一个实例对象都有一个_proto_(非标准)属性，该属性指向该对象构造函数
+     *    的原型对象,获取实例对象的原型，Object.getPrototypeOf(o:Object)
+     *
+     * 2，每个函数都有一个prototype属性，它是一个指向原型对象的指针
+     */
+    if(typeof leftElement === 'function'){
+      return (
+        <Animated.View style={styles.leftElementContainer}>
+           <leftElement/>
+        </Animated.View>
+      );
     }
 
     const flattenLeftElement = StyleSheet.flatten(styles.leftElement)

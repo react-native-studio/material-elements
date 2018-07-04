@@ -15,7 +15,7 @@ type Actions={
   actions:Array<IconPropTypes>
 }
 type RightElementProps = {
-  rightElement: IconPropTypes | React.Component<any> | Actions | MenuType,
+  rightElement: IconPropTypes | React.Component<any> | Actions | MenuType | ()=>React.Component<*>,
   style: any,
   onPress: (any)=>void,
   rightElementStyle?:ViewPropTypes.style,
@@ -74,7 +74,8 @@ class RightElement extends PureComponent<RightElementProps> {
         actionsMap = rightElement.actions
       } else if (rightElement &&
         !React.isValidElement(rightElement) &&
-        !rightElement.menu) {
+        !rightElement.menu &&
+        !(typeof rightElement === 'function')) {
         actionsMap = [rightElement]
       }
     }
@@ -107,6 +108,9 @@ class RightElement extends PureComponent<RightElementProps> {
 
     if (React.isValidElement(rightElement)) {
       result.push(React.cloneElement((rightElement:any), {key: 'customRightElement'}))
+    }
+    if (typeof rightElement === 'function'){
+      result.push(<rightElement/>)
     }
 
     if (rightElement && rightElement.menu) {
