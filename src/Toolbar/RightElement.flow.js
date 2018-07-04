@@ -17,7 +17,7 @@ type Actions={
 type RightElementProps = {
   rightElement: IconPropTypes | React.Component<any> | Actions | MenuType,
   style: any,
-  onRightElementPress: (any)=>void,
+  onPress: (any)=>void,
   rightElementStyle?:ViewPropTypes.style,
   rightElementContainerStyle?:ViewPropTypes.style,
 }
@@ -52,7 +52,7 @@ class RightElement extends PureComponent<RightElementProps> {
   render () {
     const {
       rightElement,
-      onRightElementPress,
+      onPress,
     } = this.props
 
     const styles = getStyles(this.props)
@@ -98,7 +98,7 @@ class RightElement extends PureComponent<RightElementProps> {
             {...iconToggleProps}
             style={flattenRightElement}
             onPress={() =>
-              onRightElementPress && onRightElementPress({name, index})
+              onPress && onPress({name, index})
             }
           />
         )
@@ -133,8 +133,8 @@ class RightElement extends PureComponent<RightElementProps> {
               if(typeof label==='string'){
                 return (
                   <Menu.Item key={index} text={label} onPress={()=>{
-                    const {onRightElementPress}=this.props;
-                    onRightElementPress && onRightElementPress({
+                    const {onPress}=this.props;
+                    onPress && onPress({
                       action:'menu',
                       label,
                       index,
@@ -144,8 +144,8 @@ class RightElement extends PureComponent<RightElementProps> {
                 )
               }else{
                 return <Menu.Item icon={{...label.icon}} key={index} text={label.text} onPress={()=>{
-                  const {onRightElementPress}=this.props;
-                  onRightElementPress && onRightElementPress({
+                  const {onPress}=this.props;
+                  onPress && onPress({
                     action:'menu',
                     label:label.text,
                     index,
