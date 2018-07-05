@@ -15,7 +15,7 @@ type SimpleToolbarStyle={
   centerElement?:ViewPropTypes.style,
   title?:Text.propTypes.style,
 }
-type SimpleToolbarPropTypes = {
+type SimpleToolbarProps = {
   title: string,
   leftIcon?: IconPropTypes,
   rightIcon?: IconPropTypes,
@@ -35,8 +35,8 @@ const defaultProps = {
   center:false //默认以material样式显示，即不处于center
 }
 
-class SimpleToolbar extends PureComponent<SimpleToolbarPropTypes> {
-  props: SimpleToolbarPropTypes
+class SimpleToolbar extends PureComponent<SimpleToolbarProps> {
+  props: SimpleToolbarProps
   static defaultProps: typeof defaultProps
   static defaultProps = defaultProps
   _onLeftIconPress = () => {
