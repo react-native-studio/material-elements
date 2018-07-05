@@ -9,7 +9,7 @@ import {ViewPropTypes} from "../utils/index";
 /**
  * Divider组件的属性
  */
-export type DividerPropTypes={
+export type DividerProps={
   /**
    * 是否嵌入，如果为真，则marginLeft ：72
    */
@@ -20,14 +20,15 @@ export type DividerPropTypes={
   style: {
     container?:ViewPropTypes.style
   },
+  containerStyle?:ViewPropTypes.style,
 }
 const defaultProps = {
   inset: false,
   style: {},
 }
 
-class Divider extends React.PureComponent<DividerPropTypes> {
-  props: DividerPropTypes
+class Divider extends React.PureComponent<DividerProps> {
+  props: DividerProps
   static defaultProps: typeof defaultProps
 
   getStyles = () => {
@@ -43,6 +44,7 @@ class Divider extends React.PureComponent<DividerPropTypes> {
         divider.container,
         local.container,
         props.style.container,
+        props.containerStyle
       ],
     }
 
