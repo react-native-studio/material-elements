@@ -46,7 +46,7 @@ export interface  ListItemProps{
   onLongPress?:(value:any)=>void,
   numberOfLines?:1 | 2 |3 | 'dynamic',
   style?:ListItemStyle,
-  leftElement?: IconProps,
+  leftElement?: IconProps | React.Component,
   rightElement?:IconProps | React.Component<any> |MenuType|Actions|Array<IconProps>,
   centerElement?: string| React.Component<any>|{primaryText:string, secondaryText:string,tertiaryText:string},
   children?:any,
