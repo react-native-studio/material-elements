@@ -250,3 +250,35 @@ type CardProps = {
 }
 
 export class Card extends React.Component<CardProps>{}
+
+type ToolbarStyle = {
+    container?: ViewStyle,
+    leftElementContainer?: ViewStyle,
+    leftElement?: ViewStyle,
+    centerElementContainer?: ViewStyle,
+    titleText?: TextStyle,
+    rightElementContainer?:ViewStyle,
+    rightElement?: ViewStyle,
+}
+type ToolbarMenuType = {
+    menu: { labels: Array<string> | Array<{ text: string, icon: IconProps }> }
+};
+
+type ToolbarProps = {
+    onLeftElementPress?: (any) => void,
+    style?: ToolbarStyle,
+    onPress?: () => void,
+    leftElement?: ()=>React.Component<any> |IconProps | React.Component<any> ,
+    centerElement?: ()=>React.Component<any> | React.Component<any> | string  ,
+    rightElement?: ()=>React.Component<any> | IconProps | React.Component<any> | Actions | ToolbarMenuType ,
+    onRightElementPress?: (any) => void,
+    containerStyle?:ViewStyle,
+    leftElementContainerStyle?:ViewStyle,
+    leftElementStyle?:ViewStyle,
+    rightElementContainerStyle?:ViewStyle,
+    rightElementStyle?:ViewStyle,
+    centerElementContainerStyle?:ViewStyle,
+    titleStyle?:ViewStyle,
+}
+
+export class Toolbar extends React.Component<ToolbarProps>{}
