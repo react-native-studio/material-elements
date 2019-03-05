@@ -170,3 +170,15 @@ type SimpleToolbarProps = {
 
 export class SimpleToolbar extends React.Component<SimpleToolbarProps>{}
 
+type ToastStyle={
+  container?:ViewStyle,
+  textContainer?: ViewStyle,
+  text?: TextStyle,
+}
+type ToastProps={
+  style?: ToastStyle,
+  containerStyle?:ViewStyle,
+  textContainerStyle?:ViewStyle,
+  textStyle?:TextStyle,
+}
+export class Toast extends React.Component<ToastProps>{}
