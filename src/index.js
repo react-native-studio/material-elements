@@ -5,6 +5,28 @@ import * as Color from './styles/colors';
 
 export { Color };
 export { default as RippleFeedback } from './RippleFeedback';
+export {
+  human,
+  humanDense,
+  humanTall,
+  material,
+  materialTall,
+  materialDense,
+  materialColors,
+  iOSColors,
+  iOSUIKit,
+  iOSUIKitDense,
+  iOSUIKitTall,
+  sanFranciscoSpacing,
+  sanFranciscoWeights,
+  systemDenseWeights,
+  systemTallWeights,
+  systemWeights,
+  robotoWeights,
+  notoCJKWeights,
+  notoTallWeights,
+  webWeights
+} from "react-native-typography"
 // components
 export { default as ActionButton } from './ActionButton';
 export { default as Avatar } from './Avatar';

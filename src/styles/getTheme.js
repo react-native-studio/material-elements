@@ -15,7 +15,7 @@ import lightTheme from './themes/light';
 import getPlatformElevation from './getPlatformElevation';
 /* eslint-enable import/no-unresolved, import/extensions */
 import Metrics from './Metrics'
-import {material,systemWeights} from '../Typography'
+import {material,systemWeights} from 'react-native-typography'
 function darkenOrLighten(color, ratio = 0.15) {
     const c = Color(color);
     return c.luminosity() > 0.5 ? c.darken(ratio) : c.lighten(ratio);

@@ -3,7 +3,7 @@
  */
 import React,{PureComponent} from 'react';
 import {StyleSheet,View,Text} from 'react-native';
-import {material} from "./index";
+import { material } from "react-native-typography"
 type TypographyPropTypes={
   variant:string | typeof defaultProps.variant,
   style:{
