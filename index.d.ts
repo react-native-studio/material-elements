@@ -237,3 +237,16 @@ export var robotoWeights
 export var notoCJKWeights
 export var notoTallWeights
 export var webWeights
+
+type CardStyle={
+    container?: ViewStyle,
+}
+type CardProps = {
+    children?: React.Node,
+    onPress?: () => void,
+    style?:CardStyle,
+    fullWidth?: boolean,
+    containerStyle?:ViewStyle,
+}
+
+export class Card extends React.Component<CardProps>{}
