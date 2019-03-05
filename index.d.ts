@@ -146,3 +146,27 @@ type AvatarStyle={
 
 export class Avatar extends React.Component<AvatarProps>{}
 
+type SimpleToolbarStyle={
+  container?: ViewStyle,
+  leftElement?: ViewStyle,
+  rightElement?: ViewStyle,
+  centerElement?:ViewStyle,
+  title?:TextStyle,
+}
+type SimpleToolbarProps = {
+  title: string,
+  leftIcon?: IconProps,
+  rightIcon?: IconProps,
+  onLeftIconPress?: () => void,
+  onRightIconPress?: () => void,
+  style?: SimpleToolbarStyle,
+  center?:boolean,//title是否处于center
+  containerStyle?: ViewStyle,
+  leftElementStyle?:ViewStyle,
+  rightElementStyle?:ViewStyle,
+  titleStyle?: TextStyle,
+  centerElementStyle?: ViewStyle,
+}
+
+export class SimpleToolbar extends React.Component<SimpleToolbarProps>{}
+
