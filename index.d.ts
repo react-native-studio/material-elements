@@ -182,3 +182,18 @@ type ToastProps={
   textStyle?:TextStyle,
 }
 export class Toast extends React.Component<ToastProps>{}
+
+type IconToggleProps = {
+  color?: string,
+  underlayColor?: string,
+  maxOpacity?: number,
+  percent?:number,
+  disabled?: boolean,
+  size?: number,
+  name?: string,
+  children?: React.Node,
+  onPress?:()=>void,
+  type?: "Ionicons" | "MaterialIcons" | "FontAwesome" | "MaterialCommunityIcons"
+};
+
+export class IconToggle extends React.Component<IconToggleProps>{}
