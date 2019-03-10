@@ -125,6 +125,9 @@ class Avatar extends PureComponent<AvatarProps>{
       let nativeSource = source || _source;
       return <Image {...otherProps} source={nativeSource} style={styles.image}/>
     }
+    if(source){
+      return <Image source={source} style={styles.image}/>
+    }
   }
   render() {
     const styles=getStyles(this.props);
