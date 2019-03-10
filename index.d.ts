@@ -282,3 +282,17 @@ type ToolbarProps = {
 }
 
 export class Toolbar extends React.Component<ToolbarProps>{}
+
+type BadgeStyle = {
+    container?:   ViewStyle
+}
+
+interface BadgeProps {
+    children?: React.ReactElement,
+    text?: string,
+    icon?:IconProps,
+    size?: number,
+    style?: BadgeStyle,
+    nodeSize?:number,
+}
+export class Badge extends React.Component<BadgeProps>{}
