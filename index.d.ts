@@ -1,5 +1,5 @@
 import React from "react"
-import {ImageProps, Text, TextStyle, ViewStyle} from "react-native";
+import {ImageProps, Text, TextStyle, ViewStyle,ImageSourceProps} from "react-native";
 
 export interface DividerProps {
     inset?: boolean,
@@ -150,7 +150,7 @@ export interface AvatarProps {
     style?: AvatarStyle,
     containerStyle?: ViewStyle,
     contentStyle?: ViewStyle,
-    source?: string | number,
+    source?: ImageSourceProps,
 }
 
 type AvatarStyle = {
