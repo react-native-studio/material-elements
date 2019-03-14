@@ -296,3 +296,13 @@ interface BadgeProps {
     nodeSize?:number,
 }
 export class Badge extends React.Component<BadgeProps>{}
+
+
+type CheckboxProps = {
+    checked:boolean,
+    onCheck?:(value:boolean)=>void,
+    disabled?:boolean,
+    uncheckedIcon?:IconProps,
+    checkedIcon?:IconProps,
+}
+export class Checkbox extends React.Component<CheckboxProps>{}
