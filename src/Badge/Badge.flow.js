@@ -59,7 +59,6 @@ function getStyles(props:BadgePropTypes) {
       //$FlowFixMe
         local.container.backgroundColor = palette.accentColor;
     }
-    props.style&&console.log(props.style.container)
     return {
         container: [
             badge.container,
