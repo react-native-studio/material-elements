@@ -29,8 +29,9 @@ class CenterElement extends PureComponent<CenterElementPropTypes> {
     let {simpleToolbar} = getTheme()
     return {
       centerElementContainer: [
-        props.center?simpleToolbar.centerElementContainer:{flex:1,marginLeft:20},
-        props.style.centerElementContainer
+        simpleToolbar.centerElementContainer,
+        props.style.centerElementContainer,
+        props.center ? { marginLeft: 20}: {}
       ],
       titleText: [
         simpleToolbar.titleText,

@@ -54,3 +54,4 @@ export { default as Toast } from './Toast';
 export { default as Indicator } from './Indicator';
 export { default as Placeholder } from './Placeholder';
 export { default as Typography } from './Typography/Typography'
+export { default as getPlatformElevation } from "./styles/getPlatformElevation"

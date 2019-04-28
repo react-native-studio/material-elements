@@ -127,9 +127,6 @@ class SimpleToolbar extends PureComponent<SimpleToolbarProps> {
     const {center}=this.props;
     return (
       <View style={styles.container}>
-        {/*CenterElement元素放在中间，则会使得左侧的Icon无法使用onPress*/}
-        {/*在ReactNative 中，当view设置了position属性后，图层变低，但是比其前面的图层高。子view的图层高于父view的图层*/}
-        {!center&&this.renderLeftIcon(styles)}
         <CenterElement
           center={center}
           style={{
@@ -138,7 +135,7 @@ class SimpleToolbar extends PureComponent<SimpleToolbarProps> {
           }}
           title={this.props.title}
         />
-        {center&&this.renderLeftIcon(styles)}
+        {this.renderLeftIcon(styles)}
         {this.renderRightIcon(styles)}
       </View>
     )
